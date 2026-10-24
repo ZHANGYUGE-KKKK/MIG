@@ -1,0 +1,5 @@
+/VIVADO/build/
+/TEST/build/
+*.jou
+*.log
+.Xil/
