@@ -1,0 +1,92 @@
+         4                                     3                                                              2                                            1
+
+
+
+
+                                                                                        UTIL_3V3
+
+
+                                                                                          1    R890
+                                                                                               10.0K
+D                                                                                                                                                                                                   D
+                                                                                               1/10W
+                                                                                          2    1%
+                                                                                                        56                                                                     12
+             HA01_P_CCE2 NC                               PG_M2CF1    FMC_HPC1_PG_M2C                                         CLK1_M2C_PG2       FMC_HPC1_CLK1_M2C_P
+                                                                                                                                                                               12
+             HA01_N_CCE3 NC                             HA00_P_CCF4 NC                                                        CLK1_M2C_NG3       FMC_HPC1_CLK1_M2C_N
+                                                                                                                                                                               12
+               HA05_PE6 NC                              HA00_N_CCF5 NC                                                         LA00_P_CCG6       FMC_HPC1_LA00_CC_P
+                                                                                                                                                                               12
+               HA05_NE7 NC                                HA04_PF7 NC                                                          LA00_N_CCG7       FMC_HPC1_LA00_CC_N
+                                                                                                                                                                               12
+               HA09_PE9 NC                                HA04_NF8 NC                                                              LA03_PG9      FMC_HPC1_LA03_P
+                                                                                                                                                                               12
+               HA09_NE10 NC                               HA08_PF10 NC                                                             LA03_NG10     FMC_HPC1_LA03_N
+                                                                                                                                                                               12
+               HA13_PE12 NC                               HA08_NF11 NC                                                             LA08_PG12     FMC_HPC1_LA08_P
+                                                                                                                                                                               12
+               HA13_NE13 NC                               HA12_PF13 NC                                                             LA08_NG13     FMC_HPC1_LA08_N
+                                                                                                                                                                               12
+               HA16_PE15 NC                               HA12_NF14 NC                                                             LA12_PG15     FMC_HPC1_LA12_P
+                                                                                                                                                                               12
+               HA16_NE16 NC                               HA15_PF16 NC                                                             LA12_NG16     FMC_HPC1_LA12_N
+                                                                                                                                                                               12
+               HA20_PE18 NC                               HA15_NF17 NC                                                             LA16_PG18     FMC_HPC1_LA16_P
+                                                                                                                                                                               12
+               HA20_NE19 NC                               HA19_PF19 NC                                                             LA16_NG19     FMC_HPC1_LA16_N
+
+C                                                                                                                                                                              12
+               HB03_PE21 NC                               HA19_NF20 NC                                                             LA20_PG21     FMC_HPC1_LA20_P                                    C
+                                                                                                                                                                               12
+               HB03_NE22 NC                               HB02_PF22 NC                                                             LA20_NG22     FMC_HPC1_LA20_N
+                                                                                                                                                                               12
+               HB05_PE24 NC                               HB02_NF23 NC                                                             LA22_PG24     FMC_HPC1_LA22_P
+                                                                                                                                                                               12
+               HB05_NE25 NC                               HB04_PF25 NC                                                             LA22_NG25     FMC_HPC1_LA22_N
+                                                                                                                                                                               12
+               HB09_PE27 NC                               HB04_NF26 NC                                                             LA25_PG27     FMC_HPC1_LA25_P
+                                                                                                                                                                               12
+               HB09_NE28 NC                               HB08_PF28 NC                                                             LA25_NG28     FMC_HPC1_LA25_N
+                                                                                                                                                                               12
+               HB13_PE30 NC                               HB08_NF29 NC                                                             LA29_PG30     FMC_HPC1_LA29_P
+                                                                                                                                                                               12
+               HB13_NE31 NC                               HB12_PF31 NC                                                             LA29_NG31     FMC_HPC1_LA29_N
+                                                                                                                                                                               12
+               HB19_PE33 NC                               HB12_NF32 NC                                                             LA31_PG33     FMC_HPC1_LA31_P
+                                                                                                                                                                               12
+               HB19_NE34 NC                               HB16_PF34 NC                                                             LA31_NG34     FMC_HPC1_LA31_N
+                                                                                                                                                                               12
+               HB21_PE36 NC                               HB16_NF35 NC                                                             LA33_PG36     FMC_HPC1_LA33_P
+                                                                                                                                                                               12
+               HB21_NE37 NC                               HB20_PF37 NC                                                             LA33_NG37     FMC_HPC1_LA33_N
+
+               VADJ_1E39                                  HB20_NF38 NC                                                             VADJ_3G39
+
+                                                          VADJ_2F40
+B                                                                                                                                                                                                   B
+    J2         ASP_134486_01   VADJ_1V8_FPGA                                                                      J2               ASP_134486_01                          VADJ_1V8_FPGA
+                                                                                              VADJ_1V8_FPGA
+                                                   J2     ASP_134486_01
+
+
+
+
+                                                                                                                   ANSI/VITA 57.1 - Revised 2010
+                                                                                                                   FMC HPC1 Header Rows E F G
+
+
+                                                                                                                   TITLE: FMC HPC1 Header Rows E F G                            ASSY P/N: 0432092
+A                                                                                                                         SCHEM, ROHS COMPLIANT                                 PCB P/N: 1280906
+                                                                                                                          HW-U1-VCU118_REV2_0                                   SCH P/N: 0381739
+                                                                                                                                                                                TEST P/N: TSS0185
+                                                                                                                                                                                                    A
+                                                                                                                   DATE: 07/14/2017:11:45                          VER:             2.0
+
+                                                                                                                   SHEET SIZE: B                                   REV:             03
+
+                                                                                                                   SHEET                    OF                     DRAWN BY:
+                                                                                                                               40                    76                             DN
+
+
+         4                                     3                                                              2                                            1

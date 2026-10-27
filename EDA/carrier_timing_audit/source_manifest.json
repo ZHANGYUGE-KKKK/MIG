@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-27",
+  "activity": "read-only motherboard routing evidence audit; no hardware test",
+  "signals_checked_against_official_xdc": 50,
+  "actual_pcb_lengths_available": false,
+  "sources": [
+    {
+      "path": "/home/wenhan/PROJECTS/ARCHIVE/DATASHEET/VCU118/vcu118-schematic-xtp450_cluster/vcu118-xdc-rdf0400/vcu118_rev2.0_12082017.xdc",
+      "sha256": "fdc8ce21fe617d45d78a1704d34332607add82bfe88535e4a0a933458e47c395"
+    },
+    {
+      "path": "/home/wenhan/PROJECTS/DDR3_MIG/EDA/pinmap.json",
+      "sha256": "547dab68aece1769af5dbc1c9737dd6a5960d390cb0e9d6366763e9585d5347f"
+    },
+    {
+      "path": "/home/wenhan/PROJECTS/ARCHIVE/DATASHEET/VCU118/HW-U1-VCU118_REV2_0_SCHEMATIC_7-14-2017.pdf",
+      "sha256": "1668aff38f777b480e76b491925eeb4f109ccc0a58b948c9c4ecef3e945cc21d"
+    }
+  ]
+}

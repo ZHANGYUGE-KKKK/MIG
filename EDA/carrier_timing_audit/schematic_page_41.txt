@@ -1,0 +1,94 @@
+     4                                                              3                             2                                            1
+
+
+
+
+                                           UTIL_3V3
+D                                                                                                                                                                                  D
+
+                                             1   R888
+                                                 4.70K
+                    FMC_HPC1_VREF_A_M2C          1/16W
+                                             2   1%
+
+
+          VREF_A_M2CH1                                                       CLK3_BIDIR_PJ2 NC                         VREF_B_M2CK1 NC
+                                                         56,39,46
+         PRSNT_M2C_LH2   FMC_HPC1_PRSNT_M2C_B                                CLK3_BIDIR_NJ3 NC                    CLK2_BIDIR_PK4 NC
+                                                         12
+          CLK0_M2C_PH4   FMC_HPC1_CLK0_M2C_P                                      HA03_PJ6 NC                     CLK2_BIDIR_NK5 NC
+                                                         12
+          CLK0_M2C_NH5   FMC_HPC1_CLK0_M2C_N                                      HA03_NJ7 NC                             HA02_PK7 NC
+                                                         12
+             LA02_PH7    FMC_HPC1_LA02_P                                          HA07_PJ9 NC                             HA02_NK8 NC
+                                                         12
+             LA02_NH8    FMC_HPC1_LA02_N                                          HA07_NJ10 NC                            HA06_PK10 NC
+                                                         12
+             LA04_PH10   FMC_HPC1_LA04_P                                          HA11_PJ12 NC                            HA06_NK11 NC
+                                                         12
+             LA04_NH11   FMC_HPC1_LA04_N                                          HA11_NJ13 NC                            HA10_PK13 NC
+                                                         12
+             LA07_PH13   FMC_HPC1_LA07_P                                          HA14_PJ15 NC                            HA10_NK14 NC
+                                                         12
+             LA07_NH14   FMC_HPC1_LA07_N                                          HA14_NJ16 NC                         HA17_P_CCK16 NC
+C                                                                                                                                                                                  C
+                                                         12
+             LA11_PH16   FMC_HPC1_LA11_P                                          HA18_PJ18 NC                         HA17_N_CCK17 NC
+                                                         12
+             LA11_NH17   FMC_HPC1_LA11_N                                          HA18_NJ19 NC                            HA21_PK19 NC
+                                                         12
+             LA15_PH19   FMC_HPC1_LA15_P                                          HA22_PJ21 NC                            HA21_NK20 NC
+                                                         12
+             LA15_NH20   FMC_HPC1_LA15_N                                          HA22_NJ22 NC                            HA23_PK22 NC
+                                                         12
+             LA19_PH22   FMC_HPC1_LA19_P                                          HB01_PJ24 NC                            HA23_NK23 NC
+                                                         12
+             LA19_NH23   FMC_HPC1_LA19_N                                          HB01_NJ25 NC                         HB00_P_CCK25 NC
+                                                         12
+             LA21_PH25   FMC_HPC1_LA21_P                                          HB07_PJ27 NC                         HB00_N_CCK26 NC
+                                                         12
+             LA21_NH26   FMC_HPC1_LA21_N                                          HB07_NJ28 NC                         HB06_P_CCK28 NC
+                                                         12
+             LA24_PH28   FMC_HPC1_LA24_P                                          HB11_PJ30 NC                         HB06_N_CCK29 NC
+                                                         12
+             LA24_NH29   FMC_HPC1_LA24_N                                          HB11_NJ31 NC                            HB10_PK31 NC
+                                                         12
+             LA28_PH31   FMC_HPC1_LA28_P                                          HB15_PJ33 NC                            HB10_NK32 NC
+                                                         12
+             LA28_NH32   FMC_HPC1_LA28_N                                          HB15_NJ34 NC                            HB14_PK34 NC
+                                                         12
+             LA30_PH34   FMC_HPC1_LA30_P                                          HB18_PJ36 NC                            HB14_NK35 NC
+                                                         12
+B            LA30_NH35   FMC_HPC1_LA30_N                                          HB18_NJ37 NC                         HB17_P_CCK37 NC                                             B
+                                                         12
+             LA32_PH37   FMC_HPC1_LA32_P                                     VIO_B_M2C_1J39 NC                         HB17_N_CCK38 NC
+                                                         12
+             LA32_NH38   FMC_HPC1_LA32_N                                                                           VIO_B_M2C_2K40 NC
+
+             VADJ_4H40                                                  J2        ASP_134486_01
+
+                                                                                                      J2                  ASP_134486_01
+                                       VADJ_1V8_FPGA
+    J2        ASP_134486_01
+
+
+
+
+                                                                                                       ANSI/VITA 57.1 - Revised 2010
+                                                                                                       FMC HPC1 Header Rows H J K
+
+
+                                                                                                       TITLE: FMC HPC1 Header Rows H J K                       ASSY P/N: 0432092
+A                                                                                                             SCHEM, ROHS COMPLIANT                            PCB P/N: 1280906
+                                                                                                              HW-U1-VCU118_REV2_0                              SCH P/N: 0381739
+                                                                                                                                                               TEST P/N: TSS0185
+                                                                                                                                                                                   A
+                                                                                                       DATE: 07/14/2017:11:45                      VER:          2.0
+
+                                                                                                       SHEET SIZE: B                               REV:          03
+
+                                                                                                       SHEET                    OF                 DRAWN BY:
+                                                                                                                   41                     76                     DN
+
+
+     4                                                              3                             2                                            1

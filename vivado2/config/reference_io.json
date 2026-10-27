@@ -1,0 +1,222 @@
+{
+  "C0_DDR3_0_dqs_n[1]": [
+    "AJ12",
+    "DIFF_SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dqs_p[1]": [
+    "AJ13",
+    "DIFF_SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[10]": [
+    "AK12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[15]": [
+    "AK13",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[14]": [
+    "AK14",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[8]": [
+    "AK15",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[11]": [
+    "AL12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dm[1]": [
+    "AL14",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[9]": [
+    "AL15",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[13]": [
+    "AM12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[12]": [
+    "AM13",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dm[0]": [
+    "AT12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[6]": [
+    "AU11",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_reset_n": [
+    "AV8",
+    "SSTL15"
+  ],
+  "C0_DDR3_0_odt[0]": [
+    "AV9",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dqs_p[0]": [
+    "AV10",
+    "DIFF_SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[7]": [
+    "AV11",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dqs_n[0]": [
+    "AW10",
+    "DIFF_SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[2]": [
+    "AW11",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[0]": [
+    "AW12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[4]": [
+    "AW13",
+    "SSTL15_DCI"
+  ],
+  "BADJ_CLK_clk_n": [
+    "AW22",
+    "LVDS"
+  ],
+  "BADJ_CLK_clk_p": [
+    "AW23",
+    "LVDS"
+  ],
+  "C0_DDR3_0_dq[3]": [
+    "AY10",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[1]": [
+    "AY12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_dq[5]": [
+    "AY13",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_ras_n": [
+    "BA14",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_cas_n": [
+    "BA15",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_ba[2]": [
+    "BA16",
+    "SSTL15_DCI"
+  ],
+  "GPIO_LED7": [
+    "BA37",
+    "LVCMOS12"
+  ],
+  "C0_DDR3_0_cke[0]": [
+    "BB12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_cs_n[0]": [
+    "BB13",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_we_n": [
+    "BB14",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[14]": [
+    "BB16",
+    "SSTL15_DCI"
+  ],
+  "tx": [
+    "BB21",
+    "LVCMOS18"
+  ],
+  "C0_DDR3_0_ck_n[0]": [
+    "BC8",
+    "DIFF_SSTL15_DCI"
+  ],
+  "C0_DDR3_0_ck_p[0]": [
+    "BC9",
+    "DIFF_SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[4]": [
+    "BC11",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[13]": [
+    "BC13",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[12]": [
+    "BC14",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_ba[0]": [
+    "BC15",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[15]": [
+    "BC16",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[5]": [
+    "BD11",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[0]": [
+    "BD12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[6]": [
+    "BD13",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_ba[1]": [
+    "BD15",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[1]": [
+    "BE12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[7]": [
+    "BE13",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[8]": [
+    "BE14",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[10]": [
+    "BE15",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[3]": [
+    "BF11",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[2]": [
+    "BF12",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[9]": [
+    "BF14",
+    "SSTL15_DCI"
+  ],
+  "C0_DDR3_0_addr[11]": [
+    "BF15",
+    "SSTL15_DCI"
+  ],
+  "sys_rst": [
+    "L19",
+    "LVCMOS12"
+  ]
+}

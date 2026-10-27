@@ -1,0 +1,726 @@
+                                                                  8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                                Description
+
+
+TwinDie 1.35V Automotive DDR3L
+SDRAM
+MT41K512M16 – 64 Meg x 16 x 8 Banks
+
+Description                                                              Options                                                                   Marking
+                                                                         • Configuration
+The 8Gb (TwinDie) DDR3L SDRAM (1.35V) uses two                             – 512 Meg x 16                                                             512M16
+Micron 4Gb DDR3L SDRAM x8 die for a 2 byte x16 de-                       • TFBGA package (Pb-free) – x16
+vice in one package. Refer to Micron’s 4Gb DDR3L                           – 96-ball (8mm x 14mm) - SAC302                                                VRN
+SDRAM data sheet (x8 option) for specifications not                        – 96-ball (8mm x 14mm) - SAC Q                                                 VRP
+included in this document, specifications for base part                  • Timing – cycle time
+number MT41K512M8 correlate to TwinDie manufac-                            – 1.07ns @ CL = 13 (DDR3-1866)                                                 -107
+turing base part number MT41K512M16.                                     • Product certification
+Features                                                                   – Automotive                                                                      A
+• Uses two x8, 4Gb Micron die to make one x16 pack-                      • Operating temperature
+  age                                                                      – Industrial (–40°C ≤ T C ≤ +95°C)                                               IT
+  – Single rank TwinDie                                                    – Automotive (–40°C ≤ T C ≤ +105°C)                                              AT
+  – One external ZQ ball and one internal ZQ con-                        • Revision                                                                         :P
+     nected to V SSQ through an embedded serial resis-
+                                                                           Note:       1. Not all options listed can be combined to
+     tor
+                                                                                          define an offered product. Use the part cat-
+• VDD = V DDQ = 1.35V (1.283–1.45V)
+                                                                                          alog search on http://www.micron.com for
+• Backward compatible to V DD = V DDQ = 1.5V ±0.075V                                      available offerings.
+• Differential bidirectional data strobe
+• 8n-bit prefetch architecture
+• Differential clock inputs (CK, CK#)
+• 8 internal banks
+• Nominal and dynamic on-die termination (ODT)
+  for data, strobe, and mask signals
+• Programmable CAS (READ) latency (CL)
+• Programmable posted CAS additive latency (AL)
+• Programmable CAS (WRITE) latency (CWL)
+• Fixed burst length (BL) of 8 and burst chop (BC) of 4
+  (via the mode register set [MRS])
+• Selectable BC4 or BL8 on-the-fly (OTF)
+• Self refresh mode
+• TC of –40°C to +105°C
+  – 64ms, 8192-cycle refresh at –40°C to +85°C
+  – 32ms at +85°C to +105°C
+• Self refresh temperature (SRT)
+• Automatic self refresh (ASR)
+• Write leveling
+• Multipurpose register
+• Output driver calibration
+• AEC-Q100
+• PPAP submission
+• 8D response time
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN      1         Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                           © 2018 Micron Technology, Inc. All rights reserved.
+                        Products and specifications discussed herein are subject to change by Micron without notice.
+                                                                                8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                                              Description
+
+
+Table 1: Key Timing Parameters
+
+      Speed Grade                        Data Rate (MT/s)             Target tRCD-tRP-CL             tRCD (ns)                       tRP (ns)                       CL (ns)
+              -107                                 1866                         13-13-13                  13.91                         13.91                         13.91
+
+
+
+Table 2: Addressing
+
+Parameter                                                                                              512 Meg x 16
+Configuration                                                                              64 Meg x 8 x 8 banks x 2 die
+Die per package                                                                                                    2
+Refresh count                                                                                                     8K
+Row address                                                                                             64K (A[15:0])
+Bank address                                                                                               8 (BA[2:0])
+Column address                                                                                             1K (A[9:0])
+Page size per die                                                                                                1KB
+
+
+
+
+Figure 1: DDR3L Part Numbers
+
+                                Example Part Number: MT41K512M16VRP-107 AAT:P
+
+                                                                            -                                       :
+           MT41K                       Configuration              Package        Speed                          Revision
+                                                                                                    {
+
+
+
+         Configuration                   Mark                                                                      :P          Revision
+           512 Meg x 16                512M16
+
+
+                                                                                                       Temperature                                             Mark
+  Package                                                         Mark
+                                                                                                       Industrial temperature                                     IT
+  96-ball FBGA, 8mm x 14mm                                        VRN
+                                                                                                       Automotive temperature                                     AT
+  96-ball FBGA, 8mm x 14mm                                        VRP
+
+
+
+                                                       Speed Grade               Mark       Certification                    Mark
+                                                  t CK = 1.07ns, CL = 13          107      Automotive                           A
+
+    Note:        1. Not all options listed can be combined to define an offered product. Use the part catalog search on
+                    http://www.micron.com for available offerings.
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN                     2      Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                       © 2018 Micron Technology, Inc. All rights reserved.
+                                                                  8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                                Description
+
+FBGA Part Marking Decoder
+Due to space limitations, FBGA-packaged components have an abbreviated part marking that is different from the
+part number. For a quick conversion of an FBGA code, see the FBGA Part Marking Decoder on Micron’s Web site:
+http://www.micron.com.
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN     3     Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                      © 2018 Micron Technology, Inc. All rights reserved.
+                                                                  8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                               Important Notes and Warnings
+
+Important Notes and Warnings
+Micron Technology, Inc. ("Micron") reserves the right to make changes to information published in this document,
+including without limitation specifications and product descriptions. This document supersedes and replaces all
+information supplied prior to the publication hereof. You may not rely on any information set forth in this docu-
+ment if you obtain the product described herein from any unauthorized distributor or other source not authorized
+by Micron.
+Automotive Applications. Products are not designed or intended for use in automotive applications unless specifi-
+cally designated by Micron as automotive-grade by their respective data sheets. Distributor and customer/distrib-
+utor shall assume the sole risk and liability for and shall indemnify and hold Micron harmless against all claims,
+costs, damages, and expenses and reasonable attorneys' fees arising out of, directly or indirectly, any claim of
+product liability, personal injury, death, or property damage resulting directly or indirectly from any use of non-
+automotive-grade products in automotive applications. Customer/distributor shall ensure that the terms and con-
+ditions of sale between customer/distributor and any customer of distributor/customer (1) state that Micron
+products are not designed or intended for use in automotive applications unless specifically designated by Micron
+as automotive-grade by their respective data sheets and (2) require such customer of distributor/customer to in-
+demnify and hold Micron harmless against all claims, costs, damages, and expenses and reasonable attorneys'
+fees arising out of, directly or indirectly, any claim of product liability, personal injury, death, or property damage
+resulting from any use of non-automotive-grade products in automotive applications.
+Critical Applications. Products are not authorized for use in applications in which failure of the Micron compo-
+nent could result, directly or indirectly in death, personal injury, or severe property or environmental damage
+("Critical Applications"). Customer must protect against death, personal injury, and severe property and environ-
+mental damage by incorporating safety design measures into customer's applications to ensure that failure of the
+Micron component will not result in such harms. Should customer or distributor purchase, use, or sell any Micron
+component for any critical application, customer and distributor shall indemnify and hold harmless Micron and
+its subsidiaries, subcontractors, and affiliates and the directors, officers, and employees of each against all claims,
+costs, damages, and expenses and reasonable attorneys' fees arising out of, directly or indirectly, any claim of
+product liability, personal injury, or death arising in any way out of such critical application, whether or not Mi-
+cron or its subsidiaries, subcontractors, or affiliates were negligent in the design, manufacture, or warning of the
+Micron product.
+Customer Responsibility. Customers are responsible for the design, manufacture, and operation of their systems,
+applications, and products using Micron products. ALL SEMICONDUCTOR PRODUCTS HAVE INHERENT FAIL-
+URE RATES AND LIMITED USEFUL LIVES. IT IS THE CUSTOMER'S SOLE RESPONSIBILITY TO DETERMINE
+WHETHER THE MICRON PRODUCT IS SUITABLE AND FIT FOR THE CUSTOMER'S SYSTEM, APPLICATION, OR
+PRODUCT. Customers must ensure that adequate design, manufacturing, and operating safeguards are included
+in customer's applications and products to eliminate the risk that personal injury, death, or severe property or en-
+vironmental damages will result from failure of any semiconductor component.
+Limited Warranty. In no event shall Micron be liable for any indirect, incidental, punitive, special or consequential
+damages (including without limitation lost profits, lost savings, business interruption, costs related to the removal
+or replacement of any products or rework charges) whether or not such damages are based on tort, warranty,
+breach of contract or other legal theory, unless explicitly stated in a written agreement executed by Micron's duly
+authorized representative.
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN     4     Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                      © 2018 Micron Technology, Inc. All rights reserved.
+                                                                       8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                            Functional Description
+
+Functional Description
+                                             The TwinDie DDR3L SDRAM is a high-speed, CMOS dynamic random access memory
+                                             device internally configured as two 8-bank DDR3L SDRAM devices.
+                                             Although each die is tested individually within the dual-die package, some TwinDie test
+                                             results may vary from a like die tested within a monolithic die package.
+                                             The DDR3L SDRAM uses a double data rate architecture to achieve high-speed opera-
+                                             tion. The double data rate architecture is an 8n-prefetch architecture with an interface
+                                             designed to transfer two data words per clock cycle at the I/O balls. A single read or
+                                             write access consists of a single 8n-bit-wide, one-clock-cycle data transfer at the inter-
+                                             nal DRAM core and eight corresponding n-bit-wide, one-half-clock-cycle data transfers
+                                             at the I/O balls.
+                                             The differential data strobe (DQS, DQS#) is transmitted externally, along with data, for
+                                             use in data capture at the DDR3L SDRAM input receiver. DQS is center-aligned with da-
+                                             ta for WRITEs. The read data is transmitted by the DDR3L SDRAM and edge-aligned to
+                                             the data strobes.
+                                             The DDR3 SDRAM operates from a differential clock (CK and CK#). The crossing of CK
+                                             going HIGH and CK# going LOW is referred to as the positive edge of CK. Control, com-
+                                             mand, and address signals are registered at every positive edge of CK. Input data is reg-
+                                             istered on the first rising edge of DQS after the WRITE preamble, and output data is ref-
+                                             erenced on the first rising edge of DQS after the READ preamble.
+                                             Read and write accesses to the DDR3L SDRAM are burst-oriented. Accesses start at a
+                                             selected location and continue for a programmed number of locations in a program-
+                                             med sequence. Accesses begin with the registration of an ACTIVATE command, which is
+                                             then followed by a READ or WRITE command. The address bits registered coincident
+                                             with the ACTIVATE command are used to select the bank and row to be accessed. The
+                                             address bits (including CSn#, BAn, and An) registered coincident with the READ or
+                                             WRITE command are used to select the rank, bank, and starting column location for the
+                                             burst access.
+                                             This data sheet provides a general description, package dimensions, and the package
+                                             ballout. Refer to the Micron monolithic DDR3L data sheet for complete information re-
+                                             garding individual die initialization, register definition, command descriptions, and die
+                                             operation.
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN            5         Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                 © 2018 Micron Technology, Inc. All rights reserved.
+                                                                                   8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                             Ball Assignments and Descriptions
+
+Ball Assignments and Descriptions
+Figure 2: 96-Ball FBGA – x16 (Top View)
+
+                                                            1       2       3       4       5    6           7           8           9
+
+                                             A
+                                                          VDDQ    DQ13     DQ15                           DQ12        VDDQ          VSS
+
+                                             B
+                                                          VSSQ     VDD      VSS                          UDQS#        DQ14         VSSQ
+
+                                             C
+                                                          VDDQ    DQ11     DQ9                            UDQS        DQ10        VDDQ
+
+                                             D
+                                                          VSSQ    VDDQ     UDM                             DQ8         VSSQ         VDD
+
+                                             E
+                                                           VSS    VSSQ     DQ0                             LDM         VSSQ       VDDQ
+
+                                             F
+                                                          VDDQ     DQ2     LDQS                            DQ1         DQ3         VSSQ
+
+                                             G
+                                                          VSSQ     DQ6     LDQS#                           VDD          VSS        VSSQ
+
+                                             H
+                                                         VREFDQ   VDDQ     DQ4                             DQ7         DQ5        VDDQ
+
+                                             J
+                                                           NC      VSS     RAS#                             CK          VSS         NC
+
+                                             K
+                                                          ODT      VDD     CAS#                            CK#         VDD          CKE
+
+                                             L
+                                                           NC      CS#     WE#                           A10/AP         ZQ          NC
+
+                                             M
+                                                           VSS     BA0     BA2                             A15       VREFCA         VSS
+
+                                             N
+                                                           VDD     A3       A0                          A12/BC#        BA1          VDD
+
+                                             P
+                                                           VSS     A5       A2                              A1          A4          VSS
+
+                                             R
+                                                           VDD     A7       A9                             A11          A6          VDD
+
+                                             T
+                                                           VSS    RESET#   A13                             A14          A8          VSS
+
+
+                                   Notes:        1. Ball descriptions listed in Table 3 are listed as “x4, x8” if unique; otherwise, x4 and x8
+                                                    are the same.
+                                                 2. A comma separates the configuration; a slash defines a selectable function.
+                                                    Example D7 = NF, NF/TDQS#. NF applies to the x4 configuration only. NF/TDQS# applies
+                                                    to the x8 configuration only—selectable between NF or TDQS# via MRS (symbols are de-
+                                                    fined in Table 3).
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN                         6       Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                            © 2018 Micron Technology, Inc. All rights reserved.
+                                                                              8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                        Ball Assignments and Descriptions
+
+
+Table 3: 96-Ball FBGA – x16 Ball Descriptions
+
+           Symbol                          Type                                                   Description
+  A[15:13], A12/BC#,                       Input           Address inputs: Provide the row address for ACTIVATE commands, and the column
+  A11, A10/AP, A[9:0]                                      address and auto precharge bit (A10) for READ/WRITE commands, to select one
+                                                           location out of the memory array in the respective bank. A10 sampled during a
+                                                           PRECHARGE command determines whether the PRECHARGE applies to one bank
+                                                           (A10 LOW, bank selected by BA[2:0]) or all banks (A10 HIGH). The address inputs also
+                                                           provide the op-code during a LOAD MODE command. Address inputs are referenced
+                                                           to VREFCA. A12/BC#: When enabled in the mode register (MR), A12 is sampled during
+                                                           READ and WRITE commands to determine whether burst chop (on-the-fly) will be
+                                                           performed (HIGH = BL8 or no burst chop, LOW = BC4). See the Truth Table – Com-
+                                                           mand section.
+            BA[2:0]                        Input           Bank address inputs: BA[2:0] define the bank to which an ACTIVATE, READ,
+                                                           WRITE, or PRECHARGE command is being applied. BA[2:0] define which mode
+                                                           register (MR0, MR1, MR2, or MR3) is loaded during the LOAD MODE command.
+                                                           BA[2:0] are referenced to VREFCA.
+           CK, CK#                         Input           Clock: CK and CK# are differential clock inputs. All control and address input signals
+                                                           are sampled on the crossing of the positive edge of CK and the negative edge of
+                                                           CK#. Output data strobe (DQS, DQS#) is referenced to the crossings of CK and CK#.
+               CKE                         Input           Clock enable: CKE enables (registered HIGH) and disables (registered LOW) internal
+                                                           circuitry and clocks on the DRAM. The specific circuitry that is enabled/disabled is de-
+                                                           pendent upon the DDR3 SDRAM configuration and operating mode. Taking CKE
+                                                           LOW provides PRECHARGE POWER-DOWN and SELF REFRESH operations (all banks
+                                                           idle),or active power-down (row active in any bank). CKE is synchronous for power-
+                                                           down entry and exit and for self refresh entry. CKE is asynchronous for self refresh
+                                                           exit. Input buffers (excluding CK, CK#, CKE, RESET#, and ODT) are disabled during
+                                                           POWER-DOWN. Input buffers (excluding CKE and RESET#) are disabled during SELF
+                                                           REFRESH. CKE is referenced to VREFCA.
+               CS#                         Input           Chip select: CS# enables (registered LOW) and disables (registered HIGH) the
+                                                           command decoder. All commands are masked when CS# is registered HIGH. CS# pro-
+                                                           vides for external rank selection on systems with multiple ranks. CS# is considered
+                                                           part of the command code. CS# is referenced to VREFCA.
+              LDM                          Input           Input data mask: LDM is a lower-byte, input mask signal for write data. Lower-byte
+                                                           input data is masked when LDM is sampled HIGH along with the input data during a
+                                                           write access. Although the LDM ball is input-only, the LDM loading is
+                                                           designed to match that of the DQ and DQS balls. LDM is referenced to VREFDQ.
+              ODT                          Input           On-die termination: ODT enables (registered HIGH) and disables (registered LOW)
+                                                           termination resistance internal to the DDR3 SDRAM. When enabled in normal
+                                                           operation, ODT is only applied to each of the following balls: DQ[15:0], LDQS,
+                                                           LDQS#, UDQS, UDQS#, LDM, and UDM for the x16; DQ0[7:0], DQS, DQS#, DM/TDQS,
+                                                           and NF/TDQS# (when TDQS is enabled) for the x8; DQ[3:0], DQS, DQS#, and DM for
+                                                           the x4. The ODT input is ignored if disabled via the LOAD MODE command. ODT is
+                                                           referenced to VREFCA.
+    RAS#, CAS#, WE#                        Input           Command inputs: RAS#, CAS#, and WE# (along with CS#) define the command
+                                                           being entered and are referenced to VREFCA.
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN                    7         Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                         © 2018 Micron Technology, Inc. All rights reserved.
+                                                                              8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                        Ball Assignments and Descriptions
+
+
+Table 3: 96-Ball FBGA – x16 Ball Descriptions (Continued)
+
+           Symbol                          Type                                                  Description
+            RESET#                         Input           Reset: RESET# is an active LOW CMOS input referenced to VSS. The RESET# input re-
+                                                           ceiver is a CMOS input defined as a rail-to-rail signal with DC HIGH ≥ 0.8 × VDD and
+                                                           DC LOW ≤ 0.2 × VDDQ. RESET# assertion and desertion are asynchronous.
+              UDM                          Input           Input data mask: UDM is an upper-byte, input mask signal for write data. Upper-
+                                                           byte input data is masked when UDM is sampled HIGH along with that input data
+                                                           during a WRITE access. Although the UDM ball is input-only, the UDM loading is
+                                                           designed to match that of the DQ and DQS balls. UDM is referenced to VREFDQ.
+            DQ[7:0]                          I/O           Data input/output: Lower byte of bidirectional data bus for the x16 configuration.
+                                                           DQ[7:0] are referenced to VREFDQ.
+           DQ[15:8]                          I/O           Data input/output: Upper byte of bidirectional data bus for the x16 configuration.
+                                                           DQ[15:8] are referenced to VREFDQ.
+       LDQS, LDQS#                           I/O           Lower byte data strobe: Output with read data. Edge-aligned with read data.
+                                                           Input with write data. Center-aligned to write data.
+      UDQS, UDQS#                            I/O           Upper byte data strobe: Output with read data. Edge-aligned with read data.
+                                                           Input with write data. DQS is center-aligned to write data.
+               VDD                        Supply           Power supply: 1.35V (1.283–1.45V) / 1.5V ±0.075V (backward compatible).
+              VDDQ                        Supply           DQ power supply: 1.35V (1.283–1.45V) / 1.5V ±0.075V (backward compatible). Isola-
+                                                           ted on the device for improved noise immunity.
+             VREFCA                       Supply           Reference voltage for control, command, and address: VREFCA must be
+                                                           maintained at all times (including self refresh) for proper device operation.
+             VREFDQ                       Supply           Reference voltage for data: VREFDQ must be maintained at all times (excluding self
+                                                           refresh) for proper device operation.
+               VSS                        Supply           Ground.
+              VSSQ                        Supply           DQ ground: Isolated on the device for improved noise immunity.
+               ZQ                      Reference           External reference ball for output drive calibration: This ball is tied to an
+                                                           external 240Ω resistor (RZQ), which is tied to VSSQ.
+               NC                             –            No connect: These balls should be left unconnected (the ball has no connection to
+                                                           the DRAM or to other balls).
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN                   8         Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                        © 2018 Micron Technology, Inc. All rights reserved.
+                                                                                  8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                                        Package Dimensions
+
+Package Dimensions
+
+Figure 3: 96-Ball FBGA – x16
+
+
+                                                                                           Seating plane
+
+
+                                                                              A              0.1      A
+
+
+
+
+96X Ø0.525±0.05
+Dimensions apply
+to solder balls post-                                                             Ball A1 ID                                                                    Ball A1 ID
+reflow on Ø0.47 SMD                                                               (covered by SR)
+ball pads.                                 9 8 7                  3 2 1
+
+                                                                          A
+                                                                          B
+                                                                          C
+                                                                          D
+                                                                          E
+                                                                          F
+14 ±0.1                                                                   G
+                                                                          H
+           12 CTR                                                         J
+                                                                          K
+                                                                          L
+                                                                          M
+                                                                          N
+                                                                          P
+                                                                          R
+                      0.8 TYP                                             T
+
+
+
+
+                                                       0.8 TYP                                                       1.1 ±0.1
+
+                                                    6.4 CTR                                                       0.38 ±0.05
+
+                                                     8 ±0.1
+
+                                   Notes:        1. All dimensions are in millimeters.
+                                                 2. VRN material composition: Pb-free SAC302 (96.8% Sn, 3% Ag, 0.2% Cu) .
+                                                 3. VRP material composition: Pb-free SAC Q (92.45% Sn, 4% Ag, 0.5% Cu, 3% Bi, 0.05%
+                                                    Ni) .
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN                       9            Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                               © 2018 Micron Technology, Inc. All rights reserved.
+                                                                             8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                               Functional Block Diagram
+
+Functional Block Diagram
+
+Figure 4: Functional Block Diagram (512Meg x 16 )
+
+
+
+                                          Die2
+                                                                         Byte 0
+                                                                  (64 Meg x 8 x 8 banks)
+
+
+
+
+                                          Die1
+                                                                         Byte 1                                                                                 RZQ
+                                                                  (64 Meg x 8 x 8 banks)
+                                                                                                                                                             VSSQ
+
+
+
+
+                                 ZQ        CS#                                                                CK
+                     LDM                  RAS#                            A[15:0],                            CK#                      UDM
+                                          CAS#                            BA[2:0]                             CKE
+          DQ[7:0]                          WE#                                                                ODT                           DQ[15:8]
+          LDQS                                                                                                                               UDQS
+          LDQS#                                                                                                                              UDQS#
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN                 10         Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                       © 2018 Micron Technology, Inc. All rights reserved.
+                                                                            8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                                Thermal Characteristics
+
+Thermal Characteristics
+
+Table 4: Thermal Characteristics
+Notes 1–3 apply to entire table
+Parameter                                                               Symbol               Value                              Units                            Notes
+Operating case temperature – Industrial                                    TC             –40 to +95                               °C                           1, 2, 3, 4
+Operating case temperature – Automotive                                    TC             –40 to +105                              °C                          1, 2, 3 , 4
+
+                                   Notes:          1. MAX operating case temperature TC is measured in the center of the package, as shown
+                                                      below.
+                                                   2. A thermal solution must be designed to ensure that the device does not exceed the
+                                                      maximum TC during operation.
+                                                   3. Device functionality is not guaranteed if the device exceeds maximum TC during
+                                                      operation.
+                                                   4. If TC exceeds 85°C, the DRAM must be refreshed externally at 2x refresh, which is a 3.9μs
+                                                      interval refresh rate. The use of SRT or ASR must be enabled.
+
+Figure 5: Thermal Measurement Point
+
+
+
+
+                                                        (L/2)
+                                                                                                    Tc test point
+
+
+
+
+                                               L
+
+
+
+
+                                                                                  (W/2)
+
+
+                                                                            W
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN                 11        Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                      © 2018 Micron Technology, Inc. All rights reserved.
+                                                                         8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                             Thermal Characteristics
+
+
+Table 5: Thermal Impedance
+
+                                                                                       ΘJA (°C/W)
+   Die                                                                    Airflow =    Airflow =               Airflow =                     ΘJB                     ΘJC
+   Rev.              Package                             Substrate          0m/s         1m/s                    2m/s                      (°C/W)                  (°C/W)
+                  96-ball (VRN                      Low conductivity         52.2           41.1                     36.7                    N/A                       4.9
+      P
+                   and VRP)                         High conductivity        33.9           28.7                     26.9                    19.0                     N/A
+
+                                    Note:        1. Thermal resistance data is based on a number of samples from multiple lots and should
+                                                    be viewed as a typical number.
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN              12        Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                   © 2018 Micron Technology, Inc. All rights reserved.
+                                                                              8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                                  Electrical Specifications
+
+Electrical Specifications
+Absolute Ratings
+                                             Stresses greater than those listed may cause permanent damage to the device. This is a
+                                             stress rating only, and functional operation of the device at these or any other condi-
+                                             tions outside those indicated in the operational sections of this specification is not im-
+                                             plied. Exposure to absolute maximum rating conditions for extended periods may ad-
+                                             versely affect reliability.
+
+Table 6: Absolute Maximum Ratings
+
+    Symbol                                                        Parameter                                          Min              Max              Unit            Notes
+        VDD            VDD supply voltage relative to VSS                                                             –0.4            1.975               V                 1
+       VDDQ            VDD supply voltage relative to VSSQ                                                            –0.4            1.975               V
+    VIN, VOUT          Voltage on any pin relative to VSS                                                             –0.4            1.975               V
+         TC            Operating case temperature – Commercial                                                          0               95                °C              2, 3
+                       Operating case temperature – Industrial                                                        –40               95                °C              2, 3
+                       Operating case temperature – Automotive                                                        –40              105                °C              2, 3
+        TSTG           Storage temperature                                                                            –55              150                °C
+
+                                   Notes:        1. VDD and VDDQ must be within 300mV of each other at all times, and VREF must not be
+                                                    greater than 0.6 × VDDQ. When VDD and VDDQ are <500mV, VREF can be ≤300mV.
+                                                 2. MAX operating case temperature. TC is measured in the center of the package.
+                                                 3. Device functionality is not guaranteed if the DRAM device exceeds the maximum TC dur-
+                                                    ing operation.
+                                                 4. Ultra-high temperature use based on automotive usage model. Please contact Micron
+                                                    sales representative if you have questions.
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN                 13     Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                   © 2018 Micron Technology, Inc. All rights reserved.
+                                                                          8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                              Electrical Specifications
+
+Input/Output Capacitance
+
+Table 7: DDR3L Input/Output Capacitance
+Note 1 applies to the entire table
+                                                                                                                            DDR3L
+Capacitance                                                                                                                 -1866
+Parameters                                                                               Sym                         Min              Max               Unit             Notes
+CK and CK#                                                                                CCK                         2.4               4.0               pF
+ΔC: CK to CK#                                                                            CDCK                         0.0               0.3               pF
+Single-end I/O: DQ, DM                                                                    CIO                         2.8               4.2               pF                 2
+Differential I/O: DQS, DQS#, TDQS, TDQS#                                                  CIO                         2.8               4.2               pF                 3
+ΔC: DQS to DQS#, TDQS, TDQS#                                                            CDDQS                         0.0               0.3               pF                 3
+ΔC: DQ to DQS                                                                            CDIO                        –1.0               0.6               pF                 4
+Inputs (CTRL, CMD, ADDR)                                                                   CI                         2.4               4.6               pF                 5
+ΔC: CTRL to CK                                                                         CDI_CTRL                      –0.8               0.8               pF                 6
+ΔC: CMD_ADDR to CK                                                                   CDI_CMD_ADDR                    –0.8               0.8               pF                 7
+ZQ pin                                                                                                                  –               6.1
+                                                                                          CZQ                                                             pF
+capacitance
+Reset pin                                                                                                               –               6.0
+                                                                                          CRE                                                             pF
+capacitance
+
+                                   Notes:        1. VDD = 1.35V (1.283–1.45V), VDDQ = VDD, VREF = VSS, f = 100 MHz, TC = 25°C. VOUT(DC) = 0.5
+                                                    × VDDQ, VOUT = 0.1V (peak-to-peak).
+                                                 2. DM input is grouped with I/O pins, reflecting the fact that they are matched in loading.
+                                                 3. Includes TDQS, TDQS#. CDDQS is for DQS vs. DQS# and TDQS vs. TDQS# separately.
+                                                 4. CDIO = CIO(DQ) - 0.5 × (CIO(DQS) + CIO(DQS#)).
+                                                 5. Excludes CK, CK#; CTRL = ODT, CS#, and CKE; CMD = RAS#, CAS#, and WE#; ADDR =
+                                                    A[n:0], BA[2:0].
+                                                 6. CDI_CTRL = CI(CTRL) - 0.5 × (CCK(CK) + CCK(CK#)).
+                                                 7. CDI_CMD_ADDR = CI(CMD_ADDR) - 0.5 × (CCK(CK) + CCK(CK#)).
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN               14         Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                     © 2018 Micron Technology, Inc. All rights reserved.
+                                                                                  8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                     Electrical Specifications – ICDD Parameters
+
+Electrical Specifications – ICDD Parameters
+
+Table 8: DDR3L ICDD Specifications and Conditions (Rev. P)
+Notes 1 and 2 apply to the entire table
+         Combined                       Individual                                         Bus
+           Symbol                       Die Status                                        Width                                  -107                               Units
+                    ICDD0                                     ICDD0 = 2 × IDD0             x16                                     58                                 mA
+                    ICDD1                                     ICDD1 = 2 × IDD1             x16                                     88                                 mA
+          ICDD2P0 (slow exit)                              ICDD2P0 = 2 × IDD2P0            x16                                     22                                 mA
+           ICDD2P1 (fast exit)                             ICDD2P1 = 2 × IDD2P1            x16                                     22                                 mA
+                   ICDD2Q                                   ICDD2Q = 2 × IDD2Q             x16                                     30                                 mA
+                   ICDD2N                                   ICDD2N = 2 × IDD2N             x16                                     34                                 mA
+                   ICDD2NT                                 ICDD2NT = 2 × IDD2NT            x16                                     44                                 mA
+                    ICDD3P                                   ICDD3P = 2 × IDD3P            x16                                     30                                 mA
+                   ICDD3N                                   ICDD3N = 2 × IDD3N             x16                                     42                                 mA
+                    ICDD4R                                  ICDD4R = 2 × IDD4R             x16                                    180                                 mA
+                   ICDD4W                                  ICDD4W = 2 × IDD4W              x16                                    180                                 mA
+                    ICDD5B                                  ICDD5B = 2 × IDD5B             x16                                    304                                 mA
+                    ICDD6                                     ICDD6 = 2 × IDD6             x16                                     30                                 mA
+                   ICDD6ET                                 ICDD6ET = 2 × IDD6ET            x16                                     46                                 mA
+                    ICDD7                                     ICDD7 = 2 × IDD7             x16                                    292                                 mA
+                    ICDD8                                     ICDD8 = 2 × IDD8             x16                                     26                                 mA
+
+                                   Notes:        1. ICDD values reflect the combined current of both individual die. IDDx represents individu-
+                                                    al die values.
+                                                 2. The IDD values must be derated (increased) on IT-option devices when operated outside
+                                                    of the range 0°C ≤ TC ≤ 85°C:
+                                                      2a. When TC < 0°C: IDD2P0, IDD2P1 and IDD3P must be derated by 4%; IDD4R and IDD4W must
+                                                      be derated by 2%; and IDD6, IDD6ET and IDD7 must be derated by 7%.
+                                                      2b. When TC > 85°C: IDD4R, IDD4W, IDD5B, and IDD7 must be derated by 5%; IDD0, IDD1,
+                                                      IDD2P1, IDD3N, and IDD3P must be derated by 15%; IDD2P0, IDD2Q, IDD2N, and IDD2NT must be
+                                                      derated by 40%.
+                                                      2c. When TC > 95°C: all IDD values must be derated (increased) by 30% from the 85°C
+                                                      specifications.
+                                                      2d. When TC > 105°C: all IDDx values must be derated (increased) by 50% from the 85°C
+                                                      specifications.
+
+
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN                     15     Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                                       © 2018 Micron Technology, Inc. All rights reserved.
+                                                                     8Gb: x16 TwinDie Automotive DDR3L SDRAM
+                                                                                               Revision History
+
+Revision History
+Rev. D – 01/20
+                                             • 12/04/2019 Added package code VRP in Options, DDR3L Part Numbers figure, and
+                                               Thermal Impedance table
+                                             • 12/12/2019 Added note 3 VRP material composition: Pb-free SAC Q (92.45% Sn, 4%
+                                               Ag, 0.5% Cu, 3% Bi, 0.05% Ni) in Package Dimensions
+                                             • 12/12/2019 Removed ultra-high (–40 to +125°C) from Thermal Characteristics table
+
+Rev. C – 04/19
+                                             • 04/10/2019 Updated DDR3L Input/Output Capacitance table: CCK, CI, and CDI_CTRL
+
+Rev. B – 02/19
+                                             • 01/08/2019 Updated legal status to Production
+                                             • 01/08/2019 Updated DDR3L Input/Output Capacitance table in Input/Output Capac-
+                                               itance section
+
+Rev. A – 08/18
+                                             • 07/26/2018 Updated thermal characteristics section
+                                             • 07/01/2018 Changed Die 0 to Die 1 in Functional Block Diagram
+                                             • 04/01/2018 Initial release for DDR3L_8Gb_x16_1_35V_Single_rank_TwinDie
+
+
+
+
+                                 8000 S. Federal Way, P.O. Box 6, Boise, ID 83707-0006, Tel: 208-368-4000
+                                     www.micron.com/products/support Sales inquiries: 800-932-4992
+         Micron and the Micron logo are trademarks of Micron Technology, Inc. TwinDie is a trademark of Micron Technology, Inc.
+                                     All other trademarks are the property of their respective owners.
+     This data sheet contains minimum and maximum limits specified over the power supply and temperature range set forth herein.
+  Although considered final, these specifications are subject to change, as further product development and data characterization some-
+                                                                 times occur.
+
+
+CCM005-1005363231-10357
+DDR3L_8Gb_x16_1CS_TwinDie_V00H_Automotive.pdf - Rev. D 01/20 EN          16       Micron Technology, Inc. reserves the right to change products or specifications without notice.
+                                                                                                                              © 2018 Micron Technology, Inc. All rights reserved.
+

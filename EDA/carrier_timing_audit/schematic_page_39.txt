@@ -1,0 +1,125 @@
+              4                                                      3                                                                                                        2                                                        1
+
+
+
+
+                                                                                                                                                                                                                                           56,63,34,75
+         DP1_M2C_PA2   NC                                                          DP0_C2M_PC2    NC                                                                                                PG_C2MD1 VADJ_1V8_PGOOD
+
+         DP1_M2C_NA3   NC                                                          DP0_C2M_NC3    NC                                                                                       GBTCLK0_M2C_PD4      NC
+
+D        DP2_M2C_PA6   NC                                                          DP0_M2C_PC6    NC                                                                                       GBTCLK0_M2C_ND5      NC
+                                                                                                                                                                                                                                                                                D
+                                                                                                                                                                                                                                           12
+         DP2_M2C_NA7   NC                                                          DP0_M2C_NC7    NC                                                                                          LA01_P_CCD8       FMC_HPC1_LA01_CC_P
+                                                                                                                                       12                                                                                                  12
+         DP3_M2C_PA10 NC                                                             LA06_PC10        FMC_HPC1_LA06_P                                                                         LA01_N_CCD9       FMC_HPC1_LA01_CC_N
+                                                                                                                                       12                                                                                                  12
+         DP3_M2C_NA11 NC                                                             LA06_NC11        FMC_HPC1_LA06_N                                                                               LA05_PD11 FMC_HPC1_LA05_P
+                                                                                                                                       12                                                                                                  12
+         DP4_M2C_PA14 NC                                                             LA10_PC14        FMC_HPC1_LA10_P                                                                               LA05_ND12 FMC_HPC1_LA05_N
+                                                                                                                                       12                                                                                                  12
+         DP4_M2C_NA15 NC                                                             LA10_NC15        FMC_HPC1_LA10_N                                                                               LA09_PD14 FMC_HPC1_LA09_P
+                                                                                                                                       12                                                                                                  12
+         DP5_M2C_PA18 NC                                                             LA14_PC18        FMC_HPC1_LA14_P                                                                               LA09_ND15 FMC_HPC1_LA09_N
+                                                                                                                                       12                                                                                                  12
+         DP5_M2C_NA19 NC                                                             LA14_NC19        FMC_HPC1_LA14_N                                                                               LA13_PD17 FMC_HPC1_LA13_P
+                                                                                                                                       12                                                                                                  12
+         DP1_C2M_PA22 NC                                                           LA18_P_CCC22       FMC_HPC1_LA18_CC_P                                                                            LA13_ND18 FMC_HPC1_LA13_N
+                                                                                                                                       12                                                                                                  12
+         DP1_C2M_NA23 NC                                                           LA18_N_CCC23       FMC_HPC1_LA18_CC_N                                                                      LA17_P_CCD20 FMC_HPC1_LA17_CC_P
+                                                                                                                                       12                                                                                                  12
+         DP2_C2M_PA26 NC                                                             LA27_PC26        FMC_HPC1_LA27_P                                                                         LA17_N_CCD21 FMC_HPC1_LA17_CC_N
+                                                                                                                                       12                                                                                                  12
+         DP2_C2M_NA27 NC                                                             LA27_NC27        FMC_HPC1_LA27_N                                                                               LA23_PD23 FMC_HPC1_LA23_P
+                                                                                                                                       58                                                                                                  12
+         DP3_C2M_PA30 NC                                                                 SCLC30       FMC_HPC1_IIC_SCL                                                                              LA23_ND24 FMC_HPC1_LA23_N
+                                                                                                                                       58                                                                                                  12
+         DP3_C2M_NA31 NC                                                                 SDAC31       FMC_HPC1_IIC_SDA                                                                              LA26_PD26 FMC_HPC1_LA26_P
+C                                                                                                                                                 VCC12_SW                                                                                 12
+         DP4_C2M_PA34 NC                                                                 GA0C34                                                                                                     LA26_ND27 FMC_HPC1_LA26_N                                                   C
+                                                                                                                                                                                                                                           24
+         DP4_C2M_NA35 NC                                                            12P0V_1C35                                                                                                         TCKD29 FMC_HPC1_TCK_BUF                                UTIL_3V3
+                                                                                                                                                  UTIL_3V3                                                                                 39,34-
+         DP5_C2M_PA38 NC                                                            12P0V_2C37                                                                                                         TDID30 FMCP_HSPC_TDO_HPC1_TDI
+                                                                                                                                                                                                                                           39,24
+         DP5_C2M_NA39 NC                                                             3P3V_1C39                                                                                                         TDOD31 FMC_HPC1_TDO
+
+                                                                                                                                                                                                3P3VAUXD32
+         ASP_134486_01                                                               ASP_134486_01                                                                                                                                         24
+    J2                                                         J2                                                                                                                                      TMSD33 FMC_HPC1_TMS_BUF
+
+                                                                                                                                                                                                    TRST_LD34 NC
+                                                                                                           GND
+                                                                                                                                                                                                                                                       UTIL_3V3
+                                                                                                                                                                                                       GA1D35
+
+                                                                                                                                                                                                    3P3V_2D36
+                                                                                          VADJ_1V8_FPGA                            VCC12_SW
+                                                                                                                                                                                                    3P3V_3D38
+                    CLK_DIRB1 NC
+                                                                                                                                                                                                    3P3V_4D40
+                  DP9_M2C_PB4   NC
+                                             C1627             C1651           C1650 C1649 C1012                                                C1011 1            C1656 C1633
+                                         1       1                 1              1     1                                              1                              1
+                  DP9_M2C_NB5   NC           10UF              1UF             1UF        1UF            1UF                                    1UF                1UF        10UF
+                                         2   6.3V    2         25V   2         25V 2      25V     2      25V                           2        25V       2        25V   2    25V     J2         ASP_134486_01
+                  DP8_M2C_PB8   NC           X6S               X5R             X5R        X5R            X5R                                    X5R                X5R        X5R
+
+B                 DP8_M2C_NB9   NC
+                                                                                                                                                                                                                                                                                B
+                                                                                                                                                                                                                     GND
+                  DP7_M2C_PB12 NC                                                                 GND                                   GND
+
+                  DP7_M2C_NB13 NC
+
+                  DP6_M2C_PB16 NC                                                                     UTIL_3V3                          UTIL_3V3
+
+                  DP6_M2C_NB17 NC
+
+            GBTCLK1_M2C_PB20 NC      1    C1628
+                                              1          C1655
+                                                            1  C1654
+                                                                  1  C1653
+                                                                        1  C1652
+                                                                             1   C1013 C956
+                                                                                        100UF                                               1
+                                                                                                                                                      C957
+                                                                                                                                                      100UF    1
+                                          10UF           1UF             1UF           1UF        1UF          1UF
+            GBTCLK1_M2C_NB21 NC      2    6.3V   2       25V    2        25V   2       25V 2      25V 2        25V
+                                                                                                                               6.3V
+                                                                                                                               X6S          2
+                                                                                                                                                      6.3V
+                                                                                                                                                      X6S      2
+                                                                                                                                                                          3.3V Bulk
+                                          X6S            X5R             X5R           X5R        X5R          X5R
+                  DP9_C2M_PB24 NC
+
+                  DP9_C2M_NB25 NC
+
+                  DP8_C2M_PB28 NC                                                                       GND                                 GND                                             ANSI/VITA 57.1 - Revised 2010
+                                                                                                                     UTIL_3V3
+                  DP8_C2M_NB29 NC                                                                                                                                                           FMC HPC1 Header Rows A B C D
+                  DP7_C2M_PB32 NC
+                                                                                                                               5
+                                                                                                               NC7SZ66
+                  DP7_C2M_NB33 NC
+                                                                                                                        VCC
+                  DP6_C2M_PB36 NC                                                                                                  A    1       FMCP_HSPC_TDO_HPC1_TDI       39,34-
+                                                                                                                                                                                            TITLE: FMC HPC1 Header Rows A B C D                             ASSY P/N: 0432092
+A                 DP6_C2M_NB37 NC                                                                                                  B                                         39,24                 SCHEM, ROHS COMPLIANT                                    PCB P/N: 1280906
+                                                                                                                                        2       FMC_HPC1_TDO
+                                                                                                                   OE                                                                              HW-U1-VCU118_REV2_0                                      SCH P/N: 0381739
+                                                      56,41,46                 FMC_HPC1_PRSNT_M2C_B            4
+                       RES0B40 NC                                                                                                                                                                                                                           TEST P/N: TSS0185
+                                                                                                                        GND                                                                                                                                                     A
+    J2              ASP_134486_01                                                                                                                                                           DATE: 07/14/2017:11:45                              VER:          2.0
+                                                                                                                              3    SC70_5
+                                                                                      When OE = 1 U132                                                                                      SHEET SIZE: B                                       REV:          03
+                                                                                      Switch is Closed
+                                                                                                                                                                                            SHEET                          OF                   DRAWN BY:
+                                                                                                                         GND                                                                               39                    76                           DN
+
+
+              4                                                      3                                                                                                        2                                                        1

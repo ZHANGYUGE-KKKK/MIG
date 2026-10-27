@@ -1,0 +1,14 @@
+{
+  "micron_twindie_public.pdf": {
+    "url": "https://cdn.promelec.ru/upload/grab/www.farnell.com/datasheets/3110920.pdf",
+    "sha256": "254222a6bb678d082aaa57d7802278e721260f4cab526091ced4a541595288a9",
+    "bytes": 398636,
+    "author": "Micron Technology, Inc."
+  },
+  "micron_4gb_revR.pdf": {
+    "url": "https://datasheet.datasheetarchive.com/originals/dk/DKDS42/DSANUWW0045409.pdf",
+    "sha256": "dfcb019de06148d3484c86655b57fd552b7ee19b11f608739a1b70b18d4b07d4",
+    "bytes": 3417251,
+    "author": "Micron Technology, Inc."
+  }
+}

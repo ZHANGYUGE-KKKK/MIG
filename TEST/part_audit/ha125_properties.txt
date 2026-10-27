@@ -1,0 +1,117 @@
+Property                                     Type     Read-only  Value
+ALLOWED_SIM_MODELS                           string*  true       rtl
+BASE_BOARD_PART                              string   true       
+BOARD                                        string   true       
+BOARD_CONNECTIONS                            string   true       
+CLASS                                        string   true       ip
+CONFIG.ADDN_UI_CLKOUT1.INSERT_VIP            string   false      0
+CONFIG.ADDN_UI_CLKOUT1_FREQ_HZ               string   false      None
+CONFIG.ADDN_UI_CLKOUT2.INSERT_VIP            string   false      0
+CONFIG.ADDN_UI_CLKOUT2_FREQ_HZ               string   false      None
+CONFIG.ADDN_UI_CLKOUT3.INSERT_VIP            string   false      0
+CONFIG.ADDN_UI_CLKOUT3_FREQ_HZ               string   false      None
+CONFIG.ADDN_UI_CLKOUT4.INSERT_VIP            string   false      0
+CONFIG.ADDN_UI_CLKOUT4_FREQ_HZ               string   false      None
+CONFIG.AL_SEL                                string   false      0
+CONFIG.C0.ControllerType                     string   false      DDR3_SDRAM
+CONFIG.C0.DDR3_AUTO_AP_COL_A3                string   false      false
+CONFIG.C0.DDR3_AutoPrecharge                 string   false      false
+CONFIG.C0.DDR3_AxiAddressWidth               string   false      32
+CONFIG.C0.DDR3_AxiArbitrationScheme          string   false      RD_PRI_REG
+CONFIG.C0.DDR3_AxiDataWidth                  string   false      64
+CONFIG.C0.DDR3_AxiIDWidth                    string   false      4
+CONFIG.C0.DDR3_AxiNarrowBurst                string   false      false
+CONFIG.C0.DDR3_AxiSelection                  string   false      false
+CONFIG.C0.DDR3_BurstLength                   string   false      8
+CONFIG.C0.DDR3_BurstType                     string   false      Sequential
+CONFIG.C0.DDR3_CLKFBOUT_MULT                 string   false      6
+CONFIG.C0.DDR3_CLKOUT0_DIVIDE                string   false      15
+CONFIG.C0.DDR3_Capacity                      string   false      512
+CONFIG.C0.DDR3_CasLatency                    string   false      6
+CONFIG.C0.DDR3_CasWriteLatency               string   false      5
+CONFIG.C0.DDR3_ChipSelect                    string   false      true
+CONFIG.C0.DDR3_CustomParts                   string   false      no_file_loaded
+CONFIG.C0.DDR3_DIVCLK_DIVIDE                 string   false      1
+CONFIG.C0.DDR3_DataMask                      string   false      true
+CONFIG.C0.DDR3_DataWidth                     string   false      16
+CONFIG.C0.DDR3_Ecc                           string   false      false
+CONFIG.C0.DDR3_InputClockPeriod              string   false      4000
+CONFIG.C0.DDR3_MCS_ECC                       string   false      false
+CONFIG.C0.DDR3_Mem_Add_Map                   string   false      ROW_COLUMN_BANK
+CONFIG.C0.DDR3_MemoryName                    string   false      MainMemory
+CONFIG.C0.DDR3_MemoryPart                    string   false      MT41K512M16HA-125
+CONFIG.C0.DDR3_MemoryType                    string   false      Components
+CONFIG.C0.DDR3_MemoryVoltage                 string   false      1.5V
+CONFIG.C0.DDR3_OnDieTermination              string   false      RZQ/6
+CONFIG.C0.DDR3_Ordering                      string   false      Normal
+CONFIG.C0.DDR3_OutputDriverImpedenceControl  string   false      RZQ/7
+CONFIG.C0.DDR3_PhyClockRatio                 string   false      4:1
+CONFIG.C0.DDR3_RESTORE_CRC                   string   false      false
+CONFIG.C0.DDR3_SAVE_RESTORE                  string   false      false
+CONFIG.C0.DDR3_SELF_REFRESH                  string   false      false
+CONFIG.C0.DDR3_Slot                          string   false      Single
+CONFIG.C0.DDR3_Specify_MandD                 string   false      false
+CONFIG.C0.DDR3_TimePeriod                    string   false      2500
+CONFIG.C0.DDR3_UserRefresh_ZQCS              string   false      false
+CONFIG.C0.DDR3_isCKEShared                   string   false      false
+CONFIG.C0.DDR3_isCustom                      string   false      false
+CONFIG.C0_CLOCK_BOARD_INTERFACE              string   false      Custom
+CONFIG.C0_DDR3_ARESETN.INSERT_VIP            string   false      0
+CONFIG.C0_DDR3_BOARD_INTERFACE               string   false      Custom
+CONFIG.C0_DDR3_CLOCK.INSERT_VIP              string   false      0
+CONFIG.C0_DDR3_RESET.INSERT_VIP              string   false      0
+CONFIG.C0_DDR3_S_AXI.INSERT_VIP              string   false      0
+CONFIG.C0_DDR3_S_AXI_CTRL.INSERT_VIP         string   false      0
+CONFIG.C0_SYS_CLK_I.INSERT_VIP               string   false      0
+CONFIG.CLKOUT6                               string   false      false
+CONFIG.Component_Name                        string   false      audit_mig
+CONFIG.DCI_Cascade                           string   false      false
+CONFIG.DIFF_TERM_SYSCLK                      string   false      false
+CONFIG.Debug_Signal                          string   false      Disable
+CONFIG.Default_Bank_Selections               string   false      false
+CONFIG.Enable_SysPorts                       string   false      true
+CONFIG.Example_TG                            string   false      SIMPLE_TG
+CONFIG.IOPowerReduction                      string   false      OFF
+CONFIG.IO_Power_Reduction                    string   false      false
+CONFIG.IS_FROM_PHY                           string   false      1
+CONFIG.Internal_Vref                         string   false      true
+CONFIG.MCS_DBG_EN                            string   false      false
+CONFIG.MCS_WO_DSP                            string   false      false
+CONFIG.No_Controller                         string   false      1
+CONFIG.PARTIAL_RECONFIG_FLOW_MIG             string   false      false
+CONFIG.Phy_Only                              string   false      Complete_Memory_Controller
+CONFIG.RECONFIG_XSDB_SAVE_RESTORE            string   false      false
+CONFIG.RESET_BOARD_INTERFACE                 string   false      Custom
+CONFIG.Reference_Clock                       string   false      Differential
+CONFIG.SYSTEM_RESET.INSERT_VIP               string   false      0
+CONFIG.Simulation_Mode                       string   false      BFM
+CONFIG.System_Clock                          string   false      No_Buffer
+CONFIG.TIMING_OP1                            string   false      false
+CONFIG.TIMING_OP2                            string   false      false
+CORE_REVISION                                long     true       17
+DCP_RESOURCE_DATA                            string   true       
+DELIVERED_TARGETS                            string*  true       
+DESIGN_TOOL_CONTEXTS                         string*  true       HDL IPI Sysgen
+IPDEF                                        string   true       xilinx.com:ip:ddr3:1.4
+IP_CORE_CONTAINER                            string   true       
+IP_DIR                                       string   true       /home/wenhan/PROJECTS/DDR3_MIG/TEST/part_audit/ip/audit_mig
+IP_FILE                                      string   true       /home/wenhan/PROJECTS/DDR3_MIG/TEST/part_audit/ip/audit_mig/audit_mig.xci
+IS_BD_CONTEXT                                bool     true       0
+IS_BOARD_AWARE                               bool     true       1
+IS_LOCKED                                    bool     true       0
+KNOWN_TARGETS                                string*  true       instantiation_template synthesis simulation example changelog
+LOCK_DETAILS                                 string*  true       
+NAME                                         string   true       audit_mig
+PART                                         string   true       xcvu9p-flga2104-2L-e
+REQUIRES_VIP                                 bool     true       
+SCOPE                                        string   true       
+SELECTED_SIM_MODEL                           enum     false      rtl
+STALE_TARGETS                                string*  true       
+SUPPORTED_TARGETS                            string*  true       instantiation_template synthesis simulation example changelog
+SUPPORTS_MODREF                              bool     true       1
+SW_VERSION                                   string   true       2022.2
+UNSUPPORTED_SIMULATORS                       string*  true       
+UPGRADE_RESULT                               string   true       
+UPGRADE_VERSIONS                             string*  true       
+USED_LICENSE_KEYS                            string*  true       
+USER_LOCKED                                  bool     false      0

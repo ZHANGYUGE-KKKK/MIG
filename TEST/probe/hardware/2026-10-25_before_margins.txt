@@ -1,0 +1,1133 @@
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source VIVADO/scripts/read_probe_margins.tcl
+# set root [file normalize [file join [file dirname [info script]] ../..]]
+# proc read_margins {} {
+#  global root
+#  open_hw_manager
+#  connect_hw_server -url localhost:3121
+#  set targets {}
+#  foreach target [get_hw_targets] {
+#   if {[file tail $target] eq "210308B43939"} {lappend targets $target}
+#  }
+#  if {[llength $targets]!=1} {error "Expected VCU118 serial 210308B43939"}
+#  current_hw_target [lindex $targets 0]
+#  open_hw_target
+#  set devices [get_hw_devices -filter {PART == xcvu9p}]
+#  if {[llength $devices]!=1} {error "Expected exactly one xcvu9p"}
+#  set dev [lindex $devices 0]
+#  current_hw_device $dev
+#  refresh_hw_device $dev
+#  report_property $dev
+#  foreach mig [get_hw_migs -quiet] {
+#   report_property $mig
+#   report_hw_mig $mig
+#  }
+#  close_hw_target
+#  disconnect_hw_server
+#  close_hw_manager
+# }
+# if {[catch {read_margins} message options]} {
+#  puts stderr "MIG READONLY REPORT FAILED: $message"
+#  puts stderr [dict get $options -errorinfo]
+#  exit 1
+# }
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:10:28
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 05 2022-07:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2026 Xilinx, Inc. All Rights Reserved.
+
+
+
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308B43939
+WARNING: [Labtools 27-3410] Calibration Failed.
+Resolution: For further debugging information, please refer to the Debug Guide that can be found from the following URL - https://www.xilinx.com/support/answers/68937.html
+INFO: [Labtools 27-2302] Device xcvu9p (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
+Property                                                                   Type          Read-only  Value
+CLASS                                                                      string        true       hw_device
+NAME                                                                       string        true       xcvu9p_0
+PART                                                                       string        true       xcvu9p
+VARIANT_NAME                                                               string        true       
+PROGRAM.LOG                                                                string        true       
+INDEX                                                                      int           true       0
+IDCODE                                                                     string        true       00010100101100110001000010010011
+IDCODE_HEX                                                                 string        true       14B31093
+IR_LENGTH                                                                  int           true       18
+USER_CHAIN_COUNT                                                           string        true       4
+IS_SYSMON_SUPPORTED                                                        bool          true       1
+PROGRAM.IS_SUPPORTED                                                       bool          true       1
+PROGRAM.FILE                                                               string        false      
+PROGRAM.OPTIONS                                                            string        false      
+PROGRAM.HW_BITSTREAM                                                       hw_bitstream  true       
+AUTH_JTAG.FILE                                                             string        false      
+PROBES.FILE                                                                string        false      
+FULL_PROBES.FILE                                                           string        false      
+PARTIAL_PROBES.FILES                                                       string*       false      
+PROGRAM.HW_CFGMEM                                                          hw_cfgmem     true       
+PROGRAM.HW_CFGMEM_BITFILE                                                  string        true       
+PROGRAM.HW_CFGMEM_TYPE                                                     string        true       
+PROGRAM.READBACK_FILE                                                      string        false      
+PROGRAM.IS_RSA_PROGRAMMED                                                  bool          true       0
+PROGRAM.IS_AES_PROGRAMMED                                                  bool          true       0
+PROGRAM.DPA_PROTECT                                                        bool          false      0
+PROGRAM.DPA_COUNT                                                          int           false      0
+PROGRAM.DPA_MODE                                                           string        false      
+REGISTER.BOOT_STATUS.SLR0                                                  string        true       0x00000001
+REGISTER.BOOT_STATUS.SLR0.BIT[00]_0_STATUS_VALID                           string        true       1
+REGISTER.BOOT_STATUS.SLR0.BIT[01]_0_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[02]_0_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[03]_0_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[04]_0_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[05]_0_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[06]_0_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[07]_0_SECURITY_ERROR                         string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[08]_1_STATUS_VALID                           string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[09]_1_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[10]_1_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[11]_1_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[12]_1_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[13]_1_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[14]_1_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.SLR0.BIT[15]_1_SECURITY_ERROR                         string        true       0
+REGISTER.BOOT_STATUS.SLR1                                                  string        true       0x00000001
+REGISTER.BOOT_STATUS.SLR1.BIT[00]_0_STATUS_VALID                           string        true       1
+REGISTER.BOOT_STATUS.SLR1.BIT[01]_0_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[02]_0_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[03]_0_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[04]_0_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[05]_0_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[06]_0_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[07]_0_SECURITY_ERROR                         string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[08]_1_STATUS_VALID                           string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[09]_1_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[10]_1_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[11]_1_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[12]_1_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[13]_1_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[14]_1_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.SLR1.BIT[15]_1_SECURITY_ERROR                         string        true       0
+REGISTER.BOOT_STATUS.SLR2                                                  string        true       0x00000001
+REGISTER.BOOT_STATUS.SLR2.BIT[00]_0_STATUS_VALID                           string        true       1
+REGISTER.BOOT_STATUS.SLR2.BIT[01]_0_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[02]_0_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[03]_0_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[04]_0_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[05]_0_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[06]_0_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[07]_0_SECURITY_ERROR                         string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[08]_1_STATUS_VALID                           string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[09]_1_FALLBACK                               string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[10]_1_INTERNAL_PROG                          string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[11]_1_WATCHDOG_TIMEOUT_ERROR                 string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[12]_1_ID_ERROR                               string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[13]_1_CRC_ERROR                              string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[14]_1_WRAP_ERROR                             string        true       0
+REGISTER.BOOT_STATUS.SLR2.BIT[15]_1_SECURITY_ERROR                         string        true       0
+REGISTER.CONFIG_STATUS.SLR0                                                string        true       0x10b079fc
+REGISTER.CONFIG_STATUS.SLR0.BIT[00]_CRC_ERROR                              string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[01]_DECRYPTOR_ENABLE                       string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[02]_PLL_LOCK_STATUS                        string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[03]_DCI_MATCH_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[04]_END_OF_STARTUP_(EOS)_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[05]_GTS_CFG_B_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[06]_GWE_STATUS                             string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[07]_GHIGH_STATUS                           string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[08]_MODE_PIN_M[0]                          string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[09]_MODE_PIN_M[1]                          string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[10]_MODE_PIN_M[2]                          string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[11]_INIT_B_INTERNAL_SIGNAL_STATUS          string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[12]_INIT_B_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[13]_DONE_INTERNAL_SIGNAL_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[14]_DONE_PIN                               string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[15]_IDCODE_ERROR                           string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[16]_SECURITY_ERROR                         string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[17]_SYSTEM_MONITOR_OVER-TEMP_ALARM_STATUS  string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[20:18]_CFG_STARTUP_STATE_MACHINE_PHASE     string        true       100
+REGISTER.CONFIG_STATUS.SLR0.BIT[23:21]_SECURITY_STATUS                     string        true       101
+REGISTER.CONFIG_STATUS.SLR0.BIT[24]_RESERVED                               string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[25]_CFG_BUS_WIDTH_DETECTION                string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[26]_CFG_BUS_WIDTH_DETECTION                string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[27]_SECURITY_AUTH_ERROR                    string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[28]_PUDC_B_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.SLR0.BIT[29]_BAD_PACKET_ERROR                       string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[30]_CFGBVS_PIN                             string        true       0
+REGISTER.CONFIG_STATUS.SLR0.BIT[31]_RESERVED                               string        true       0
+REGISTER.CONFIG_STATUS.SLR1                                                string        true       0x10b079fc
+REGISTER.CONFIG_STATUS.SLR1.BIT[00]_CRC_ERROR                              string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[01]_DECRYPTOR_ENABLE                       string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[02]_PLL_LOCK_STATUS                        string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[03]_DCI_MATCH_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[04]_END_OF_STARTUP_(EOS)_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[05]_GTS_CFG_B_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[06]_GWE_STATUS                             string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[07]_GHIGH_STATUS                           string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[08]_MODE_PIN_M[0]                          string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[09]_MODE_PIN_M[1]                          string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[10]_MODE_PIN_M[2]                          string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[11]_INIT_B_INTERNAL_SIGNAL_STATUS          string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[12]_INIT_B_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[13]_DONE_INTERNAL_SIGNAL_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[14]_DONE_PIN                               string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[15]_IDCODE_ERROR                           string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[16]_SECURITY_ERROR                         string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[17]_SYSTEM_MONITOR_OVER-TEMP_ALARM_STATUS  string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[20:18]_CFG_STARTUP_STATE_MACHINE_PHASE     string        true       100
+REGISTER.CONFIG_STATUS.SLR1.BIT[23:21]_SECURITY_STATUS                     string        true       101
+REGISTER.CONFIG_STATUS.SLR1.BIT[24]_RESERVED                               string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[25]_CFG_BUS_WIDTH_DETECTION                string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[26]_CFG_BUS_WIDTH_DETECTION                string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[27]_SECURITY_AUTH_ERROR                    string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[28]_PUDC_B_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.SLR1.BIT[29]_BAD_PACKET_ERROR                       string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[30]_CFGBVS_PIN                             string        true       0
+REGISTER.CONFIG_STATUS.SLR1.BIT[31]_RESERVED                               string        true       0
+REGISTER.CONFIG_STATUS.SLR2                                                string        true       0x10b079fc
+REGISTER.CONFIG_STATUS.SLR2.BIT[00]_CRC_ERROR                              string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[01]_DECRYPTOR_ENABLE                       string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[02]_PLL_LOCK_STATUS                        string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[03]_DCI_MATCH_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[04]_END_OF_STARTUP_(EOS)_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[05]_GTS_CFG_B_STATUS                       string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[06]_GWE_STATUS                             string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[07]_GHIGH_STATUS                           string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[08]_MODE_PIN_M[0]                          string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[09]_MODE_PIN_M[1]                          string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[10]_MODE_PIN_M[2]                          string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[11]_INIT_B_INTERNAL_SIGNAL_STATUS          string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[12]_INIT_B_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[13]_DONE_INTERNAL_SIGNAL_STATUS            string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[14]_DONE_PIN                               string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[15]_IDCODE_ERROR                           string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[16]_SECURITY_ERROR                         string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[17]_SYSTEM_MONITOR_OVER-TEMP_ALARM_STATUS  string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[20:18]_CFG_STARTUP_STATE_MACHINE_PHASE     string        true       100
+REGISTER.CONFIG_STATUS.SLR2.BIT[23:21]_SECURITY_STATUS                     string        true       101
+REGISTER.CONFIG_STATUS.SLR2.BIT[24]_RESERVED                               string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[25]_CFG_BUS_WIDTH_DETECTION                string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[26]_CFG_BUS_WIDTH_DETECTION                string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[27]_SECURITY_AUTH_ERROR                    string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[28]_PUDC_B_PIN                             string        true       1
+REGISTER.CONFIG_STATUS.SLR2.BIT[29]_BAD_PACKET_ERROR                       string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[30]_CFGBVS_PIN                             string        true       0
+REGISTER.CONFIG_STATUS.SLR2.BIT[31]_RESERVED                               string        true       0
+REGISTER.COR0.SLR0                                                         string        true       0x383235e5
+REGISTER.COR0.SLR0.BIT[02:00]_GWE_CYCLE                                    string        true       101
+REGISTER.COR0.SLR0.BIT[05:03]_GTS_CYCLE                                    string        true       100
+REGISTER.COR0.SLR0.BIT[08:06]_LOCK_CYCLE                                   string        true       111
+REGISTER.COR0.SLR0.BIT[11:09]_MATCH_CYCLE                                  string        true       010
+REGISTER.COR0.SLR0.BIT[14:12]_DONE_CYCLE                                   string        true       011
+REGISTER.COR0.SLR0.BIT[16:15]_RESERVED                                     string        true       00
+REGISTER.COR0.SLR0.BIT[22:17]_OSCFSEL                                      string        true       011001
+REGISTER.COR0.SLR0.BIT[23]_RESERVED                                        string        true       0
+REGISTER.COR0.SLR0.BIT[24]_DRIVE_DONE                                      string        true       0
+REGISTER.COR0.SLR0.BIT[25]_RESERVED                                        string        true       0
+REGISTER.COR0.SLR0.BIT[26]_ECLK_EN                                         string        true       0
+REGISTER.COR0.SLR0.BIT[31:27]_RESERVED                                     string        true       00111
+REGISTER.COR0.SLR1                                                         string        true       0x383235e5
+REGISTER.COR0.SLR1.BIT[02:00]_GWE_CYCLE                                    string        true       101
+REGISTER.COR0.SLR1.BIT[05:03]_GTS_CYCLE                                    string        true       100
+REGISTER.COR0.SLR1.BIT[08:06]_LOCK_CYCLE                                   string        true       111
+REGISTER.COR0.SLR1.BIT[11:09]_MATCH_CYCLE                                  string        true       010
+REGISTER.COR0.SLR1.BIT[14:12]_DONE_CYCLE                                   string        true       011
+REGISTER.COR0.SLR1.BIT[16:15]_RESERVED                                     string        true       00
+REGISTER.COR0.SLR1.BIT[22:17]_OSCFSEL                                      string        true       011001
+REGISTER.COR0.SLR1.BIT[23]_RESERVED                                        string        true       0
+REGISTER.COR0.SLR1.BIT[24]_DRIVE_DONE                                      string        true       0
+REGISTER.COR0.SLR1.BIT[25]_RESERVED                                        string        true       0
+REGISTER.COR0.SLR1.BIT[26]_ECLK_EN                                         string        true       0
+REGISTER.COR0.SLR1.BIT[31:27]_RESERVED                                     string        true       00111
+REGISTER.COR0.SLR2                                                         string        true       0x383235e5
+REGISTER.COR0.SLR2.BIT[02:00]_GWE_CYCLE                                    string        true       101
+REGISTER.COR0.SLR2.BIT[05:03]_GTS_CYCLE                                    string        true       100
+REGISTER.COR0.SLR2.BIT[08:06]_LOCK_CYCLE                                   string        true       111
+REGISTER.COR0.SLR2.BIT[11:09]_MATCH_CYCLE                                  string        true       010
+REGISTER.COR0.SLR2.BIT[14:12]_DONE_CYCLE                                   string        true       011
+REGISTER.COR0.SLR2.BIT[16:15]_RESERVED                                     string        true       00
+REGISTER.COR0.SLR2.BIT[22:17]_OSCFSEL                                      string        true       011001
+REGISTER.COR0.SLR2.BIT[23]_RESERVED                                        string        true       0
+REGISTER.COR0.SLR2.BIT[24]_DRIVE_DONE                                      string        true       0
+REGISTER.COR0.SLR2.BIT[25]_RESERVED                                        string        true       0
+REGISTER.COR0.SLR2.BIT[26]_ECLK_EN                                         string        true       0
+REGISTER.COR0.SLR2.BIT[31:27]_RESERVED                                     string        true       00111
+REGISTER.COR1.SLR0                                                         string        true       0x00400000
+REGISTER.COR1.SLR0.BIT[01:00]_BPI_PAGE_SIZE                                string        true       00
+REGISTER.COR1.SLR0.BIT[03:02]_BPI_1ST_READ_CYCLE                           string        true       00
+REGISTER.COR1.SLR0.BIT[07:04]_RESERVED                                     string        true       0000
+REGISTER.COR1.SLR0.BIT[08]_RBCRC_EN                                        string        true       0
+REGISTER.COR1.SLR0.BIT[09]_RBCRC_NO_PIN                                    string        true       0
+REGISTER.COR1.SLR0.BIT[14:10]_RESERVED                                     string        true       00000
+REGISTER.COR1.SLR0.BIT[16:15]_RBCRC_ACTION                                 string        true       00
+REGISTER.COR1.SLR0.BIT[17]_PERSIST_DEASSERT_AT_DESYNC                      string        true       0
+REGISTER.COR1.SLR0.BIT[18]_RESERVED                                        string        true       0
+REGISTER.COR1.SLR1                                                         string        true       0x00400000
+REGISTER.COR1.SLR1.BIT[01:00]_BPI_PAGE_SIZE                                string        true       00
+REGISTER.COR1.SLR1.BIT[03:02]_BPI_1ST_READ_CYCLE                           string        true       00
+REGISTER.COR1.SLR1.BIT[07:04]_RESERVED                                     string        true       0000
+REGISTER.COR1.SLR1.BIT[08]_RBCRC_EN                                        string        true       0
+REGISTER.COR1.SLR1.BIT[09]_RBCRC_NO_PIN                                    string        true       0
+REGISTER.COR1.SLR1.BIT[14:10]_RESERVED                                     string        true       00000
+REGISTER.COR1.SLR1.BIT[16:15]_RBCRC_ACTION                                 string        true       00
+REGISTER.COR1.SLR1.BIT[17]_PERSIST_DEASSERT_AT_DESYNC                      string        true       0
+REGISTER.COR1.SLR1.BIT[18]_RESERVED                                        string        true       0
+REGISTER.COR1.SLR2                                                         string        true       0x00400000
+REGISTER.COR1.SLR2.BIT[01:00]_BPI_PAGE_SIZE                                string        true       00
+REGISTER.COR1.SLR2.BIT[03:02]_BPI_1ST_READ_CYCLE                           string        true       00
+REGISTER.COR1.SLR2.BIT[07:04]_RESERVED                                     string        true       0000
+REGISTER.COR1.SLR2.BIT[08]_RBCRC_EN                                        string        true       0
+REGISTER.COR1.SLR2.BIT[09]_RBCRC_NO_PIN                                    string        true       0
+REGISTER.COR1.SLR2.BIT[14:10]_RESERVED                                     string        true       00000
+REGISTER.COR1.SLR2.BIT[16:15]_RBCRC_ACTION                                 string        true       00
+REGISTER.COR1.SLR2.BIT[17]_PERSIST_DEASSERT_AT_DESYNC                      string        true       0
+REGISTER.COR1.SLR2.BIT[18]_RESERVED                                        string        true       0
+REGISTER.DNA.SLR0                                                          string        true       0x0000000040020000016a64474c408145
+REGISTER.DNA.SLR1                                                          string        true       0x0000000040020000016a64474c408105
+REGISTER.DNA.SLR2                                                          string        true       0x0000000040020000016a64474c408185
+REGISTER.IR                                                                string        true       110101110101110101
+REGISTER.IR.BIT00_ALWAYS_ONE                                               string        true       1
+REGISTER.IR.BIT01_ALWAYS_ZERO                                              string        true       0
+REGISTER.IR.BIT02_ISC_DONE                                                 string        true       1
+REGISTER.IR.BIT03_ISC_ENABLED                                              string        true       0
+REGISTER.IR.BIT04_INIT_COMPLETE                                            string        true       1
+REGISTER.IR.BIT05_DONE                                                     string        true       1
+REGISTER.IR.BIT06                                                          string        true       1
+REGISTER.IR.BIT07                                                          string        true       0
+REGISTER.IR.BIT08                                                          string        true       1
+REGISTER.IR.BIT09                                                          string        true       0
+REGISTER.IR.BIT10                                                          string        true       1
+REGISTER.IR.BIT11                                                          string        true       1
+REGISTER.IR.BIT12                                                          string        true       1
+REGISTER.IR.BIT13                                                          string        true       0
+REGISTER.IR.BIT14                                                          string        true       1
+REGISTER.IR.BIT15                                                          string        true       0
+REGISTER.IR.BIT16                                                          string        true       1
+REGISTER.IR.BIT17                                                          string        true       1
+REGISTER.TIMER.SLR0                                                        string        true       0x00000000
+REGISTER.TIMER.SLR0.BIT[29:00]_TIMER_VALUE                                 string        true       000000000000000000000000000000
+REGISTER.TIMER.SLR0.BIT[30]_TIMER_CFG_MON                                  string        true       0
+REGISTER.TIMER.SLR0.BIT[31]_TIMER_USR_MON                                  string        true       0
+REGISTER.TIMER.SLR1                                                        string        true       0x00000000
+REGISTER.TIMER.SLR1.BIT[29:00]_TIMER_VALUE                                 string        true       000000000000000000000000000000
+REGISTER.TIMER.SLR1.BIT[30]_TIMER_CFG_MON                                  string        true       0
+REGISTER.TIMER.SLR1.BIT[31]_TIMER_USR_MON                                  string        true       0
+REGISTER.TIMER.SLR2                                                        string        true       0x00000000
+REGISTER.TIMER.SLR2.BIT[29:00]_TIMER_VALUE                                 string        true       000000000000000000000000000000
+REGISTER.TIMER.SLR2.BIT[30]_TIMER_CFG_MON                                  string        true       0
+REGISTER.TIMER.SLR2.BIT[31]_TIMER_USR_MON                                  string        true       0
+REGISTER.USERCODE.SLR0                                                     string        true       0xffffffff
+REGISTER.USERCODE.SLR1                                                     string        true       0xffffffff
+REGISTER.USERCODE.SLR2                                                     string        true       0xffffffff
+REGISTER.USR_ACCESS.SLR0                                                   string        true       0x00000000
+REGISTER.USR_ACCESS.SLR1                                                   string        true       0x00000000
+REGISTER.USR_ACCESS.SLR2                                                   string        true       0x00000000
+REGISTER.WBSTAR.SLR0                                                       string        true       0x00000000
+REGISTER.WBSTAR.SLR0.BIT[28:00]_START_ADDR                                 string        true       00000000000000000000000000000
+REGISTER.WBSTAR.SLR0.BIT[29]_RS_TS_B                                       string        true       0
+REGISTER.WBSTAR.SLR0.BIT[31:30]_RS                                         string        true       00
+REGISTER.WBSTAR.SLR1                                                       string        true       0x00000000
+REGISTER.WBSTAR.SLR1.BIT[28:00]_START_ADDR                                 string        true       00000000000000000000000000000
+REGISTER.WBSTAR.SLR1.BIT[29]_RS_TS_B                                       string        true       0
+REGISTER.WBSTAR.SLR1.BIT[31:30]_RS                                         string        true       00
+REGISTER.WBSTAR.SLR2                                                       string        true       0x00000000
+REGISTER.WBSTAR.SLR2.BIT[28:00]_START_ADDR                                 string        true       00000000000000000000000000000
+REGISTER.WBSTAR.SLR2.BIT[29]_RS_TS_B                                       string        true       0
+REGISTER.WBSTAR.SLR2.BIT[31:30]_RS                                         string        true       00
+REGISTER.EFUSE.FUSE_DNA                                                    string        true       40020000016A64474C408145
+REGISTER.EFUSE.DNA_PORT                                                    string        true       40020000016A64474C408145
+REGISTER.EFUSE.FUSE_CNTL                                                   string        true       144400
+REGISTER.EFUSE.FUSE_USER                                                   string        true       00000000
+REGISTER.EFUSE.FUSE_SECURITY                                               string        true       00
+REGISTER.EFUSE.FUSE_KEY                                                    string        true       Unreadable
+REGISTER.EFUSE.FUSE_RSA                                                    string        true       000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000
+REGISTER.EFUSE.FUSE_USER_128                                               string        true       00000000000000000000000000000000
+DID                                                                        string        true       jsn-JTAG-SMT2NC-210308B43939-14b31093-0
+MASK                                                                       string        true       00001111111111111111111111111111
+MASK_HEX                                                                   string        true       0FFFFFFF
+UNKNOWN_DEVICE                                                             bool          true       0
+XSDB_USER_BSCAN                                                            string        false      1,3
+BSCAN_SWITCH_USER_MASK                                                     string        false      0001
+Property                                                      Type    Read-only  Value
+2D_EYE_SCAN_END                                               string  true       000
+2D_EYE_SCAN_START                                             string  true       000
+BISC_ALIGN_NQTR_NIBBLE0                                       string  true       000
+BISC_ALIGN_NQTR_NIBBLE1                                       string  true       000
+BISC_ALIGN_NQTR_NIBBLE2                                       string  true       000
+BISC_ALIGN_NQTR_NIBBLE3                                       string  true       000
+BISC_ALIGN_PQTR_NIBBLE0                                       string  true       00b
+BISC_ALIGN_PQTR_NIBBLE1                                       string  true       002
+BISC_ALIGN_PQTR_NIBBLE2                                       string  true       00b
+BISC_ALIGN_PQTR_NIBBLE3                                       string  true       003
+BISC_NQTR_NIBBLE0                                             string  true       056
+BISC_NQTR_NIBBLE1                                             string  true       056
+BISC_NQTR_NIBBLE2                                             string  true       058
+BISC_NQTR_NIBBLE3                                             string  true       057
+BISC_PQTR_NIBBLE0                                             string  true       061
+BISC_PQTR_NIBBLE1                                             string  true       058
+BISC_PQTR_NIBBLE2                                             string  true       05f
+BISC_PQTR_NIBBLE3                                             string  true       05a
+BITS_PER_BYTES                                                hex     true       008
+BIT_TIME                                                      string  true       625
+BUS_DATA_BURST_0_BIT_0                                        string  true       000
+BUS_DATA_BURST_0_BIT_1                                        string  true       000
+BUS_DATA_BURST_0_BIT_2                                        string  true       000
+BUS_DATA_BURST_0_BIT_3                                        string  true       000
+BUS_DATA_BURST_0_BIT_4                                        string  true       000
+BUS_DATA_BURST_0_BIT_5                                        string  true       000
+BUS_DATA_BURST_0_BIT_6                                        string  true       000
+BUS_DATA_BURST_0_BIT_7                                        string  true       000
+BUS_DATA_BURST_1_BIT_0                                        string  true       000
+BUS_DATA_BURST_1_BIT_1                                        string  true       000
+BUS_DATA_BURST_1_BIT_2                                        string  true       000
+BUS_DATA_BURST_1_BIT_3                                        string  true       000
+BUS_DATA_BURST_1_BIT_4                                        string  true       000
+BUS_DATA_BURST_1_BIT_5                                        string  true       000
+BUS_DATA_BURST_1_BIT_6                                        string  true       000
+BUS_DATA_BURST_1_BIT_7                                        string  true       000
+BUS_DATA_BURST_2_BIT_0                                        string  true       000
+BUS_DATA_BURST_2_BIT_1                                        string  true       000
+BUS_DATA_BURST_2_BIT_2                                        string  true       000
+BUS_DATA_BURST_2_BIT_3                                        string  true       000
+BUS_DATA_BURST_2_BIT_4                                        string  true       000
+BUS_DATA_BURST_2_BIT_5                                        string  true       000
+BUS_DATA_BURST_2_BIT_6                                        string  true       000
+BUS_DATA_BURST_2_BIT_7                                        string  true       000
+BUS_DATA_BURST_3_BIT_0                                        string  true       000
+BUS_DATA_BURST_3_BIT_1                                        string  true       000
+BUS_DATA_BURST_3_BIT_2                                        string  true       000
+BUS_DATA_BURST_3_BIT_3                                        string  true       000
+BUS_DATA_BURST_3_BIT_4                                        string  true       000
+BUS_DATA_BURST_3_BIT_5                                        string  true       000
+BUS_DATA_BURST_3_BIT_6                                        string  true       000
+BUS_DATA_BURST_3_BIT_7                                        string  true       000
+BYTES                                                         hex     true       002
+CALIBRATION_FAIL.RANK                                         string  true       0
+CALIBRATION_FAIL.STAGE                                        string  true       1
+CALIBRATION_FAIL.STATUS                                       string  true       TRUE
+CAL_ERROR_MSG                                                 string  true       Pattern not found on GT_STATUS, all samples were 1. Expecting to sample the preamble. Error found on Rank 0, Byte 0, Nibble 9.
+CAL_MAP_VERSION                                               hex     true       001
+CAL_STATUS.RANK0.01_DQS_GATE                                  string  true       FAIL
+CAL_STATUS.RANK0.02_DQS_GATE_SANITY_CHECK                     string  true        
+CAL_STATUS.RANK0.03_WRITE_LEVELING                            string  true        
+CAL_STATUS.RANK0.04_READ_PER_BIT_DESKEW                       string  true        
+CAL_STATUS.RANK0.05_READ_PER_BIT_DESKEW_DBI                   string  true        
+CAL_STATUS.RANK0.06_READ_DQS_CENTERING                        string  true        
+CAL_STATUS.RANK0.07_READ_SANITY_CHECK                         string  true        
+CAL_STATUS.RANK0.08_WRITE_DQS_TO_DQ_DESKEW                    string  true        
+CAL_STATUS.RANK0.09_WRITE_DQS_TO_DM_DBI_DESKEW                string  true        
+CAL_STATUS.RANK0.10_WRITE_DQS_TO_DQ(SIMPLE)                   string  true        
+CAL_STATUS.RANK0.11_WRITE_DQS_TO_DM_DBI(SIMPLE)               string  true        
+CAL_STATUS.RANK0.12_READ_DQS_CENTERING_DBI                    string  true        
+CAL_STATUS.RANK0.13_WRITE_LATENCY_CALIBRATION                 string  true        
+CAL_STATUS.RANK0.14_WRITE_READ_SANITY_CHECK                   string  true        
+CAL_STATUS.RANK0.15_READ_LEVELING(COMPLEX)                    string  true        
+CAL_STATUS.RANK0.16_WRITE_READ_SANITY_CHECK                   string  true        
+CAL_STATUS.RANK0.17_READ_VREF_TRAINING                        string  true        
+CAL_STATUS.RANK0.18_WRITE_READ_SANITY_CHECK                   string  true        
+CAL_STATUS.RANK0.19_WRITE_DQS_TO_DQ(COMPLEX)                  string  true        
+CAL_STATUS.RANK0.20_WRITE_DQS_TO_DM_DBI(COMPLEX)              string  true        
+CAL_STATUS.RANK0.21_WRITE_READ_SANITY_CHECK                   string  true        
+CAL_STATUS.RANK0.22_WRITE_VREF_TRAINING                       string  true        
+CAL_STATUS.RANK0.23_WRITE_READ_SANITY_CHECK                   string  true        
+CAL_STATUS.RANK0.24_READ_DQS_CENTERING_MULTI_RANK_ADJUSTMENT  string  true        
+CAL_STATUS.RANK0.25_WRITE_READ_SANITY_CHECK                   string  true        
+CAL_STATUS.RANK0.26_MULTI_RANK_ADJUST_CHECK                   string  true        
+CAL_STATUS.RANK0.27_WRITE_READ_SANITY_CHECK                   string  true        
+CAL_STATUS_SIZE                                               string  true       007
+CAL_STOP_MARGIN                                               string  true       FALSE
+CAL_VERSION_C_MB                                              string  true       00b
+CAL_VERSION_RTL                                               string  true       000
+CELL_NAME                                                     string  true       N/A
+CLASS                                                         string  true       hw_mig
+CONFIG_INFORMATION_0                                          string  true       170
+CONFIG_INFORMATION_1                                          string  true       049
+CONFIG_INFORMATION_2                                          string  true       002
+CONFIG_INFORMATION_3                                          string  true       010
+CONFIG_INFORMATION_4                                          string  true       072
+CONFIG_INFORMATION_5                                          string  true       049
+CONFIG_INFORMATION_6                                          string  true       048
+CONFIG_INFORMATION_7                                          string  true       001
+CONFIG_INFORMATION_8                                          string  true       0a0
+CONFIG_INFORMATION_9                                          string  true       001
+CONFIG_INFORMATION_10                                         string  true       014
+CONFIG_INFORMATION_11                                         string  true       010
+CONFIG_INFORMATION_12                                         string  true       010
+CONFIG_INFORMATION_13                                         string  true       010
+CONFIG_INFORMATION_14                                         string  true       03e
+CONFIG_INFORMATION_15                                         string  true       001
+CONFIG_INFORMATION_16                                         string  true       000
+CONFIG_INFORMATION_17                                         string  true       000
+CONFIG_INFORMATION_18                                         string  true       000
+CONFIG_INFORMATION_19                                         string  true       001
+CONFIG_INFORMATION_20                                         string  true       000
+CONFIG_INFORMATION_21                                         string  true       000
+CONFIG_INFORMATION_22                                         string  true       000
+CONFIG_INFORMATION_23                                         string  true       001
+CONFIG_INFORMATION_24                                         string  true       000
+CONFIG_INFORMATION_25                                         string  true       001
+CONFIG_INFORMATION_26                                         string  true       000
+CONFIG_INFORMATION_27                                         string  true       000
+CONFIG_INFORMATION_28                                         string  true       000
+CONFIG_INFORMATION_29                                         string  true       030
+CONFIG_INFORMATION_30                                         string  true       040
+CONFIG_INFORMATION_31                                         string  true       050
+CONFIG_INFORMATION_32                                         string  true       12b
+CONTROLLER_INFO                                               string  true       000
+CORE_UUID                                                     string  true       7B99D74418C5542BA324A82208477AB4
+DBG_END                                                       string  true       002
+DDR_CAL_ERROR_0                                               string  true       009
+DDR_CAL_ERROR_1                                               string  true       000
+DDR_CAL_ERROR_CODE                                            string  true       005
+DDR_CAL_STATUS_RANK0_0                                        string  true       001
+DDR_CAL_STATUS_RANK0_1                                        string  true       000
+DDR_CAL_STATUS_RANK0_2                                        string  true       000
+DDR_CAL_STATUS_RANK0_3                                        string  true       000
+DDR_CAL_STATUS_RANK0_4                                        string  true       000
+DDR_CAL_STATUS_RANK0_5                                        string  true       000
+DDR_CAL_STATUS_RANK0_6                                        string  true       000
+DDR_CAL_STATUS_RANK1_0                                        string  true       000
+DDR_CAL_STATUS_RANK1_1                                        string  true       000
+DDR_CAL_STATUS_RANK1_2                                        string  true       000
+DDR_CAL_STATUS_RANK1_3                                        string  true       000
+DDR_CAL_STATUS_RANK1_4                                        string  true       000
+DDR_CAL_STATUS_RANK1_5                                        string  true       000
+DDR_CAL_STATUS_RANK1_6                                        string  true       000
+DDR_CAL_STATUS_RANK2_0                                        string  true       000
+DDR_CAL_STATUS_RANK2_1                                        string  true       000
+DDR_CAL_STATUS_RANK2_2                                        string  true       000
+DDR_CAL_STATUS_RANK2_3                                        string  true       000
+DDR_CAL_STATUS_RANK2_4                                        string  true       000
+DDR_CAL_STATUS_RANK2_5                                        string  true       000
+DDR_CAL_STATUS_RANK2_6                                        string  true       000
+DDR_CAL_STATUS_RANK3_0                                        string  true       000
+DDR_CAL_STATUS_RANK3_1                                        string  true       000
+DDR_CAL_STATUS_RANK3_2                                        string  true       000
+DDR_CAL_STATUS_RANK3_3                                        string  true       000
+DDR_CAL_STATUS_RANK3_4                                        string  true       000
+DDR_CAL_STATUS_RANK3_5                                        string  true       000
+DDR_CAL_STATUS_RANK3_6                                        string  true       000
+DDR_POST_CAL_STATUS_0                                         string  true       000
+DDR_POST_CAL_STATUS_1                                         string  true       000
+DDR_POST_CAL_STATUS_2                                         string  true       000
+DDR_PRE_CAL_STATUS                                            string  true       01f
+DISPLAY_NAME                                                  string  true       MIG_1
+DQS_GATE_COARSE_RANK0_BYTE0                                   string  true       000
+DQS_GATE_COARSE_RANK0_BYTE1                                   string  true       000
+DQS_GATE_FINE_CENTER_RANK0_BYTE0                              string  true       000
+DQS_GATE_FINE_CENTER_RANK0_BYTE1                              string  true       000
+DQS_GATE_FINE_LEFT_RANK0_BYTE0                                string  true       000
+DQS_GATE_FINE_LEFT_RANK0_BYTE1                                string  true       000
+DQS_GATE_FINE_RIGHT_RANK0_BYTE0                               string  true       000
+DQS_GATE_FINE_RIGHT_RANK0_BYTE1                               string  true       000
+DQS_GATE_PATTERN_0_RANK0_BYTE0                                string  true       07f
+DQS_GATE_PATTERN_0_RANK0_BYTE1                                string  true       000
+DQS_GATE_PATTERN_1_RANK0_BYTE0                                string  true       000
+DQS_GATE_PATTERN_1_RANK0_BYTE1                                string  true       000
+DQS_GATE_PATTERN_2_RANK0_BYTE0                                string  true       000
+DQS_GATE_PATTERN_2_RANK0_BYTE1                                string  true       000
+DQS_GATE_READ_LATENCY_RANK0_BYTE0                             string  true       000
+DQS_GATE_READ_LATENCY_RANK0_BYTE1                             string  true       000
+DQS_GATE_TRACKING                                             string  true       NOT STARTED
+DQS_TRACK_COARSE_MAX_RANK0_BYTE0                              string  true       000
+DQS_TRACK_COARSE_MAX_RANK0_BYTE1                              string  true       000
+DQS_TRACK_COARSE_MIN_RANK0_BYTE0                              string  true       000
+DQS_TRACK_COARSE_MIN_RANK0_BYTE1                              string  true       000
+DQS_TRACK_COARSE_RANK0_BYTE0                                  string  true       000
+DQS_TRACK_COARSE_RANK0_BYTE1                                  string  true       000
+DQS_TRACK_FINE_MAX_RANK0_BYTE0                                string  true       000
+DQS_TRACK_FINE_MAX_RANK0_BYTE1                                string  true       000
+DQS_TRACK_FINE_MIN_RANK0_BYTE0                                string  true       000
+DQS_TRACK_FINE_MIN_RANK0_BYTE1                                string  true       000
+DQS_TRACK_FINE_RANK0_BYTE0                                    string  true       000
+DQS_TRACK_FINE_RANK0_BYTE1                                    string  true       000
+END_ADDR0                                                     hex     true       073
+END_ADDR1                                                     hex     true       001
+ERROR_MAP_VERSION                                             hex     true       001
+MEMORY_CODE_NAME                                              string  true       000
+MEMORY_FREQUENCY_0                                            string  true       0e2
+MEMORY_FREQUENCY_1                                            string  true       002
+MEMORY_MODULE_TYPE                                            string  true       001
+MEMORY_VOLTAGE                                                string  true       003
+MEM_TYPE                                                      hex     true       001
+MICROBLAZE_START_UP                                           string  true       PASS
+MIG_REFRESH_RATE                                              int     false      3000
+MMCM_D                                                        string  true       001
+MMCM_M                                                        string  true       004
+MR0_0                                                         string  true       170
+MR0_1                                                         string  true       006
+MR1_0                                                         string  true       044
+MR1_1                                                         string  true       000
+MR2_0                                                         string  true       018
+MR2_1                                                         string  true       000
+MR3_0                                                         string  true       000
+MR3_1                                                         string  true       000
+MR4_0                                                         string  true       000
+MR4_1                                                         string  true       000
+MR5_0                                                         string  true       000
+MR5_1                                                         string  true       002
+MR6_0                                                         string  true       000
+MR6_1                                                         string  true       004
+MULTI_RANK_DQS_GATE_COARSE_RANK0_BYTE0                        string  true       000
+MULTI_RANK_DQS_GATE_COARSE_RANK0_BYTE1                        string  true       000
+MULTI_RANK_DQS_GATE_READ_LATENCY_BYTE0                        string  true       000
+MULTI_RANK_DQS_GATE_READ_LATENCY_BYTE1                        string  true       000
+NAME                                                          string  true       localhost:3121/xilinx_tcf/Digilent/210308B43939/0_1/MIG_1
+NIBBLES                                                       hex     true       004
+NUM_RANK                                                      hex     true       001
+PERIOD                                                        string  true       1250
+PLL_D                                                         string  true       001
+PLL_M                                                         string  true       004
+RDLVL_COMPLEX_IDELAY_DBI_RANK0_BYTE0                          string  true       000
+RDLVL_COMPLEX_IDELAY_DBI_RANK0_BYTE1                          string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE0_BIT0                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE0_BIT1                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE0_BIT2                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE0_BIT3                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE0_BIT4                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE0_BIT5                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE0_BIT6                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE0_BIT7                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE1_BIT0                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE1_BIT1                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE1_BIT2                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE1_BIT3                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE1_BIT4                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE1_BIT5                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE1_BIT6                         string  true       000
+RDLVL_COMPLEX_IDELAY_RANK0_BYTE1_BIT7                         string  true       000
+RDLVL_COMPLEX_NQTR_CENTER_RANK0_NIBBLE0                       string  true       000
+RDLVL_COMPLEX_NQTR_CENTER_RANK0_NIBBLE1                       string  true       000
+RDLVL_COMPLEX_NQTR_CENTER_RANK0_NIBBLE2                       string  true       000
+RDLVL_COMPLEX_NQTR_CENTER_RANK0_NIBBLE3                       string  true       000
+RDLVL_COMPLEX_NQTR_LEFT_RANK0_NIBBLE0                         string  true       000
+RDLVL_COMPLEX_NQTR_LEFT_RANK0_NIBBLE1                         string  true       000
+RDLVL_COMPLEX_NQTR_LEFT_RANK0_NIBBLE2                         string  true       000
+RDLVL_COMPLEX_NQTR_LEFT_RANK0_NIBBLE3                         string  true       000
+RDLVL_COMPLEX_NQTR_RIGHT_RANK0_NIBBLE0                        string  true       000
+RDLVL_COMPLEX_NQTR_RIGHT_RANK0_NIBBLE1                        string  true       000
+RDLVL_COMPLEX_NQTR_RIGHT_RANK0_NIBBLE2                        string  true       000
+RDLVL_COMPLEX_NQTR_RIGHT_RANK0_NIBBLE3                        string  true       000
+RDLVL_COMPLEX_PQTR_CENTER_RANK0_NIBBLE0                       string  true       000
+RDLVL_COMPLEX_PQTR_CENTER_RANK0_NIBBLE1                       string  true       000
+RDLVL_COMPLEX_PQTR_CENTER_RANK0_NIBBLE2                       string  true       000
+RDLVL_COMPLEX_PQTR_CENTER_RANK0_NIBBLE3                       string  true       000
+RDLVL_COMPLEX_PQTR_LEFT_RANK0_NIBBLE0                         string  true       000
+RDLVL_COMPLEX_PQTR_LEFT_RANK0_NIBBLE1                         string  true       000
+RDLVL_COMPLEX_PQTR_LEFT_RANK0_NIBBLE2                         string  true       000
+RDLVL_COMPLEX_PQTR_LEFT_RANK0_NIBBLE3                         string  true       000
+RDLVL_COMPLEX_PQTR_RIGHT_RANK0_NIBBLE0                        string  true       000
+RDLVL_COMPLEX_PQTR_RIGHT_RANK0_NIBBLE1                        string  true       000
+RDLVL_COMPLEX_PQTR_RIGHT_RANK0_NIBBLE2                        string  true       000
+RDLVL_COMPLEX_PQTR_RIGHT_RANK0_NIBBLE3                        string  true       000
+RDLVL_DBI_NQTR_CENTER_RANK0_BYTE0                             string  true       000
+RDLVL_DBI_NQTR_CENTER_RANK0_BYTE1                             string  true       000
+RDLVL_DBI_NQTR_LEFT_RANK0_BYTE0                               string  true       000
+RDLVL_DBI_NQTR_LEFT_RANK0_BYTE1                               string  true       000
+RDLVL_DBI_NQTR_RIGHT_RANK0_BYTE0                              string  true       000
+RDLVL_DBI_NQTR_RIGHT_RANK0_BYTE1                              string  true       000
+RDLVL_DBI_PQTR_CENTER_RANK0_BYTE0                             string  true       000
+RDLVL_DBI_PQTR_CENTER_RANK0_BYTE1                             string  true       000
+RDLVL_DBI_PQTR_LEFT_RANK0_BYTE0                               string  true       000
+RDLVL_DBI_PQTR_LEFT_RANK0_BYTE1                               string  true       000
+RDLVL_DBI_PQTR_RIGHT_RANK0_BYTE0                              string  true       000
+RDLVL_DBI_PQTR_RIGHT_RANK0_BYTE1                              string  true       000
+RDLVL_DESKEW_DBI_IDELAY_BYTE0                                 string  true       000
+RDLVL_DESKEW_DBI_IDELAY_BYTE1                                 string  true       000
+RDLVL_DESKEW_DBI_NQTR_BYTE0                                   string  true       000
+RDLVL_DESKEW_DBI_NQTR_BYTE1                                   string  true       000
+RDLVL_DESKEW_DBI_PQTR_BYTE0                                   string  true       000
+RDLVL_DESKEW_DBI_PQTR_BYTE1                                   string  true       000
+RDLVL_DESKEW_IDELAY_BYTE0_BIT0                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE0_BIT1                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE0_BIT2                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE0_BIT3                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE0_BIT4                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE0_BIT5                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE0_BIT6                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE0_BIT7                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE1_BIT0                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE1_BIT1                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE1_BIT2                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE1_BIT3                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE1_BIT4                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE1_BIT5                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE1_BIT6                                string  true       000
+RDLVL_DESKEW_IDELAY_BYTE1_BIT7                                string  true       000
+RDLVL_DESKEW_NQTR_NIBBLE0                                     string  true       000
+RDLVL_DESKEW_NQTR_NIBBLE1                                     string  true       000
+RDLVL_DESKEW_NQTR_NIBBLE2                                     string  true       000
+RDLVL_DESKEW_NQTR_NIBBLE3                                     string  true       000
+RDLVL_DESKEW_PQTR_NIBBLE0                                     string  true       000
+RDLVL_DESKEW_PQTR_NIBBLE1                                     string  true       000
+RDLVL_DESKEW_PQTR_NIBBLE2                                     string  true       000
+RDLVL_DESKEW_PQTR_NIBBLE3                                     string  true       000
+RDLVL_IDELAY_DBI_FINAL_BYTE0                                  string  true       000
+RDLVL_IDELAY_DBI_FINAL_BYTE1                                  string  true       000
+RDLVL_IDELAY_DBI_RANK0_BYTE0                                  string  true       000
+RDLVL_IDELAY_DBI_RANK0_BYTE1                                  string  true       000
+RDLVL_IDELAY_FINAL_BYTE0_BIT0                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE0_BIT1                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE0_BIT2                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE0_BIT3                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE0_BIT4                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE0_BIT5                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE0_BIT6                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE0_BIT7                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE1_BIT0                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE1_BIT1                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE1_BIT2                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE1_BIT3                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE1_BIT4                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE1_BIT5                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE1_BIT6                                 string  true       000
+RDLVL_IDELAY_FINAL_BYTE1_BIT7                                 string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE0_BIT0                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE0_BIT1                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE0_BIT2                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE0_BIT3                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE0_BIT4                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE0_BIT5                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE0_BIT6                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE0_BIT7                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE1_BIT0                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE1_BIT1                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE1_BIT2                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE1_BIT3                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE1_BIT4                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE1_BIT5                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE1_BIT6                           string  true       000
+RDLVL_IDELAY_VALUE_RANK0_BYTE1_BIT7                           string  true       000
+RDLVL_NQTR_CENTER_FINAL_NIBBLE0                               string  true       000
+RDLVL_NQTR_CENTER_FINAL_NIBBLE1                               string  true       000
+RDLVL_NQTR_CENTER_FINAL_NIBBLE2                               string  true       000
+RDLVL_NQTR_CENTER_FINAL_NIBBLE3                               string  true       000
+RDLVL_NQTR_CENTER_RANK0_NIBBLE0                               string  true       000
+RDLVL_NQTR_CENTER_RANK0_NIBBLE1                               string  true       000
+RDLVL_NQTR_CENTER_RANK0_NIBBLE2                               string  true       000
+RDLVL_NQTR_CENTER_RANK0_NIBBLE3                               string  true       000
+RDLVL_NQTR_LEFT_RANK0_NIBBLE0                                 string  true       000
+RDLVL_NQTR_LEFT_RANK0_NIBBLE1                                 string  true       000
+RDLVL_NQTR_LEFT_RANK0_NIBBLE2                                 string  true       000
+RDLVL_NQTR_LEFT_RANK0_NIBBLE3                                 string  true       000
+RDLVL_NQTR_RIGHT_RANK0_NIBBLE0                                string  true       000
+RDLVL_NQTR_RIGHT_RANK0_NIBBLE1                                string  true       000
+RDLVL_NQTR_RIGHT_RANK0_NIBBLE2                                string  true       000
+RDLVL_NQTR_RIGHT_RANK0_NIBBLE3                                string  true       000
+RDLVL_PQTR_CENTER_FINAL_NIBBLE0                               string  true       000
+RDLVL_PQTR_CENTER_FINAL_NIBBLE1                               string  true       000
+RDLVL_PQTR_CENTER_FINAL_NIBBLE2                               string  true       000
+RDLVL_PQTR_CENTER_FINAL_NIBBLE3                               string  true       000
+RDLVL_PQTR_CENTER_RANK0_NIBBLE0                               string  true       000
+RDLVL_PQTR_CENTER_RANK0_NIBBLE1                               string  true       000
+RDLVL_PQTR_CENTER_RANK0_NIBBLE2                               string  true       000
+RDLVL_PQTR_CENTER_RANK0_NIBBLE3                               string  true       000
+RDLVL_PQTR_LEFT_RANK0_NIBBLE0                                 string  true       000
+RDLVL_PQTR_LEFT_RANK0_NIBBLE1                                 string  true       000
+RDLVL_PQTR_LEFT_RANK0_NIBBLE2                                 string  true       000
+RDLVL_PQTR_LEFT_RANK0_NIBBLE3                                 string  true       000
+RDLVL_PQTR_RIGHT_RANK0_NIBBLE0                                string  true       000
+RDLVL_PQTR_RIGHT_RANK0_NIBBLE1                                string  true       000
+RDLVL_PQTR_RIGHT_RANK0_NIBBLE2                                string  true       000
+RDLVL_PQTR_RIGHT_RANK0_NIBBLE3                                string  true       000
+READ_VREF_CAL_EYE_LEFT_EDGE_BYTE0                             string  true       000
+READ_VREF_CAL_EYE_LEFT_EDGE_BYTE1                             string  true       000
+READ_VREF_CAL_EYE_RIGHT_EDGE_BYTE0                            string  true       000
+READ_VREF_CAL_EYE_RIGHT_EDGE_BYTE1                            string  true       000
+READ_VREF_CAL_EYE_SIZE_BYTE0                                  string  true       000
+READ_VREF_CAL_EYE_SIZE_BYTE1                                  string  true       000
+READ_VREF_CAL_VREF_COARSE_VALUE_BYTE0                         string  true       000
+READ_VREF_CAL_VREF_COARSE_VALUE_BYTE1                         string  true       000
+READ_VREF_CAL_VREF_FINAL_VALUE_BYTE0                          string  true       000
+READ_VREF_CAL_VREF_FINAL_VALUE_BYTE1                          string  true       000
+RESERVED_LOC6                                                 hex     true       000
+RESERVED_LOC7                                                 hex     true       000
+RESERVED_LOC8                                                 hex     true       000
+RESERVED_LOC9                                                 hex     true       000
+RESERVED_LOC10                                                hex     true       000
+RESTORE_MODE                                                  string  true       000
+RL_DLY_QTR_NIBBLE0                                            string  true       056
+RL_DLY_QTR_NIBBLE1                                            string  true       056
+RL_DLY_QTR_NIBBLE2                                            string  true       056
+RL_DLY_QTR_NIBBLE3                                            string  true       057
+SLOTS                                                         hex     true       000
+SOFT_MIG_CSV_VER                                              hex     true       003
+START_ADDR                                                    hex     true       012
+TG_MARGIN_CONTROL_0                                           string  true       000
+TG_MARGIN_CONTROL_1                                           string  true       000
+TG_MARGIN_CONTROL_2                                           string  true       000
+TG_MARGIN_CONTROL_3                                           string  true       000
+TG_MARGIN_CONTROL_4                                           string  true       000
+TG_MARGIN_CONTROL_5                                           string  true       000
+TG_MARGIN_CONTROL_6                                           string  true       000
+TG_MARGIN_CONTROL_7                                           string  true       000
+TG_MARGIN_CONTROL_8                                           string  true       000
+TG_MARGIN_CONTROL_9                                           string  true       000
+TG_MARGIN_CONTROL_10                                          string  true       000
+TG_MARGIN_CONTROL_11                                          string  true       000
+TG_MARGIN_CONTROL_12                                          string  true       000
+TG_MARGIN_CONTROL_13                                          string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE0_BIT0                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE0_BIT1                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE0_BIT2                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE0_BIT3                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE0_BIT4                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE0_BIT5                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE0_BIT6                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE0_BIT7                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE1_BIT0                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE1_BIT1                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE1_BIT2                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE1_BIT3                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE1_BIT4                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE1_BIT5                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE1_BIT6                    string  true       000
+TG_RDLVL_MARGIN_NQTR_LEFT_RANK0_BYTE1_BIT7                    string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE0_BIT0                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE0_BIT1                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE0_BIT2                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE0_BIT3                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE0_BIT4                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE0_BIT5                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE0_BIT6                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE0_BIT7                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE1_BIT0                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE1_BIT1                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE1_BIT2                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE1_BIT3                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE1_BIT4                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE1_BIT5                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE1_BIT6                   string  true       000
+TG_RDLVL_MARGIN_NQTR_RIGHT_RANK0_BYTE1_BIT7                   string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE0_BIT0                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE0_BIT1                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE0_BIT2                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE0_BIT3                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE0_BIT4                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE0_BIT5                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE0_BIT6                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE0_BIT7                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE1_BIT0                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE1_BIT1                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE1_BIT2                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE1_BIT3                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE1_BIT4                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE1_BIT5                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE1_BIT6                    string  true       000
+TG_RDLVL_MARGIN_PQTR_LEFT_RANK0_BYTE1_BIT7                    string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE0_BIT0                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE0_BIT1                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE0_BIT2                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE0_BIT3                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE0_BIT4                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE0_BIT5                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE0_BIT6                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE0_BIT7                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE1_BIT0                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE1_BIT1                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE1_BIT2                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE1_BIT3                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE1_BIT4                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE1_BIT5                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE1_BIT6                   string  true       000
+TG_RDLVL_MARGIN_PQTR_RIGHT_RANK0_BYTE1_BIT7                   string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE0_BIT0                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE0_BIT1                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE0_BIT2                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE0_BIT3                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE0_BIT4                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE0_BIT5                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE0_BIT6                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE0_BIT7                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE1_BIT0                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE1_BIT1                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE1_BIT2                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE1_BIT3                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE1_BIT4                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE1_BIT5                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE1_BIT6                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_LEFT_RANK0_BYTE1_BIT7                  string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE0_BIT0                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE0_BIT1                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE0_BIT2                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE0_BIT3                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE0_BIT4                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE0_BIT5                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE0_BIT6                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE0_BIT7                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE1_BIT0                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE1_BIT1                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE1_BIT2                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE1_BIT3                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE1_BIT4                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE1_BIT5                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE1_BIT6                 string  true       000
+TG_WRITE_DQS_DQ_MARGIN_RIGHT_RANK0_BYTE1_BIT7                 string  true       000
+USER_REGISTER                                                 int     true       1
+VT_TRACK_NQTR_MAX_NIBBLE0                                     string  true       000
+VT_TRACK_NQTR_MAX_NIBBLE1                                     string  true       000
+VT_TRACK_NQTR_MAX_NIBBLE2                                     string  true       000
+VT_TRACK_NQTR_MAX_NIBBLE3                                     string  true       000
+VT_TRACK_NQTR_MIN_NIBBLE0                                     string  true       000
+VT_TRACK_NQTR_MIN_NIBBLE1                                     string  true       000
+VT_TRACK_NQTR_MIN_NIBBLE2                                     string  true       000
+VT_TRACK_NQTR_MIN_NIBBLE3                                     string  true       000
+VT_TRACK_NQTR_NIBBLE0                                         string  true       000
+VT_TRACK_NQTR_NIBBLE1                                         string  true       000
+VT_TRACK_NQTR_NIBBLE2                                         string  true       000
+VT_TRACK_NQTR_NIBBLE3                                         string  true       000
+VT_TRACK_PQTR_MAX_NIBBLE0                                     string  true       000
+VT_TRACK_PQTR_MAX_NIBBLE1                                     string  true       000
+VT_TRACK_PQTR_MAX_NIBBLE2                                     string  true       000
+VT_TRACK_PQTR_MAX_NIBBLE3                                     string  true       000
+VT_TRACK_PQTR_MIN_NIBBLE0                                     string  true       000
+VT_TRACK_PQTR_MIN_NIBBLE1                                     string  true       000
+VT_TRACK_PQTR_MIN_NIBBLE2                                     string  true       000
+VT_TRACK_PQTR_MIN_NIBBLE3                                     string  true       000
+VT_TRACK_PQTR_NIBBLE0                                         string  true       000
+VT_TRACK_PQTR_NIBBLE1                                         string  true       000
+VT_TRACK_PQTR_NIBBLE2                                         string  true       000
+VT_TRACK_PQTR_NIBBLE3                                         string  true       000
+WARNING_COUNT                                                 string  true       000
+WARNING_MAP_VERSION                                           hex     true       001
+WARNING_REGISTER_SIZE                                         string  true       003
+WNOTICE_COUNT                                                 string  true       0
+WRITE_COMPLEX_DQS_TO_DM_DM_ODELAY_BYTE0                       string  true       000
+WRITE_COMPLEX_DQS_TO_DM_DM_ODELAY_BYTE1                       string  true       000
+WRITE_COMPLEX_DQS_TO_DM_DQS_ODELAY_BYTE0                      string  true       000
+WRITE_COMPLEX_DQS_TO_DM_DQS_ODELAY_BYTE1                      string  true       000
+WRITE_COMPLEX_DQS_TO_DM_MARGIN_LEFT_BYTE0                     string  true       000
+WRITE_COMPLEX_DQS_TO_DM_MARGIN_LEFT_BYTE1                     string  true       000
+WRITE_COMPLEX_DQS_TO_DM_MARGIN_RIGHT_BYTE0                    string  true       000
+WRITE_COMPLEX_DQS_TO_DM_MARGIN_RIGHT_BYTE1                    string  true       000
+WRITE_COMPLEX_DQS_TO_DM_PRE_ADJUST_MARGIN_LEFT_BYTE0          string  true       000
+WRITE_COMPLEX_DQS_TO_DM_PRE_ADJUST_MARGIN_LEFT_BYTE1          string  true       000
+WRITE_COMPLEX_DQS_TO_DM_PRE_ADJUST_MARGIN_RIGHT_BYTE0         string  true       000
+WRITE_COMPLEX_DQS_TO_DM_PRE_ADJUST_MARGIN_RIGHT_BYTE1         string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQS_ODELAY_BYTE0                      string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQS_ODELAY_BYTE1                      string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT0                  string  true       03a
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT1                  string  true       03e
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT2                  string  true       03f
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT3                  string  true       03d
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT4                  string  true       032
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT5                  string  true       036
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT6                  string  true       035
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT7                  string  true       035
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT0                  string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT1                  string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT2                  string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT3                  string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT4                  string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT5                  string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT6                  string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT7                  string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_MARGIN_LEFT_BYTE0                     string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_MARGIN_LEFT_BYTE1                     string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_MARGIN_RIGHT_BYTE0                    string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_MARGIN_RIGHT_BYTE1                    string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_PRE_ADJUST_MARGIN_LEFT_BYTE0          string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_PRE_ADJUST_MARGIN_LEFT_BYTE1          string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_PRE_ADJUST_MARGIN_RIGHT_BYTE0         string  true       000
+WRITE_COMPLEX_DQS_TO_DQ_PRE_ADJUST_MARGIN_RIGHT_BYTE1         string  true       000
+WRITE_DM_ODELAY_FINAL_BYTE0                                   string  true       000
+WRITE_DM_ODELAY_FINAL_BYTE1                                   string  true       000
+WRITE_DQS_ODELAY_FINAL_BYTE0                                  string  true       000
+WRITE_DQS_ODELAY_FINAL_BYTE1                                  string  true       000
+WRITE_DQS_TO_DM_DESKEW_BYTE0                                  string  true       000
+WRITE_DQS_TO_DM_DESKEW_BYTE1                                  string  true       000
+WRITE_DQS_TO_DM_DM_ODELAY_BYTE0                               string  true       000
+WRITE_DQS_TO_DM_DM_ODELAY_BYTE1                               string  true       000
+WRITE_DQS_TO_DM_DQS_ODELAY_BYTE0                              string  true       000
+WRITE_DQS_TO_DM_DQS_ODELAY_BYTE1                              string  true       000
+WRITE_DQS_TO_DM_MARGIN_LEFT_BYTE0                             string  true       000
+WRITE_DQS_TO_DM_MARGIN_LEFT_BYTE1                             string  true       000
+WRITE_DQS_TO_DM_MARGIN_RIGHT_BYTE0                            string  true       000
+WRITE_DQS_TO_DM_MARGIN_RIGHT_BYTE1                            string  true       000
+WRITE_DQS_TO_DM_PRE_ADJUST_MARGIN_LEFT_BYTE0                  string  true       000
+WRITE_DQS_TO_DM_PRE_ADJUST_MARGIN_LEFT_BYTE1                  string  true       000
+WRITE_DQS_TO_DM_PRE_ADJUST_MARGIN_RIGHT_BYTE0                 string  true       000
+WRITE_DQS_TO_DM_PRE_ADJUST_MARGIN_RIGHT_BYTE1                 string  true       000
+WRITE_DQS_TO_DQ_DESKEW_DELAY_BYTE0                            string  true       000
+WRITE_DQS_TO_DQ_DESKEW_DELAY_BYTE1                            string  true       000
+WRITE_DQS_TO_DQ_DQS_ODELAY_BYTE0                              string  true       000
+WRITE_DQS_TO_DQ_DQS_ODELAY_BYTE1                              string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT0                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT1                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT2                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT3                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT4                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT5                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT6                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE0_BIT7                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT0                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT1                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT2                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT3                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT4                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT5                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT6                          string  true       000
+WRITE_DQS_TO_DQ_DQ_ODELAY_BYTE1_BIT7                          string  true       000
+WRITE_DQS_TO_DQ_MARGIN_LEFT_BYTE0                             string  true       000
+WRITE_DQS_TO_DQ_MARGIN_LEFT_BYTE1                             string  true       000
+WRITE_DQS_TO_DQ_MARGIN_RIGHT_BYTE0                            string  true       000
+WRITE_DQS_TO_DQ_MARGIN_RIGHT_BYTE1                            string  true       000
+WRITE_DQS_TO_DQ_PRE_ADJUST_MARGIN_LEFT_BYTE0                  string  true       000
+WRITE_DQS_TO_DQ_PRE_ADJUST_MARGIN_LEFT_BYTE1                  string  true       000
+WRITE_DQS_TO_DQ_PRE_ADJUST_MARGIN_RIGHT_BYTE0                 string  true       000
+WRITE_DQS_TO_DQ_PRE_ADJUST_MARGIN_RIGHT_BYTE1                 string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE0_BIT0                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE0_BIT1                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE0_BIT2                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE0_BIT3                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE0_BIT4                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE0_BIT5                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE0_BIT6                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE0_BIT7                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE1_BIT0                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE1_BIT1                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE1_BIT2                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE1_BIT3                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE1_BIT4                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE1_BIT5                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE1_BIT6                              string  true       000
+WRITE_DQ_ODELAY_FINAL_BYTE1_BIT7                              string  true       000
+WRITE_LATENCY_CALIBRATION_COARSE_RANK0_BYTE0                  string  true       000
+WRITE_LATENCY_CALIBRATION_COARSE_RANK0_BYTE1                  string  true       000
+WRITE_VREF_CAL_EYE_LEFT_EDGE_RANK0_BYTE0                      string  true       000
+WRITE_VREF_CAL_EYE_LEFT_EDGE_RANK0_BYTE1                      string  true       000
+WRITE_VREF_CAL_EYE_RIGHT_EDGE_RANK0_BYTE0                     string  true       000
+WRITE_VREF_CAL_EYE_RIGHT_EDGE_RANK0_BYTE1                     string  true       000
+WRITE_VREF_CAL_EYE_SIZE_RANK0_BYTE0                           string  true       000
+WRITE_VREF_CAL_EYE_SIZE_RANK0_BYTE1                           string  true       000
+WRITE_VREF_CAL_VREF_COARSE_VALUE_RANK0_BYTE0                  string  true       000
+WRITE_VREF_CAL_VREF_COARSE_VALUE_RANK0_BYTE1                  string  true       000
+WRITE_VREF_CAL_VREF_FINAL_VALUE_RANK0_BYTE0                   string  true       000
+WRITE_VREF_CAL_VREF_FINAL_VALUE_RANK0_BYTE1                   string  true       000
+WRLVL_COARSE_STABLE0_RANK0_BYTE0                              string  true       000
+WRLVL_COARSE_STABLE0_RANK0_BYTE1                              string  true       000
+WRLVL_COARSE_STABLE1_RANK0_BYTE0                              string  true       000
+WRLVL_COARSE_STABLE1_RANK0_BYTE1                              string  true       000
+WRLVL_ODELAY_CENTER_RANK0_BYTE0                               string  true       000
+WRLVL_ODELAY_CENTER_RANK0_BYTE1                               string  true       000
+WRLVL_ODELAY_INITIAL_OFFSET_BYTE0                             string  true       000
+WRLVL_ODELAY_INITIAL_OFFSET_BYTE1                             string  true       000
+WRLVL_ODELAY_LAST_OFFSET_RANK0_BYTE0                          string  true       000
+WRLVL_ODELAY_LAST_OFFSET_RANK0_BYTE1                          string  true       000
+WRLVL_ODELAY_LOWEST_COMMON_BYTE0                              string  true       000
+WRLVL_ODELAY_LOWEST_COMMON_BYTE1                              string  true       000
+WRLVL_ODELAY_STABLE0_RANK0_BYTE0                              string  true       000
+WRLVL_ODELAY_STABLE0_RANK0_BYTE1                              string  true       000
+WRLVL_ODELAY_STABLE1_RANK0_BYTE0                              string  true       000
+WRLVL_ODELAY_STABLE1_RANK0_BYTE1                              string  true       000
+XSDB_BRAMS                                                    string  true       001
+WARNING: [Labtools 27-3410] Calibration Failed.
+Resolution: For further debugging information, please refer to the Debug Guide that can be found from the following URL - https://www.xilinx.com/support/answers/68937.html
+|Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+|--------------------------------------------------------------------------------
+|Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+|Date        : Sun Oct 25 19:20:14 2026
+|Host        : wenhan-System-Product-Name running 64-bit Ubuntu 24.04.3 LTS
+|Command     : report_hw_mig localhost:3121/xilinx_tcf/Digilent/210308B43939/0_1/MIG_1
+|Device      : xcvu9p_0
+|--------------------------------------------------------------------------------
+
+-------------------
+ MIG Status 
+-------------------
+Overall Status:  CAL FAIL
+MicroBlaze Status:  PASS
+DQS Gate Status:  NOT STARTED
+Message:  Pattern not found on GT_STATUS, all samples were 1. Expecting to sample the preamble. Error found on Rank 0, Byte 0, Nibble 9.
+
+----------------------------------
+ Memory Configuration 
+----------------------------------
+Memory Debug Core Number:  MIG_1
+Memory Interface Type:  DDR3
+MIG Core Cell Name:  N/A
+XSDB Version:  3
+RTL Version:  0
+MicroBlaze Code Version:  11
+Memory Frequency (MHz):  800
+Bit Time (ps):  625
+Ranks:  1
+Data Bytes:  2
+Nibbles:  4
+Bits per Byte:  8
+PLL Multiply:  4
+PLL Divide:  1
+MMCM Multiply:  4
+MMCM Divide:  1
+
+-----------------------------------
+ Calibration Information 
+-----------------------------------
+
+RANK 0 -
+1 - DQS Gate:  FAIL
+2 - DQS Gate Sanity Check:   
+3 - Write Leveling:   
+4 - Read Per-Bit Deskew:   
+5 - Read Per-Bit DBI Deskew:   
+6 - Read DQS Centering (Simple):   
+7 - Read Sanity Check:   
+8 - Write DQS to DQ Deskew:   
+9 - Write DQS to DM/DBI Deskew:   
+10 - Write DQS to DQ (Simple):   
+11 - Write DQS to DM/DBI (Simple):   
+12 - Read DQS Centering DBI (Simple):   
+13 - Write Latency Calibration:   
+14 - Write Read Sanity Check 0:   
+15 - Read DQS Centering (Complex):   
+16 - Write Read Sanity Check 1:   
+17 - Read VREF Training:   
+18 - Write Read Sanity Check 2:   
+19 - Write DQS to DQ (Complex):   
+20 - Write DQS to DM/DBI (Complex):   
+21 - Write Read Sanity Check 3:   
+22 - Write VREF Training:   
+23 - Write Read Sanity Check 4:   
+24 - Read DQS Centering Multi Rank Adjustment:   
+25 - Write Read Sanity Check 5:   
+26 - Multi Rank Adjustment and Checks:   
+27 - Write Read Sanity Check 6:   
+
+--------------------------
+ Margin Analysis 
+--------------------------
+
+RANK 0 - Simple pattern read margin did not run because either a prior stage of calibration failed or read levelling stage was skipped.
+
+RANK 0 - Complex pattern read margin did not run because either a prior stage of calibration failed or read levelling (complex) stage was skipped.
+
+RANK 0 - Simple pattern write margin did not run because either a prior stage of calibration failed or write simple stage was skipped.
+
+RANK 0 - Complex pattern write margin did not run because either a prior stage of calibration failed or write complex stage was skipped.
+
+-----------------------
+  Warning Notices  
+-----------------------
+
+No warning has been generated during calibration.
+
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210308B43939
+# puts "MIG READONLY REPORT PASSED"
+MIG READONLY REPORT PASSED
+# exit 0
+INFO: [Common 17-206] Exiting Vivado at Sun Oct 25 19:20:14 2026...

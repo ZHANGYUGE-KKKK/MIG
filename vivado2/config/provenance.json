@@ -1,0 +1,22 @@
+{
+  "rtl/ddr_databit.sv": {
+    "copied_from": "VIVADO/databit/rtl/ddr_databit.sv",
+    "sha256": "3051fb8c11fe2aac71d77b8a1621f1638133e8a42e9bee6868f2a9c6bff9ad19"
+  },
+  "rtl/probe_uart.sv": {
+    "copied_from": "VIVADO/probe/rtl/probe_uart.sv",
+    "sha256": "0dbe63266bbbb4f9881d6f5d6cade6c7ce46f23ef29b483298b86e9fe32978f7"
+  },
+  "rtl/uart_tx.v": {
+    "copied_from": "VIVADO/rtl/uart_tx.v",
+    "sha256": "6a437fa0144edfd88ddcb042db6f16e8345c6bc28a9c19173568fed393b1fb7d"
+  },
+  "config/vrp107_800.csv": {
+    "copied_from": "VIVADO/vrp/vrp107_800.csv",
+    "sha256": "e1f2af9e080e8fbdbf242426628ccc7bd52fe16c27702aa085ae9374aa51588d"
+  },
+  "constraints/flash_config.xdc": {
+    "copied_from": "VIVADO/stress/flash_config.xdc",
+    "sha256": "ff5ab747ea80e3dbfb3520f11088f0374e42d55ffdf4882d3b47821374fb9c54"
+  }
+}

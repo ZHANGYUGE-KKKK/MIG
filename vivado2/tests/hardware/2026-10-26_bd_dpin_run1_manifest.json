@@ -1,0 +1,15 @@
+{
+  "experiment": "BD DPIN run1",
+  "date": "2026-10-26",
+  "complete": true,
+  "data_pass": true,
+  "independent_runs_observed": 1,
+  "source_attachment": "/home/wenhan/.codex/attachments/17d2fea8-f377-44fe-a454-445322af4203/Pasted text.txt",
+  "raw_text_sha256": "8cbb7bad54405ec428153be8c6bd470356e42dceeed71b8aec8a3bccac7f8589",
+  "decoded_sha256": "a6ddb3e088e37640da349ee209100e057af19b6fe16297b5d56f421a56f20191",
+  "report_sha256": "7c974bbaeb4b32489a75c013775a34d24dc7d55047e29a7efd6a9a0229acc5f2",
+  "flash_program_manifest_sha256": "cbed7dc038f6044dc703ef96a37eae36463f5f8f7f84093be0fc0a12668ad0e0",
+  "image_association": "Most recent verified BD programming followed by user log; header alone cannot distinguish BD/native RTL",
+  "full_capacity_test": false,
+  "dm_test": false
+}
