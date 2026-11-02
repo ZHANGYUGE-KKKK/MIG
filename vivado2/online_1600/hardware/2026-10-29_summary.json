@@ -1,0 +1,505 @@
+{
+  "date": "2026-10-29",
+  "rate_mt_s": 1600,
+  "ck_mhz": 800,
+  "ui_mhz": 200,
+  "jtag_hz": 3000000,
+  "configured_max_outstanding": 32,
+  "supply": "User confirms J199/J200/J201/J202 match 1.50/1.50/0.75/0.75V targets; exact individual meter readings not transcribed",
+  "groups": {
+    "small": {
+      "rounds": 8,
+      "region_bytes": 1048576,
+      "read_bytes": 134217728,
+      "write_bytes": 8388608,
+      "read_beats": 8388608,
+      "errors": 330,
+      "dense_errors": 330,
+      "sparse_errors": 0,
+      "bit_flips_per_dq": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        197,
+        119,
+        14,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_errors": [
+        {
+          "byte_address": 147344,
+          "leg": 0,
+          "expected": "5fcd0a46ec8f41c8b9f41e104ae0d43b",
+          "actual": "5fcf0a46ec8f41c8b9f41e104ae0d43b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 212880,
+          "leg": 0,
+          "expected": "4fdc8246fc9ec9c8a9e596105af15c3b",
+          "actual": "4fde8246fc9ec9c8a9e596105af15c3b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 147344,
+          "leg": 0,
+          "expected": "5fcd0a46ec8f41c8b9f41e104ae0d43b",
+          "actual": "5fcf0a46ec8f41c8b9f41e104ae0d43b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 163712,
+          "leg": 0,
+          "expected": "dbe8694e68aa22c03dd17d18cec5b733",
+          "actual": "dbe8694a68aa22c03dd17d18cec5b733",
+          "xor": "00000004000000000000000000000000",
+          "dq": [
+            10
+          ],
+          "ui_bits": [
+            98
+          ],
+          "beats": [
+            4
+          ]
+        },
+        {
+          "byte_address": 147328,
+          "leg": 0,
+          "expected": "5fec0b4eecae40c0b9d51f184ac1d533",
+          "actual": "5fee0b4eecae40c0b9d51f184ac1d533",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 147344,
+          "leg": 0,
+          "expected": "5fcd0a46ec8f41c8b9f41e104ae0d43b",
+          "actual": "5fcf0a46ec8f41c8b9f41e104ae0d43b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 212880,
+          "leg": 0,
+          "expected": "4fdc8246fc9ec9c8a9e596105af15c3b",
+          "actual": "4fde8246fc9ec9c8a9e596105af15c3b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 147344,
+          "leg": 0,
+          "expected": "5fcd0a46ec8f41c8b9f41e104ae0d43b",
+          "actual": "5fcf0a46ec8f41c8b9f41e104ae0d43b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        }
+      ]
+    },
+    "large": {
+      "rounds": 8,
+      "region_bytes": 16777216,
+      "read_bytes": 2147483648,
+      "write_bytes": 134217728,
+      "read_beats": 134217728,
+      "errors": 3069,
+      "dense_errors": 3068,
+      "sparse_errors": 1,
+      "bit_flips_per_dq": [
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1559,
+        1335,
+        260,
+        0,
+        0,
+        0,
+        0
+      ],
+      "first_errors": [
+        {
+          "byte_address": 147344,
+          "leg": 0,
+          "expected": "5fcd0a46ec8f41c8b9f41e104ae0d43b",
+          "actual": "5fcf0a46ec8f41c8b9f41e104ae0d43b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 147344,
+          "leg": 0,
+          "expected": "5fcd0a46ec8f41c8b9f41e104ae0d43b",
+          "actual": "5fcf0a46ec8f41c8b9f41e104ae0d43b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 147344,
+          "leg": 0,
+          "expected": "5fcd0a46ec8f41c8b9f41e104ae0d43b",
+          "actual": "5fcf0a46ec8f41c8b9f41e104ae0d43b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 130992,
+          "leg": 0,
+          "expected": "e3b1367750f37df905882221f69ce80a",
+          "actual": "e3b3367750f37df905882221f69ce80a",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 212880,
+          "leg": 0,
+          "expected": "4fdc8246fc9ec9c8a9e596105af15c3b",
+          "actual": "4fde8246fc9ec9c8a9e596105af15c3b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 147344,
+          "leg": 0,
+          "expected": "5fcd0a46ec8f41c8b9f41e104ae0d43b",
+          "actual": "5fcf0a46ec8f41c8b9f41e104ae0d43b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 212880,
+          "leg": 0,
+          "expected": "4fdc8246fc9ec9c8a9e596105af15c3b",
+          "actual": "4fde8246fc9ec9c8a9e596105af15c3b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        },
+        {
+          "byte_address": 147344,
+          "leg": 0,
+          "expected": "5fcd0a46ec8f41c8b9f41e104ae0d43b",
+          "actual": "5fcf0a46ec8f41c8b9f41e104ae0d43b",
+          "xor": "00020000000000000000000000000000",
+          "dq": [
+            9
+          ],
+          "ui_bits": [
+            113
+          ],
+          "beats": [
+            6
+          ]
+        }
+      ]
+    }
+  },
+  "files": [
+    {
+      "path": "vivado2/online_1600/hardware/small_round0.json",
+      "sha256": "d0ef9e93324e2a7afdc324f676267a8dc5d14119f1373cb697329f3bd09ff432"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round0.csv",
+      "sha256": "37cd269ace43181051819da6f567cb6c2601809c1d8e0ec258269efb0b065cd5"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round1.json",
+      "sha256": "b063d34141288db0f30db397066ce93edaf19642edb6224bcbb417a87f4eedba"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round1.csv",
+      "sha256": "055d5dd9b6935ccaab2e6cff1f663e28c6d23748bb810936c1282ada7d4cc391"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round2.json",
+      "sha256": "6edc04317afcd178507393eea6245d43aacc97eceef90c040ceb7f1fcc5cdf1a"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round2.csv",
+      "sha256": "8364ba2d1cd9eb97c1fc8167a15d3a7c28ccab8860b35e3e7156e4718048de67"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round3.json",
+      "sha256": "02091399c91b8c42c0918f6c42bfdb2044ab10b75e1d800152e6c4d69aefe165"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round3.csv",
+      "sha256": "0dd0e0b4958a53a71fd65103cb8844229f33cb0fb16f320298bd9a18fa5135ed"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round4.json",
+      "sha256": "0dbca7ad40ac2216df2e8917a22d6d911f3f00a0dabc231469356f3ca3e4e2c2"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round4.csv",
+      "sha256": "5603092b8da1125b47d4d39f8e68225e526d266fcc16a855433b71bdcd149343"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round5.json",
+      "sha256": "77a1bf50cb6e3ffb4c2d28d40bdb05add5b036ad9baa7c30b6c5f515543210f3"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round5.csv",
+      "sha256": "2f14b1c240a452607e580454a889f9877d6f6b483da7501f9e79252625447cd9"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round6.json",
+      "sha256": "4932d334190a39ff0cf564b18221295303fb44a2972ba7ffe52e44908d5e7113"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round6.csv",
+      "sha256": "cd751bf631e1fd56042f11191b33bd074aa2113bdac2eb176e3829ebdf53ee1d"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round7.json",
+      "sha256": "9e1ca7d915dc5cebe17a4ea54270970ac0fc3e35103e20be23b331d06697599d"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/small_round7.csv",
+      "sha256": "a47eeb96fccc9195856411657af0ab28960719a9089062ed0c2f73ed651eed58"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round0.json",
+      "sha256": "d1f908bb5966419e8b5c784dcf639e421656ebc216f19966399390db32cd8535"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round0.csv",
+      "sha256": "cb43065e3bafc7484344dd7e2e02e30252438f2053d83c2150308ad894e922ee"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round1.json",
+      "sha256": "02988d8694cb9135c36af88316e3f40c93ba13157e8a15102fc07dc76e112a4a"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round1.csv",
+      "sha256": "5364250ee9f5f4dfb3bc7704584310931a0c2fb81475671cb3c5dac047a66f1a"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round2.json",
+      "sha256": "0554b9ac8d4664c640418622b82a12132914b94ae2d450f1a6c0f596529e553d"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round2.csv",
+      "sha256": "b2fb824e9a00affdf35577b53382e90a3aa7488667c80c26035b6ab638a2cda0"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round3.json",
+      "sha256": "4f996d73986c86edde43a42f1c0b523a3b71cc1589cf1dabc8c634755cbbdcb2"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round3.csv",
+      "sha256": "b371fdfba790fdfe68271f4b39ab3280bece2a8864de5cbc109f91dd376656f2"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round4.json",
+      "sha256": "7099363c0dfe467c52ee0f9ad4667f6811b4e85a647aeca7906b7a1871393c9a"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round4.csv",
+      "sha256": "9ffc00725bbdc3a3ff760a197d49293a8a4a8b8cd24f74cf30ea749e7c6f7a9e"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round5.json",
+      "sha256": "f6c5e7dbc739dee2274dd3473ccf95e6e1e7bc5eed0ef55b10aef9b4956fb323"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round5.csv",
+      "sha256": "c2409e83beffb517edc462f877b0cf10280c76fcaf31a3134479f870c5ae4d91"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round6.json",
+      "sha256": "098576f410996755a16df52f214a16afaa964cd24d7129c3a267f49270bfe720"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round6.csv",
+      "sha256": "9e5ce7772924e72cdfae44441b8e8786ccf2c6fb5b04595b07f9b515a51eea05"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round7.json",
+      "sha256": "46322d61b624540b8044d4e60349c2eebb0819364819218bf1149915ea5c9c2f"
+    },
+    {
+      "path": "vivado2/online_1600/hardware/large_round7.csv",
+      "sha256": "4c7057220c88f8a811ca4d8e36fb45630e6cf0fb4a439538bfa6dd2878b65087"
+    },
+    {
+      "path": "vivado2/online_1600/build/wiring_online_axi.bit",
+      "sha256": "0048aa2d4cebaeda7a0c4fc0d333c21eeaa025cf539cce89fca545f38bac2692"
+    },
+    {
+      "path": "vivado2/online_1600/build/wiring_online_axi.ltx",
+      "sha256": "d94e0f012a345fe833671bd1766ea80286d424b953c61957a16c8f38d5f5d1f5"
+    },
+    {
+      "path": "vivado2/online_1600/rtl/online_axi_diag.v",
+      "sha256": "5457fed481654de10eb80352f7f01b1f437267ee37fd05d21454ab67331be922"
+    },
+    {
+      "path": "vivado2/online_1600/scripts/run.tcl",
+      "sha256": "4573207ecb6f7d4967e2079be6dd0d49fb60cb9d65faf3f5c59545c9b23fda66"
+    },
+    {
+      "path": "vivado2/online_1600/tests/decode_ila.py",
+      "sha256": "cad55d95356820a959bedcb80e5f133756cd991d3a78fc80fd485f9ef4748c5e"
+    },
+    {
+      "path": "vivado2/online_1600/config/vrp107_1600.csv",
+      "sha256": "6a6802971298d8c7224ed59f41b19c325e4e78bd72c31fca5f651ca0c7ef6a84"
+    }
+  ],
+  "total_errors": 3399,
+  "total_read_bytes": 2281701376,
+  "total_dense_errors": 3398,
+  "total_sparse_errors": 1,
+  "total_bit_flips_per_dq": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    1756,
+    1454,
+    274,
+    0,
+    0,
+    0,
+    0
+  ],
+  "data_passed": false,
+  "fatal_count": 0
+}

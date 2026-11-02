@@ -1,0 +1,23 @@
+{
+  "rate_mt_s": 800,
+  "ui_mhz": 100,
+  "unique_capacity_bytes": 1073741824,
+  "pins_checked": 55,
+  "rtl_simulations": 7,
+  "decoder_tests": 5,
+  "sha256": {
+    "vivado2/online_800_burst/build/wiring_online_axi.bit": "b9e7b9d7f0386a8985e05e17ffa4e7c96ac460fa63c6ab58187acfd2647d8e05",
+    "vivado2/online_800_burst/build/wiring_online_axi.ltx": "9d5310d2532b7d80bc3687b72681c7af0deeeb408f52025cdda7fdcf99699e81",
+    "vivado2/online_800_burst/build/generated_parameters.json": "0993ad3e75b7329ed4b1bd449321dcec54650ae8785a7cedae8e7e8afc124c07",
+    "vivado2/online_800_burst/rtl/uart_block.v": "cbe3432e0277d88f3824832a90e2043ce6209ff44fa7562393a5aeb31edef452",
+    "vivado2/online_800_burst/rtl/online_axi_diag.v": "aefec7cd6cec959ce84e331921bc4dff3f8a99dd68d6f2bbf45b86efaa5c8e7d",
+    "vivado2/online_800_burst/rtl/uart_tx.v": "6a437fa0144edfd88ddcb042db6f16e8345c6bc28a9c19173568fed393b1fb7d",
+    "vivado2/online_800_burst/rtl/probe_uart.sv": "0dbe63266bbbb4f9881d6f5d6cade6c7ce46f23ef29b483298b86e9fe32978f7",
+    "vivado2/online_800_burst/rtl/board_control.v": "fb2684fb98e7b1d96983fd1f9b3f5a594b9f2e6a22c985fe9ef16b71d5a9514d",
+    "vivado2/online_800_burst/config/vrp107_800.csv": "e1f2af9e080e8fbdbf242426628ccc7bd52fe16c27702aa085ae9374aa51588d",
+    "vivado2/online_800_burst/scripts/run.tcl": "4b23de3a22550584cce7a46b36a1d63b53a53c4c74d9cfd1641867c49527a884",
+    "vivado2/online_800_burst/scripts/audit.py": "ff9a7c524aefe80af10506f1f177d1f22acf1beff078f632da45d79cee53d7fb",
+    "vivado2/online_800_burst/scripts/build.tcl": "93ec070fb7cfcf2f795a5ed39ad3316118d3c8ee7be419cb8ab55b5d41006108",
+    "vivado2/online_800_burst/scripts/create_bd.tcl": "7de4dba22af6abccc4629ac27a9e3a34e5e5fd4d03582cdd2d23e8524966657f"
+  }
+}

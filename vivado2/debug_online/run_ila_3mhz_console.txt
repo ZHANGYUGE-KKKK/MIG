@@ -1,0 +1,3790 @@
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source vivado2/debug_online/run_ila.tcl
+# set out [file normalize vivado2/debug_online]
+# open_hw_manager
+# connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:10:28
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 05 2022-07:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2026 Xilinx, Inc. All Rights Reserved.
+
+
+
+# set targets [get_hw_targets -filter {NAME =~ *210308B43939*}]
+# if {[llength $targets]!=1} {error "Known board target missing"}
+# current_hw_target [lindex $targets 0]
+# set_property PARAM.FREQUENCY 3000000 [current_hw_target]
+# open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308B43939
+# set dev [get_hw_devices -filter {PART == xcvu9p}]
+# if {[llength $dev]!=1} {error "Expected one xcvu9p"}
+# current_hw_device $dev
+# set_property PROGRAM.FILE $out/wiring_online.bit $dev
+# set_property PROBES.FILE $out/wiring_online.ltx $dev
+# set_property FULL_PROBES.FILE $out/wiring_online.ltx $dev
+# program_hw_devices $dev
+INFO: [Labtools 27-3164] End of startup status: HIGH
+program_hw_devices: Time (s): cpu = 00:00:59 ; elapsed = 00:00:59 . Memory (MB): peak = 1768.035 ; gain = 0.000 ; free physical = 11643 ; free virtual = 25652
+# refresh_hw_device $dev
+WARNING: [Labtools 27-3089] Calibration is still in-progress.
+INFO: [Labtools 27-2302] Device xcvu9p (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xcvu9p (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
+INFO: [Labtools 27-3143] Calibration status change detected, refreshing MIG_1
+# set ila [get_hw_ilas -of_objects $dev]
+# if {[llength $ila]!=1} {error "Expected one online ILA"}
+# report_property $ila
+Property                                       Type    Read-only  Value
+CELL_NAME                                      enum    true       online_ila
+CLASS                                          string  true       hw_ila
+CONTROL.CAPTURE_CONDITION                      enum    true       AND
+CONTROL.CAPTURE_MODE                           enum    true       ALWAYS
+CONTROL.DATA_DEPTH                             int     false      1024
+CONTROL.TRIGGER_CONDITION                      string  false      AND
+CONTROL.TRIGGER_MODE                           enum    true       BASIC_ONLY
+CONTROL.TRIGGER_POSITION                       int     false      512
+CONTROL.TRIG_OUT_MODE                          enum    true       DISABLED
+CONTROL.TSM_FILE                               string  false      
+CONTROL.WINDOW_COUNT                           int     false      1
+CORE_REFRESH_RATE_MS                           int     false      500
+CORE_UUID                                      string  true       A19E4BF37E0D5D16AB29B4E200A9A071
+NAME                                           string  true       hw_ila_1
+STATIC.ILA_CLOCK_FREQ                          int     true       0
+STATIC.IS_ADVANCED_TRIGGER_MODE_SUPPORTED      bool    true       0
+STATIC.IS_BASIC_CAPTURE_MODE_SUPPORTED         bool    true       0
+STATIC.IS_TRANSITIONAL_CAPTURE_MODE_SUPPORTED  bool    true       0
+STATIC.IS_TRIG_IN_SUPPORTED                    bool    true       0
+STATIC.IS_TRIG_OUT_SUPPORTED                   bool    true       0
+STATIC.MAX_DATA_DEPTH                          int     true       1024
+STATIC.PORTS.COUNT                             int     true       12
+STATIC.PORTS.PORT_0.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_0.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_0.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_0.WIDTH                      int     true       1
+STATIC.PORTS.PORT_1.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_1.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_1.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_1.WIDTH                      int     true       64
+STATIC.PORTS.PORT_2.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_2.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_2.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_2.WIDTH                      int     true       64
+STATIC.PORTS.PORT_3.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_3.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_3.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_3.WIDTH                      int     true       64
+STATIC.PORTS.PORT_4.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_4.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_4.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_4.WIDTH                      int     true       3
+STATIC.PORTS.PORT_5.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_5.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_5.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_5.WIDTH                      int     true       5
+STATIC.PORTS.PORT_6.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_6.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_6.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_6.WIDTH                      int     true       9
+STATIC.PORTS.PORT_7.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_7.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_7.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_7.WIDTH                      int     true       128
+STATIC.PORTS.PORT_8.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_8.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_8.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_8.WIDTH                      int     true       128
+STATIC.PORTS.PORT_9.COMPARATOR_COUNT           int     true       1
+STATIC.PORTS.PORT_9.IS_DATA                    bool    true       1
+STATIC.PORTS.PORT_9.IS_TRIGGER                 bool    true       1
+STATIC.PORTS.PORT_9.WIDTH                      int     true       6
+STATIC.PORTS.PORT_10.COMPARATOR_COUNT          int     true       1
+STATIC.PORTS.PORT_10.IS_DATA                   bool    true       1
+STATIC.PORTS.PORT_10.IS_TRIGGER                bool    true       1
+STATIC.PORTS.PORT_10.WIDTH                     int     true       1
+STATIC.PORTS.PORT_11.COMPARATOR_COUNT          int     true       1
+STATIC.PORTS.PORT_11.IS_DATA                   bool    true       1
+STATIC.PORTS.PORT_11.IS_TRIGGER                bool    true       1
+STATIC.PORTS.PORT_11.WIDTH                     int     true       1
+STATIC.TIME_TAG_PORT                           int     true       -1
+STATIC.TIME_TAG_WIDTH                          int     true       0
+STATIC.TSM_COUNTER_0_WIDTH                     int     true       0
+STATIC.TSM_COUNTER_1_WIDTH                     int     true       0
+STATIC.TSM_COUNTER_2_WIDTH                     int     true       0
+STATIC.TSM_COUNTER_3_WIDTH                     int     true       0
+STATUS.CORE_STATUS                             string  true       IDLE
+STATUS.DATA_DEPTH                              int     true       1
+STATUS.IS_TRIGGER_AT_STARTUP                   bool    true       0
+STATUS.SAMPLE_COUNT                            int     true       0
+STATUS.TRIGGER_POSITION                        int     true       0
+STATUS.TSM_FLAG0                               bool    true       0
+STATUS.TSM_FLAG1                               bool    true       0
+STATUS.TSM_FLAG2                               bool    true       0
+STATUS.TSM_FLAG3                               bool    true       0
+STATUS.TSM_STATE                               int     true       0
+STATUS.WINDOW_COUNT                            int     true       1
+TRIGGER_START_TIME_SECONDS                     string  true       
+TRIGGER_STOP_TIME_SECONDS                      string  true       
+# set probes [get_hw_probes -of_objects $ila]
+# foreach p $probes {puts "ONLINE_HW_PROBE $p";report_property $p}
+ONLINE_HW_PROBE online_ila_app_addr
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq6'hXX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe9[5:0]
+NAME                   string  true       online_ila_app_addr
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       online_ila_app_addr
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       online_ila_app_addr
+PROBE_PORT             int     true       9
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       6
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq6'hXX
+TYPE                   string  true       ila
+WIDTH                  int     true       6
+ONLINE_HW_PROBE online_ila_done
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe0[0]
+NAME                   string  true       online_ila_done
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       online_ila_done
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       online_ila_done
+PROBE_PORT             int     true       0
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE online_ila_state
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq3'hX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe5[3:1]
+NAME                   string  true       online_ila_state
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       online_ila_state
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       online_ila_state
+PROBE_PORT             int     true       5
+PROBE_PORT_BITS        int     true       1
+PROBE_PORT_BIT_COUNT   int     true       3
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq3'hX
+TYPE                   string  true       ila
+WIDTH                  int     true       3
+ONLINE_HW_PROBE wiring_i/test_engine/calib_complete
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe10[0]
+NAME                   string  true       wiring_i/test_engine/calib_complete
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/calib_complete
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       calib_complete
+PROBE_PORT             int     true       10
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/Q
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq128'hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe8[127:0]
+NAME                   string  true       wiring_i/test_engine/inst/engine/Q
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/Q
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       Q
+PROBE_PORT             int     true       8
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       128
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq128'hXXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX_XXXX
+TYPE                   string  true       ila
+WIDTH                  int     true       128
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/actual_reg_n_0_
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[0]
+NAME                   string  true       wiring_i/test_engine/inst/engine/actual_reg_n_0_
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/actual_reg_n_0_
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       actual_reg_n_0_
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/fatal_code_reg_n_0_
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq3'hX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe4[2:0]
+NAME                   string  true       wiring_i/test_engine/inst/engine/fatal_code_reg_n_0_
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/fatal_code_reg_n_0_
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       fatal_code_reg_n_0_
+PROBE_PORT             int     true       4
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       3
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq3'hX
+TYPE                   string  true       ila
+WIDTH                  int     true       3
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[1]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       1
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in102_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[35]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in102_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in102_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in102_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       35
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in105_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[36]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in105_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in105_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in105_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       36
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in108_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[37]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in108_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in108_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in108_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       37
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in111_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[38]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in111_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in111_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in111_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       38
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in114_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[39]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in114_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in114_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in114_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       39
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in117_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[40]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in117_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in117_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in117_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       40
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in120_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[41]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in120_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in120_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in120_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       41
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in123_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[42]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in123_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in123_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in123_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       42
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in126_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[43]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in126_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in126_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in126_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       43
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in129_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[44]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in129_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in129_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in129_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       44
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in12_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[5]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in12_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in12_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in12_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       5
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in132_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[45]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in132_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in132_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in132_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       45
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in135_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[46]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in135_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in135_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in135_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       46
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in138_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[47]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in138_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in138_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in138_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       47
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in141_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[48]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in141_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in141_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in141_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       48
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in144_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[49]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in144_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in144_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in144_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       49
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in147_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[50]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in147_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in147_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in147_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       50
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in150_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[51]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in150_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in150_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in150_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       51
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in153_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[52]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in153_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in153_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in153_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       52
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in156_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[53]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in156_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in156_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in156_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       53
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in159_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[54]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in159_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in159_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in159_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       54
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in15_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[6]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in15_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in15_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in15_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       6
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in162_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[55]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in162_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in162_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in162_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       55
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in165_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[56]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in165_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in165_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in165_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       56
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in168_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[57]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in168_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in168_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in168_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       57
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in171_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[58]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in171_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in171_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in171_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       58
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in174_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[59]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in174_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in174_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in174_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       59
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in177_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[60]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in177_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in177_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in177_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       60
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in180_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[61]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in180_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in180_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in180_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       61
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in183_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[62]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in183_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in183_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in183_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       62
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in186_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[63]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in186_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in186_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in186_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       63
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in189_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[64]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in189_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in189_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in189_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       64
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in18_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[7]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in18_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in18_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in18_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       7
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in192_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[65]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in192_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in192_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in192_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       65
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in195_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[66]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in195_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in195_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in195_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       66
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in198_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[67]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in198_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in198_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in198_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       67
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in201_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[68]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in201_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in201_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in201_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       68
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in204_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[69]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in204_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in204_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in204_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       69
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in207_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[70]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in207_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in207_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in207_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       70
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in210_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[71]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in210_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in210_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in210_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       71
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in213_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[72]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in213_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in213_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in213_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       72
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in216_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[73]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in216_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in216_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in216_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       73
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in219_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[74]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in219_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in219_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in219_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       74
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in21_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[8]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in21_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in21_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in21_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       8
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in222_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[75]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in222_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in222_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in222_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       75
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in225_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[76]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in225_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in225_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in225_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       76
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in228_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[77]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in228_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in228_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in228_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       77
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in231_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[78]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in231_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in231_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in231_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       78
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in234_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[79]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in234_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in234_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in234_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       79
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in237_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[80]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in237_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in237_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in237_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       80
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in240_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[81]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in240_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in240_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in240_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       81
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in243_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[82]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in243_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in243_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in243_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       82
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in246_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[83]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in246_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in246_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in246_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       83
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in249_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[84]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in249_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in249_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in249_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       84
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in24_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[9]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in24_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in24_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in24_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       9
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in252_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[85]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in252_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in252_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in252_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       85
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in255_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[86]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in255_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in255_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in255_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       86
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in258_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[87]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in258_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in258_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in258_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       87
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in261_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[88]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in261_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in261_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in261_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       88
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in264_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[89]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in264_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in264_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in264_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       89
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in267_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[90]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in267_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in267_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in267_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       90
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in270_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[91]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in270_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in270_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in270_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       91
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in273_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[92]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in273_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in273_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in273_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       92
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in276_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[93]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in276_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in276_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in276_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       93
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in279_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[94]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in279_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in279_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in279_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       94
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in27_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[10]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in27_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in27_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in27_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       10
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in282_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[95]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in282_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in282_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in282_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       95
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in285_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[96]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in285_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in285_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in285_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       96
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in288_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[97]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in288_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in288_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in288_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       97
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in291_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[98]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in291_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in291_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in291_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       98
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in294_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[99]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in294_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in294_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in294_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       99
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in297_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[100]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in297_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in297_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in297_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       100
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in300_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[101]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in300_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in300_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in300_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       101
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in303_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[102]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in303_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in303_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in303_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       102
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in306_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[103]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in306_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in306_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in306_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       103
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in309_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[104]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in309_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in309_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in309_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       104
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in30_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[11]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in30_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in30_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in30_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       11
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in312_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[105]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in312_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in312_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in312_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       105
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in315_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[106]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in315_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in315_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in315_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       106
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in318_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[107]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in318_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in318_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in318_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       107
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in321_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[108]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in321_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in321_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in321_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       108
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in324_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[109]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in324_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in324_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in324_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       109
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in327_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[110]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in327_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in327_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in327_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       110
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in330_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[111]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in330_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in330_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in330_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       111
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in333_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[112]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in333_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in333_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in333_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       112
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in336_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[113]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in336_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in336_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in336_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       113
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in339_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[114]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in339_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in339_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in339_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       114
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in33_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[12]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in33_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in33_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in33_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       12
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in342_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[115]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in342_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in342_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in342_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       115
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in345_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[116]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in345_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in345_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in345_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       116
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in348_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[117]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in348_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in348_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in348_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       117
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in351_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[118]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in351_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in351_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in351_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       118
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in354_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[119]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in354_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in354_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in354_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       119
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in357_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[120]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in357_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in357_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in357_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       120
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in360_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[121]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in360_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in360_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in360_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       121
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in363_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[122]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in363_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in363_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in363_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       122
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in366_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[123]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in366_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in366_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in366_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       123
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in369_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[124]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in369_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in369_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in369_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       124
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in36_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[13]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in36_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in36_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in36_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       13
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in372_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[125]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in372_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in372_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in372_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       125
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in375_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[126]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in375_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in375_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in375_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       126
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in378_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[127]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in378_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in378_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in378_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       127
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in39_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[14]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in39_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in39_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in39_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       14
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in3_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[2]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in3_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in3_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in3_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       2
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in42_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[15]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in42_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in42_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in42_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       15
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in45_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[16]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in45_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in45_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in45_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       16
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in48_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[17]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in48_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in48_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in48_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       17
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in51_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[18]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in51_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in51_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in51_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       18
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in54_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[19]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in54_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in54_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in54_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       19
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in57_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[20]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in57_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in57_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in57_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       20
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in60_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[21]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in60_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in60_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in60_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       21
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in63_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[22]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in63_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in63_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in63_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       22
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in66_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[23]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in66_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in66_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in66_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       23
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in69_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[24]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in69_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in69_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in69_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       24
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in6_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[3]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in6_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in6_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in6_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       3
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in72_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[25]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in72_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in72_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in72_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       25
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in75_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[26]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in75_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in75_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in75_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       26
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in78_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[27]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in78_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in78_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in78_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       27
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in81_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[28]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in81_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in81_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in81_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       28
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in84_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[29]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in84_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in84_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in84_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       29
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in87_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[30]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in87_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in87_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in87_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       30
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in90_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[31]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in90_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in90_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in90_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       31
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in93_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[32]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in93_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in93_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in93_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       32
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in96_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[33]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in96_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in96_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in96_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       33
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in99_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[34]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in99_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in99_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in99_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       34
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/p_1_in9_in
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe7[4]
+NAME                   string  true       wiring_i/test_engine/inst/engine/p_1_in9_in
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/p_1_in9_in
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       p_1_in9_in
+PROBE_PORT             int     true       7
+PROBE_PORT_BITS        int     true       4
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/pattern_reg
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq9'hXXX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe6[8:0]
+NAME                   string  true       wiring_i/test_engine/inst/engine/pattern_reg
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/pattern_reg
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       pattern_reg
+PROBE_PORT             int     true       6
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       9
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq9'hXXX
+TYPE                   string  true       ila
+WIDTH                  int     true       9
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/state
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe5[4]
+NAME                   string  true       wiring_i/test_engine/inst/engine/state
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/state
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       state
+PROBE_PORT             int     true       5
+PROBE_PORT_BITS        int     true       4
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/state_1
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe5[0]
+NAME                   string  true       wiring_i/test_engine/inst/engine/state_1
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/state_1
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       state_1
+PROBE_PORT             int     true       5
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/total_errors_reg
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq64'hXXXX_XXXX_XXXX_XXXX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe3[63:0]
+NAME                   string  true       wiring_i/test_engine/inst/engine/total_errors_reg
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/total_errors_reg
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       total_errors_reg
+PROBE_PORT             int     true       3
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       64
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq64'hXXXX_XXXX_XXXX_XXXX
+TYPE                   string  true       ila
+WIDTH                  int     true       64
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/total_reads_reg
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq64'hXXXX_XXXX_XXXX_XXXX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe2[63:0]
+NAME                   string  true       wiring_i/test_engine/inst/engine/total_reads_reg
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/total_reads_reg
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       total_reads_reg
+PROBE_PORT             int     true       2
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       64
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq64'hXXXX_XXXX_XXXX_XXXX
+TYPE                   string  true       ila
+WIDTH                  int     true       64
+ONLINE_HW_PROBE wiring_i/test_engine/inst/engine/total_writes_reg
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq64'hXXXX_XXXX_XXXX_XXXX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe1[63:0]
+NAME                   string  true       wiring_i/test_engine/inst/engine/total_writes_reg
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/inst/engine/total_writes_reg
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       total_writes_reg
+PROBE_PORT             int     true       1
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       64
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq64'hXXXX_XXXX_XXXX_XXXX
+TYPE                   string  true       ila
+WIDTH                  int     true       64
+ONLINE_HW_PROBE wiring_i/test_engine/ui_reset
+Property               Type    Read-only  Value
+CAPTURE_COMPARE_VALUE  string  false      eq1'bX
+CLASS                  string  true       hw_probe
+COMPARATOR_COUNT       int     true       1
+DISPLAY_AS_ENUM        bool    false      1
+DISPLAY_RADIX          enum    false      HEX
+HW_ILA                 string  true       hw_ila_1
+IS_DATA                bool    true       1
+IS_TRIGGER             bool    true       1
+IS_VIRTUAL             bool    true       0
+LINK_TO_WAVEFORM       bool    false      1
+MAP                    string  true       probe11[0]
+NAME                   string  true       wiring_i/test_engine/ui_reset
+NAME.CUSTOM            string  false      
+NAME.LONG              string  true       wiring_i/test_engine/ui_reset
+NAME.SELECT            enum    false      Long
+NAME.SHORT             string  true       ui_reset
+PROBE_PORT             int     true       11
+PROBE_PORT_BITS        int     true       0
+PROBE_PORT_BIT_COUNT   int     true       1
+SOURCE                 enum    true       netlist
+TRIGGER_COMPARE_VALUE  string  false      eq1'bX
+TYPE                   string  true       ila
+WIDTH                  int     true       1
+# set done [get_hw_probes -of_objects $ila -filter {NAME =~ *done*}]
+# if {[llength $done]!=1} {error "Expected one done probe"}
+# set_property TRIGGER_COMPARE_VALUE eq1'b1 $done
+# set_property CONTROL.TRIGGER_POSITION 512 $ila
+# run_hw_ila $ila
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Oct-29 21:53:47
+# wait_on_hw_ila -timeout 100 $ila
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Oct-29 21:53:51
+# set data [upload_hw_ila_data $ila]
+# write_hw_ila_data -force -csv_file $out/2026-10-29_baseline_ila.csv $data
+# write_hw_ila_data -force $out/2026-10-29_baseline_ila.ila $data
+# foreach mig [get_hw_migs -of_objects $dev] {report_hw_mig $mig}
+|Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+|--------------------------------------------------------------------------------
+|Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+|Date        : Thu Oct 29 21:53:51 2026
+|Host        : wenhan-System-Product-Name running 64-bit Ubuntu 24.04.3 LTS
+|Command     : report_hw_mig localhost:3121/xilinx_tcf/Digilent/210308B43939/0_1/MIG_1
+|Device      : xcvu9p_0
+|--------------------------------------------------------------------------------
+
+-------------------
+ MIG Status 
+-------------------
+Overall Status:  CAL PASS
+MicroBlaze Status:  PASS
+DQS Gate Status:  RUNNING
+Message:  No errors detected during calibration.
+
+----------------------------------
+ Memory Configuration 
+----------------------------------
+Memory Debug Core Number:  MIG_1
+Memory Interface Type:  DDR3
+MIG Core Cell Name:  wiring_i/mig
+XSDB Version:  3
+RTL Version:  0
+MicroBlaze Code Version:  11
+Memory Frequency (MHz):  400
+Bit Time (ps):  1250
+Ranks:  1
+Data Bytes:  2
+Nibbles:  4
+Bits per Byte:  8
+PLL Multiply:  8
+PLL Divide:  1
+MMCM Multiply:  6
+MMCM Divide:  1
+
+-----------------------------------
+ Calibration Information 
+-----------------------------------
+
+RANK 0 -
+1 - DQS Gate:  PASS
+2 - DQS Gate Sanity Check:  PASS
+3 - Write Leveling:  PASS
+4 - Read Per-Bit Deskew:  PASS
+5 - Read Per-Bit DBI Deskew:  SKIP
+6 - Read DQS Centering (Simple):  PASS
+7 - Read Sanity Check:  PASS
+8 - Write DQS to DQ Deskew:  PASS
+9 - Write DQS to DM/DBI Deskew:  PASS
+10 - Write DQS to DQ (Simple):  PASS
+11 - Write DQS to DM/DBI (Simple):  PASS
+12 - Read DQS Centering DBI (Simple):  SKIP
+13 - Write Latency Calibration:  PASS
+14 - Write Read Sanity Check 0:  PASS
+15 - Read DQS Centering (Complex):  SKIP
+16 - Write Read Sanity Check 1:  SKIP
+17 - Read VREF Training:  SKIP
+18 - Write Read Sanity Check 2:  SKIP
+19 - Write DQS to DQ (Complex):  SKIP
+20 - Write DQS to DM/DBI (Complex):  SKIP
+21 - Write Read Sanity Check 3:  SKIP
+22 - Write VREF Training:  SKIP
+23 - Write Read Sanity Check 4:  SKIP
+24 - Read DQS Centering Multi Rank Adjustment:  SKIP
+25 - Write Read Sanity Check 5:  SKIP
+26 - Multi Rank Adjustment and Checks:  SKIP
+27 - Write Read Sanity Check 6:  SKIP
+
+--------------------------
+ Margin Analysis 
+--------------------------
+
+RANK 0 - Read Margin - Falling Edge Simple Calibration
+Byte 0 Nibble 0  -  Left Margin:  611  Center Point:  657  Right Margin:  611
+Byte 0 Nibble 1  -  Left Margin:  607  Center Point:  654  Right Margin:  611
+Byte 1 Nibble 0  -  Left Margin:  600  Center Point:  643  Right Margin:  600
+Byte 1 Nibble 1  -  Left Margin:  600  Center Point:  664  Right Margin:  600
+
+RANK 0 - Read Margin - Rising Edge Simple Calibration
+Byte 0 Nibble 0  -  Left Margin:  600  Center Point:  686  Right Margin:  603
+Byte 0 Nibble 1  -  Left Margin:  600  Center Point:  658  Right Margin:  603
+Byte 1 Nibble 0  -  Left Margin:  618  Center Point:  683  Right Margin:  618
+Byte 1 Nibble 1  -  Left Margin:  607  Center Point:  665  Right Margin:  607
+
+RANK 0 - Complex pattern read margin did not run because either a prior stage of calibration failed or read levelling (complex) stage was skipped.
+
+RANK 0 - Write Margin - Simple Calibration
+Byte 0  -  Left Margin:  609  Center Point:  2552  Right Margin:  609
+Byte 1  -  Left Margin:  600  Center Point:  2403  Right Margin:  603
+
+RANK 0 - Complex pattern write margin did not run because either a prior stage of calibration failed or write complex stage was skipped.
+
+-----------------------
+  Warning Notices  
+-----------------------
+
+No warning has been generated during calibration.
+
+# puts "ONLINE_BASELINE_CAPTURE_COMPLETE"
+ONLINE_BASELINE_CAPTURE_COMPLETE
+# close_hw_target
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210308B43939
+# disconnect_hw_server
+# close_hw_manager
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 21:53:51 2026...

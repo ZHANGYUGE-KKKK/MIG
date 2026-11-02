@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-29",
+  "method": "JTAG ILA",
+  "jtag_hz": 3000000,
+  "samples": 1024,
+  "terminal_samples": 512,
+  "writes": 8320,
+  "reads": 8320,
+  "errors": 0,
+  "fatal": 0,
+  "pattern": 259,
+  "calib": 1,
+  "ui_reset": 0,
+  "passed": true,
+  "sha256": {
+    "wiring_online.bit": "f4efc9f4e749c7103d3a972a0c55d3d7b8af9fd8f5b1ea18838d9e0456a6c90f",
+    "wiring_online.ltx": "a4d62589d48d3b46ace05d3875e2c562d5e0026d9528ee48343cd63dcfdfa08e",
+    "2026-10-29_baseline_ila.csv": "edc61f67d5d7b0f658e4375551b9b867fb55be64ebaea185731f797191bdc94e"
+  }
+}

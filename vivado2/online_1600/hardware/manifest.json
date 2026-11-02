@@ -1,0 +1,17 @@
+{
+  "date": "2026-10-29",
+  "rate_mt_s": 1600,
+  "ui_mhz": 200,
+  "pins_checked": 55,
+  "rtl_simulations": 7,
+  "decoder_tests": 5,
+  "sha256": {
+    "vivado2/online_1600/rtl/online_axi_diag.v": "5457fed481654de10eb80352f7f01b1f437267ee37fd05d21454ab67331be922",
+    "vivado2/online_1600/build/wiring_online_axi.bit": "0048aa2d4cebaeda7a0c4fc0d333c21eeaa025cf539cce89fca545f38bac2692",
+    "vivado2/online_1600/build/wiring_online_axi.ltx": "d94e0f012a345fe833671bd1766ea80286d424b953c61957a16c8f38d5f5d1f5",
+    "vivado2/online_1600/scripts/create_bd.tcl": "0701d9a12df6ab1a5892f433394e56085914e5ae3346fb1369f11cbfdeec7b54",
+    "vivado2/online_1600/scripts/build.tcl": "f4e76e52c7a7071deee7d5f2f612df7991c014477daa153f1139a8c7ed4d8cef",
+    "vivado2/online_1600/config/vrp107_1600.csv": "6a6802971298d8c7224ed59f41b19c325e4e78bd72c31fca5f651ca0c7ef6a84",
+    "vivado2/online_1600/build/generated_parameters.json": "0e797da0bf39f3a5c1154f38af9164f19a2e61757c78b4d3edde46afda925afd"
+  }
+}

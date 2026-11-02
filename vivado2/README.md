@@ -1,5 +1,7 @@
 # VCU118 DDR3低负载数据位测试：Block Design工程
 
+2026-10-29最新：用户要求切回800，已完成[全容量压力](online_800_burst/hardware/2026-10-29_results.md)，1GiB两种互补地址模式、17GiB写/272GiB读、0错/fatal0。新独立BD位于online_800_full与online_800_burst，当前FPGA保留后者800镜像，Flash未变。下文原始低负载工程说明保留。
+
 工具验收及限制见[RESULTS.md](RESULTS.md)。
 
 本工程采用Vivado 2022.2 IP Integrator，顶层是生成的`wiring_wrapper`，实际设计保存在`wiring.bd`。应用没有CPU。内容是当前第一项数据位测试，不包含DM验证或全容量地址唯一性测试。
@@ -64,4 +66,4 @@ python3 vivado2/tests/decode.py /path/to/raw.log --output /path/to/result.json
 
 仿真不含实际DDR PHY、模拟信号完整性或实物DDR颗粒模型。图样回环即使通过，也不能排除可逆DQ/地址置换；严格逐针线序还需原理图/PCB端点与断电导通核对。全容量和DM测试属于后续项目。
 
-**硬件约束：JTAG与DDR链路无法共存。** 今后只在DDR断开时烧写Flash；完全断电后接回DDR，从Flash启动并采集串口，保持现有SW16设置。
+**2026-10-29接线更新：**用户移除H2，撤销JTAG/DDR不能共存及调试必须烧写Flash的限制。优先JTAG下载和在线MIG调试；需要掉电保存时再烧写Flash。

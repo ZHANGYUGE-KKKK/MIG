@@ -1,0 +1,14 @@
+{
+  "date": "2026-10-29",
+  "pins_checked": 55,
+  "pins_identical_to_original_bd": true,
+  "rtl_simulations": 6,
+  "decoder_tests": 4,
+  "sha256": {
+    "vivado2/online_diag/rtl/online_axi_diag.v": "1ff88fa7f9cd1330fa6be2ef9c766705e691fe680e9ed35ae647a72e60a51352",
+    "vivado2/online_diag/build/wiring_online_axi.bit": "488a818204134250bd105c2db42dce678270e4632abe642db0a8dbc37bd152fc",
+    "vivado2/online_diag/build/wiring_online_axi.ltx": "8f68ce61f48d7421ad9f7a2be18bcc3d12b1142c694f8dfaf1958832ae721879",
+    "vivado2/online_diag/scripts/create_bd.tcl": "aa3f4221694f0be9515539cd3304b09c09efb49474632ce5380bd00a02513a4a",
+    "vivado2/online_diag/scripts/build.tcl": "93ec070fb7cfcf2f795a5ed39ad3316118d3c8ee7be419cb8ab55b5d41006108"
+  }
+}

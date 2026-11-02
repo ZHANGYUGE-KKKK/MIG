@@ -30,3 +30,26 @@
 /TEST/part_audit/ip/
 /TEST/part_audit/*_ip/
 /vivado_pid*.str
+
+# Online JTAG diagnostics: keep sources and hardware evidence, omit build products.
+/.tmpCRC/
+/vivado2/debug_online/*.dcp
+/vivado2/debug_online/*.bit
+/vivado2/debug_online/*.ltx
+/vivado2/online_diag/build/
+/vivado2/online_diag/tests/obj/
+/vivado2/online_diag/tests/__pycache__/
+/vivado2/online_multi/build/
+/vivado2/online_multi/tests/obj/
+/vivado2/online_multi/tests/__pycache__/
+/vivado2/online_1600/build/
+/vivado2/online_1600/tests/obj/
+/vivado2/online_1600/tests/__pycache__/
+
+/vivado2/online_800_full/build/
+/vivado2/online_800_full/tests/obj/
+/vivado2/online_800_full/tests/__pycache__/
+
+/vivado2/online_800_burst/build/
+/vivado2/online_800_burst/tests/obj/
+/vivado2/online_800_burst/tests/__pycache__/

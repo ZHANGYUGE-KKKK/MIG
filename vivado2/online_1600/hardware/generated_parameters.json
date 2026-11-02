@@ -1,0 +1,33 @@
+{
+  "generated_top": "vivado2/online_1600/build/project/wiring_bd.gen/sources_1/bd/wiring/ip/wiring_mig_0/rtl/ip_top/wiring_mig_0_ddr3.sv",
+  "parameters": {
+    "tCK": 1250,
+    "ROW_WIDTH": 16,
+    "COL_WIDTH": 10,
+    "BANK_WIDTH": 3,
+    "CS_WIDTH": 1,
+    "CKE_WIDTH": 1,
+    "ODT_WIDTH": 1,
+    "DQ_WIDTH": 16,
+    "DQS_WIDTH": 2,
+    "tRFC": 208,
+    "tREFI": 6240,
+    "tFAW": 32,
+    "tRCD": 12,
+    "tRP": 12,
+    "tRAS": 28,
+    "tRRD": 8,
+    "tWTR": 8,
+    "tRTP": 8,
+    "tWR": 12,
+    "tZQCS": 64
+  },
+  "MR": {
+    "MR0": "0xd70",
+    "MR1": "0x44",
+    "MR2": "0x18"
+  },
+  "CL": 11,
+  "CWL": 8,
+  "capacity_bytes": 1073741824
+}

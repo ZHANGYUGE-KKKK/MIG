@@ -1,0 +1,20 @@
+ONLINE_AXI_SIM_PASS mode=0 W=64 R=256 err=0 fatal=0
+- vivado2/online_800_full/tests/tb.sv:80: Verilog $finish
+
+ONLINE_AXI_SIM_PASS mode=1 W=64 R=256 err=2 fatal=0
+- vivado2/online_800_full/tests/tb.sv:80: Verilog $finish
+
+ONLINE_AXI_SIM_PASS mode=2 W=64 R=6 err=0 fatal=2
+- vivado2/online_800_full/tests/tb.sv:80: Verilog $finish
+
+ONLINE_AXI_SIM_PASS mode=3 W=32 R=0 err=0 fatal=1
+- vivado2/online_800_full/tests/tb.sv:80: Verilog $finish
+
+ONLINE_AXI_SIM_PASS mode=4 W=0 R=0 err=0 fatal=4
+- vivado2/online_800_full/tests/tb.sv:80: Verilog $finish
+
+ONLINE_AXI_SIM_PASS mode=5 W=22 R=0 err=0 fatal=3
+- vivado2/online_800_full/tests/tb.sv:80: Verilog $finish
+
+ONLINE_AXI_SIM_PASS mode=6 W=128 R=512 err=0 fatal=0
+- vivado2/online_800_full/tests/tb.sv:80: Verilog $finish

@@ -1,0 +1,315 @@
+
+****** Vivado v2022.2 (64-bit)
+  **** SW Build 3671981 on Fri Oct 14 04:59:54 MDT 2022
+  **** IP Build 3669848 on Fri Oct 14 08:30:02 MDT 2022
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+source vivado2/online_diag/scripts/run.tcl
+# set base [file normalize [file join [file dirname [info script]] ..]]
+# set rounds [expr {[llength $argv]?[lindex $argv 0]:1}]
+# set label [expr {[llength $argv]>1?[lindex $argv 1]:"initial"}]
+# open_hw_manager
+# connect_hw_server -url localhost:3121
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2022.2
+  **** Build date : Oct 14 2022 at 05:10:28
+    ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:0
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2022.2.0
+  ****** Build date   : Oct 05 2022-07:25:37
+    **** Build number : 2022.2.1664925937
+      ** Copyright 2017-2026 Xilinx, Inc. All Rights Reserved.
+
+
+
+# set target [get_hw_targets -filter {NAME =~ *210308B43939*}]
+# if {[llength $target]!=1} {error "Known target missing"}
+# current_hw_target $target
+# set_property PARAM.FREQUENCY 3000000 $target
+# open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210308B43939
+# set dev [get_hw_devices -filter {PART == xcvu9p}]
+# if {[llength $dev]!=1} {error "Expected one xcvu9p"}
+# current_hw_device $dev
+# set_property PROGRAM.FILE $base/build/wiring_online_axi.bit $dev
+# set_property PROBES.FILE $base/build/wiring_online_axi.ltx $dev
+# set_property FULL_PROBES.FILE $base/build/wiring_online_axi.ltx $dev
+# if {[lindex $argv 2] ne "reuse"} {program_hw_devices $dev}
+# refresh_hw_device $dev
+INFO: [Labtools 27-2302] Device xcvu9p (JTAG device index = 0) is programmed with a design that has 1 ILA core(s).
+INFO: [Labtools 27-2302] Device xcvu9p (JTAG device index = 0) is programmed with a design that has 1 MIG core(s).
+INFO: [Labtools 27-2302] Device xcvu9p (JTAG device index = 0) is programmed with a design that has 1 VIO core(s).
+INFO: [Labtools 27-1889] Uploading output probe values for VIO core [hw_vio_1]
+# set ila [get_hw_ilas -of_objects $dev]
+# set vio [get_hw_vios -of_objects $dev]
+# if {[llength $ila]!=1 || [llength $vio]!=1} {error "Expected ILA and VIO"}
+# set out {}
+# foreach p [get_hw_probes -of_objects $vio] {
+#  if {[lsearch -exact [list_property $p] OUTPUT_VALUE]>=0} {lappend out $p}
+# }
+# if {[llength $out]!=1} {error "Expected one VIO output, got $out"}
+# set done [get_hw_probes -of_objects $ila -filter {NAME =~ *test_engine_done*}]
+# if {[llength $done]!=1} {error "Done probe missing: [get_hw_probes -of_objects $ila]"}
+# set_property TRIGGER_COMPARE_VALUE eq1'b1 $done
+# set_property CONTROL.TRIGGER_POSITION 512 $ila
+# foreach mig [get_hw_migs -of_objects $dev] {
+#  refresh_hw_mig $mig
+#  if {[get_property CALIBRATION_FAIL.STATUS $mig] ne "FALSE"} {error "MIG calibration failed"}
+#  report_hw_mig $mig
+# }
+|Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+|--------------------------------------------------------------------------------
+|Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+|Date        : Thu Oct 29 22:08:11 2026
+|Host        : wenhan-System-Product-Name running 64-bit Ubuntu 24.04.3 LTS
+|Command     : report_hw_mig localhost:3121/xilinx_tcf/Digilent/210308B43939/0_1/MIG_1
+|Device      : xcvu9p_0
+|--------------------------------------------------------------------------------
+
+-------------------
+ MIG Status 
+-------------------
+Overall Status:  CAL PASS
+MicroBlaze Status:  PASS
+DQS Gate Status:  RUNNING
+Message:  No errors detected during calibration.
+
+----------------------------------
+ Memory Configuration 
+----------------------------------
+Memory Debug Core Number:  MIG_1
+Memory Interface Type:  DDR3
+MIG Core Cell Name:  wiring_i/mig
+XSDB Version:  3
+RTL Version:  0
+MicroBlaze Code Version:  11
+Memory Frequency (MHz):  400
+Bit Time (ps):  1250
+Ranks:  1
+Data Bytes:  2
+Nibbles:  4
+Bits per Byte:  8
+PLL Multiply:  8
+PLL Divide:  1
+MMCM Multiply:  6
+MMCM Divide:  1
+
+-----------------------------------
+ Calibration Information 
+-----------------------------------
+
+RANK 0 -
+1 - DQS Gate:  PASS
+2 - DQS Gate Sanity Check:  PASS
+3 - Write Leveling:  PASS
+4 - Read Per-Bit Deskew:  PASS
+5 - Read Per-Bit DBI Deskew:  SKIP
+6 - Read DQS Centering (Simple):  PASS
+7 - Read Sanity Check:  PASS
+8 - Write DQS to DQ Deskew:  PASS
+9 - Write DQS to DM/DBI Deskew:  PASS
+10 - Write DQS to DQ (Simple):  PASS
+11 - Write DQS to DM/DBI (Simple):  PASS
+12 - Read DQS Centering DBI (Simple):  SKIP
+13 - Write Latency Calibration:  PASS
+14 - Write Read Sanity Check 0:  PASS
+15 - Read DQS Centering (Complex):  SKIP
+16 - Write Read Sanity Check 1:  SKIP
+17 - Read VREF Training:  SKIP
+18 - Write Read Sanity Check 2:  SKIP
+19 - Write DQS to DQ (Complex):  SKIP
+20 - Write DQS to DM/DBI (Complex):  SKIP
+21 - Write Read Sanity Check 3:  SKIP
+22 - Write VREF Training:  SKIP
+23 - Write Read Sanity Check 4:  SKIP
+24 - Read DQS Centering Multi Rank Adjustment:  SKIP
+25 - Write Read Sanity Check 5:  SKIP
+26 - Multi Rank Adjustment and Checks:  SKIP
+27 - Write Read Sanity Check 6:  SKIP
+
+--------------------------
+ Margin Analysis 
+--------------------------
+
+RANK 0 - Read Margin - Falling Edge Simple Calibration
+Byte 0 Nibble 0  -  Left Margin:  603  Center Point:  650  Right Margin:  607
+Byte 0 Nibble 1  -  Left Margin:  607  Center Point:  654  Right Margin:  611
+Byte 1 Nibble 0  -  Left Margin:  607  Center Point:  650  Right Margin:  607
+Byte 1 Nibble 1  -  Left Margin:  604  Center Point:  671  Right Margin:  604
+
+RANK 0 - Read Margin - Rising Edge Simple Calibration
+Byte 0 Nibble 0  -  Left Margin:  610  Center Point:  698  Right Margin:  610
+Byte 0 Nibble 1  -  Left Margin:  607  Center Point:  658  Right Margin:  611
+Byte 1 Nibble 0  -  Left Margin:  610  Center Point:  698  Right Margin:  610
+Byte 1 Nibble 1  -  Left Margin:  603  Center Point:  665  Right Margin:  607
+
+RANK 0 - Complex pattern read margin did not run because either a prior stage of calibration failed or read levelling (complex) stage was skipped.
+
+RANK 0 - Write Margin - Simple Calibration
+Byte 0  -  Left Margin:  618  Center Point:  2634  Right Margin:  621
+Byte 1  -  Left Margin:  604  Center Point:  2454  Right Margin:  597
+
+RANK 0 - Complex pattern write margin did not run because either a prior stage of calibration failed or write complex stage was skipped.
+
+-----------------------
+  Warning Notices  
+-----------------------
+
+No warning has been generated during calibration.
+
+# for {set round 0} {$round<$rounds} {incr round} {
+#  set_property OUTPUT_VALUE 0 $out
+#  commit_hw_vio $vio
+#  after 20
+#  run_hw_ila $ila
+#  set_property OUTPUT_VALUE 1 $out
+#  commit_hw_vio $vio
+#  wait_on_hw_ila -timeout 30 $ila
+#  set data [upload_hw_ila_data $ila]
+#  set name [file join $base build ${label}_round${round}]
+#  write_hw_ila_data -force -csv_file ${name}.csv $data
+#  if {$round==0} {write_hw_ila_data -force ${name}.ila $data}
+#  set decoded [exec python3 $base/tests/decode_ila.py ${name}.csv]
+#  puts "ONLINE_DIAG_RESULT $round $decoded"
+# }
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Oct-29 22:08:11
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Oct-29 22:08:12
+ONLINE_DIAG_RESULT 0 {"state": 9, "leg": 15, "fatal": 0, "region_beats": 65536, "legs": 16, "writes": 65536, "reads": 1048576, "errors": 0, "read_index": 65536, "write_index": 65536, "sparse_gap": 100, "seed": "137a5c29", "samples": 1024, "errors_per_leg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "bit_flips_per_dq": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "first_error": null, "dense_errors": 0, "sparse_errors": 0, "passed": true}
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Oct-29 22:08:13
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Oct-29 22:08:14
+ONLINE_DIAG_RESULT 1 {"state": 9, "leg": 15, "fatal": 0, "region_beats": 65536, "legs": 16, "writes": 65536, "reads": 1048576, "errors": 0, "read_index": 65536, "write_index": 65536, "sparse_gap": 100, "seed": "137a5c29", "samples": 1024, "errors_per_leg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "bit_flips_per_dq": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "first_error": null, "dense_errors": 0, "sparse_errors": 0, "passed": true}
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Oct-29 22:08:15
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Oct-29 22:08:16
+ONLINE_DIAG_RESULT 2 {"state": 9, "leg": 15, "fatal": 0, "region_beats": 65536, "legs": 16, "writes": 65536, "reads": 1048576, "errors": 0, "read_index": 65536, "write_index": 65536, "sparse_gap": 100, "seed": "137a5c29", "samples": 1024, "errors_per_leg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "bit_flips_per_dq": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "first_error": null, "dense_errors": 0, "sparse_errors": 0, "passed": true}
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Oct-29 22:08:17
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Oct-29 22:08:18
+ONLINE_DIAG_RESULT 3 {"state": 9, "leg": 15, "fatal": 0, "region_beats": 65536, "legs": 16, "writes": 65536, "reads": 1048576, "errors": 0, "read_index": 65536, "write_index": 65536, "sparse_gap": 100, "seed": "137a5c29", "samples": 1024, "errors_per_leg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "bit_flips_per_dq": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "first_error": null, "dense_errors": 0, "sparse_errors": 0, "passed": true}
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Oct-29 22:08:19
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Oct-29 22:08:20
+ONLINE_DIAG_RESULT 4 {"state": 9, "leg": 15, "fatal": 0, "region_beats": 65536, "legs": 16, "writes": 65536, "reads": 1048576, "errors": 0, "read_index": 65536, "write_index": 65536, "sparse_gap": 100, "seed": "137a5c29", "samples": 1024, "errors_per_leg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "bit_flips_per_dq": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "first_error": null, "dense_errors": 0, "sparse_errors": 0, "passed": true}
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Oct-29 22:08:21
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Oct-29 22:08:22
+ONLINE_DIAG_RESULT 5 {"state": 9, "leg": 15, "fatal": 0, "region_beats": 65536, "legs": 16, "writes": 65536, "reads": 1048576, "errors": 0, "read_index": 65536, "write_index": 65536, "sparse_gap": 100, "seed": "137a5c29", "samples": 1024, "errors_per_leg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "bit_flips_per_dq": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "first_error": null, "dense_errors": 0, "sparse_errors": 0, "passed": true}
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Oct-29 22:08:23
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Oct-29 22:08:24
+ONLINE_DIAG_RESULT 6 {"state": 9, "leg": 15, "fatal": 0, "region_beats": 65536, "legs": 16, "writes": 65536, "reads": 1048576, "errors": 0, "read_index": 65536, "write_index": 65536, "sparse_gap": 100, "seed": "137a5c29", "samples": 1024, "errors_per_leg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "bit_flips_per_dq": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "first_error": null, "dense_errors": 0, "sparse_errors": 0, "passed": true}
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2026-Oct-29 22:08:25
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2026-Oct-29 22:08:26
+ONLINE_DIAG_RESULT 7 {"state": 9, "leg": 15, "fatal": 0, "region_beats": 65536, "legs": 16, "writes": 65536, "reads": 1048576, "errors": 0, "read_index": 65536, "write_index": 65536, "sparse_gap": 100, "seed": "137a5c29", "samples": 1024, "errors_per_leg": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "bit_flips_per_dq": [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0], "first_error": null, "dense_errors": 0, "sparse_errors": 0, "passed": true}
+# foreach mig [get_hw_migs -of_objects $dev] {report_hw_mig $mig}
+|Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
+|--------------------------------------------------------------------------------
+|Tool Version: Vivado v.2022.2 (lin64) Build 3671981 Fri Oct 14 04:59:54 MDT 2022
+|Date        : Thu Oct 29 22:08:27 2026
+|Host        : wenhan-System-Product-Name running 64-bit Ubuntu 24.04.3 LTS
+|Command     : report_hw_mig localhost:3121/xilinx_tcf/Digilent/210308B43939/0_1/MIG_1
+|Device      : xcvu9p_0
+|--------------------------------------------------------------------------------
+
+-------------------
+ MIG Status 
+-------------------
+Overall Status:  CAL PASS
+MicroBlaze Status:  PASS
+DQS Gate Status:  RUNNING
+Message:  No errors detected during calibration.
+
+----------------------------------
+ Memory Configuration 
+----------------------------------
+Memory Debug Core Number:  MIG_1
+Memory Interface Type:  DDR3
+MIG Core Cell Name:  wiring_i/mig
+XSDB Version:  3
+RTL Version:  0
+MicroBlaze Code Version:  11
+Memory Frequency (MHz):  400
+Bit Time (ps):  1250
+Ranks:  1
+Data Bytes:  2
+Nibbles:  4
+Bits per Byte:  8
+PLL Multiply:  8
+PLL Divide:  1
+MMCM Multiply:  6
+MMCM Divide:  1
+
+-----------------------------------
+ Calibration Information 
+-----------------------------------
+
+RANK 0 -
+1 - DQS Gate:  PASS
+2 - DQS Gate Sanity Check:  PASS
+3 - Write Leveling:  PASS
+4 - Read Per-Bit Deskew:  PASS
+5 - Read Per-Bit DBI Deskew:  SKIP
+6 - Read DQS Centering (Simple):  PASS
+7 - Read Sanity Check:  PASS
+8 - Write DQS to DQ Deskew:  PASS
+9 - Write DQS to DM/DBI Deskew:  PASS
+10 - Write DQS to DQ (Simple):  PASS
+11 - Write DQS to DM/DBI (Simple):  PASS
+12 - Read DQS Centering DBI (Simple):  SKIP
+13 - Write Latency Calibration:  PASS
+14 - Write Read Sanity Check 0:  PASS
+15 - Read DQS Centering (Complex):  SKIP
+16 - Write Read Sanity Check 1:  SKIP
+17 - Read VREF Training:  SKIP
+18 - Write Read Sanity Check 2:  SKIP
+19 - Write DQS to DQ (Complex):  SKIP
+20 - Write DQS to DM/DBI (Complex):  SKIP
+21 - Write Read Sanity Check 3:  SKIP
+22 - Write VREF Training:  SKIP
+23 - Write Read Sanity Check 4:  SKIP
+24 - Read DQS Centering Multi Rank Adjustment:  SKIP
+25 - Write Read Sanity Check 5:  SKIP
+26 - Multi Rank Adjustment and Checks:  SKIP
+27 - Write Read Sanity Check 6:  SKIP
+
+--------------------------
+ Margin Analysis 
+--------------------------
+
+RANK 0 - Read Margin - Falling Edge Simple Calibration
+Byte 0 Nibble 0  -  Left Margin:  603  Center Point:  650  Right Margin:  607
+Byte 0 Nibble 1  -  Left Margin:  607  Center Point:  654  Right Margin:  611
+Byte 1 Nibble 0  -  Left Margin:  607  Center Point:  650  Right Margin:  607
+Byte 1 Nibble 1  -  Left Margin:  604  Center Point:  671  Right Margin:  604
+
+RANK 0 - Read Margin - Rising Edge Simple Calibration
+Byte 0 Nibble 0  -  Left Margin:  610  Center Point:  698  Right Margin:  610
+Byte 0 Nibble 1  -  Left Margin:  607  Center Point:  658  Right Margin:  611
+Byte 1 Nibble 0  -  Left Margin:  610  Center Point:  698  Right Margin:  610
+Byte 1 Nibble 1  -  Left Margin:  603  Center Point:  665  Right Margin:  607
+
+RANK 0 - Complex pattern read margin did not run because either a prior stage of calibration failed or read levelling (complex) stage was skipped.
+
+RANK 0 - Write Margin - Simple Calibration
+Byte 0  -  Left Margin:  618  Center Point:  2634  Right Margin:  621
+Byte 1  -  Left Margin:  604  Center Point:  2454  Right Margin:  597
+
+RANK 0 - Complex pattern write margin did not run because either a prior stage of calibration failed or write complex stage was skipped.
+
+-----------------------
+  Warning Notices  
+-----------------------
+
+No warning has been generated during calibration.
+
+# puts "ONLINE_DIAG_RUN_COMPLETE"
+ONLINE_DIAG_RUN_COMPLETE
+# close_hw_target
+INFO: [Labtoolstcl 44-464] Closing hw_target localhost:3121/xilinx_tcf/Digilent/210308B43939
+# disconnect_hw_server
+# close_hw_manager
+INFO: [Common 17-206] Exiting Vivado at Thu Oct 29 22:08:27 2026...

@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-29",
+  "method": "JTAG download; VIO start/reset; ILA result capture; no UART parsing",
+  "ddr_mt_s": 800,
+  "ui_mhz": 100,
+  "jtag_hz": 3000000,
+  "rounds": 16,
+  "unique_address_bytes": 1048576,
+  "total_write_beats": 1048576,
+  "total_read_beats": 16777216,
+  "total_read_bytes": 268435456,
+  "dense_read_beats": 8388608,
+  "sparse_read_beats": 8388608,
+  "total_errors": 0,
+  "errors_per_dq": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "fatal_count": 0,
+  "passed": true,
+  "supply": "User reports R257 adjustment and power cycle; exact post-adjustment measurements not supplied",
+  "limitations": [
+    "Not original native paired traffic; one AXI request in flight, dense uses 32-beat bursts",
+    "Same 1MiB reused; not full capacity or address uniqueness/DM test",
+    "No controlled voltage-only A/B; implementation and generator changed"
+  ],
+  "files": [
+    {
+      "path": "vivado2/online_diag/build/initial_round0.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/initial_round0.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round0.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round0.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round1.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round1.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round2.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round2.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round3.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round3.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round4.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round4.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round5.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round5.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round6.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/repeat_round6.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round0.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round0.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round1.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round1.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round2.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round2.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round3.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round3.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round4.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round4.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round5.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round5.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round6.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round6.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round7.json",
+      "sha256": "c999179ee648fc4a38e9ff42dd47a1b260add5509448a00110bcf48d58a82de6"
+    },
+    {
+      "path": "vivado2/online_diag/build/extended_round7.csv",
+      "sha256": "1b1a2ff1194f305a19025d38378676cdea62769f195d8579b337e9089afefa9d"
+    },
+    {
+      "path": "vivado2/online_diag/build/wiring_online_axi.bit",
+      "sha256": "488a818204134250bd105c2db42dce678270e4632abe642db0a8dbc37bd152fc"
+    },
+    {
+      "path": "vivado2/online_diag/build/wiring_online_axi.ltx",
+      "sha256": "8f68ce61f48d7421ad9f7a2be18bcc3d12b1142c694f8dfaf1958832ae721879"
+    },
+    {
+      "path": "vivado2/online_diag/rtl/online_axi_diag.v",
+      "sha256": "1ff88fa7f9cd1330fa6be2ef9c766705e691fe680e9ed35ae647a72e60a51352"
+    },
+    {
+      "path": "vivado2/online_diag/scripts/run.tcl",
+      "sha256": "293e42804602f006fe9f0eef9384e9985596dcc60385c74b966080c2b5e34611"
+    },
+    {
+      "path": "vivado2/online_diag/tests/decode_ila.py",
+      "sha256": "3d62bc553d8e53a1b20f4a970853ba21fb9d989192bf94705bc1377e17d173fe"
+    }
+  ]
+}
